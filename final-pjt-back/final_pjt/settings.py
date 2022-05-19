@@ -39,15 +39,20 @@ INSTALLED_APPS = [
     # 3rd party apps
     'django_extensions',
     'rest_framework',
+
+    # token 기반의 authentication 사용
     'rest_framework.authtoken',
 
+    # signup 제외 auth 관련
     'dj_rest_auth',
-    'dj_rest_auth.registration',
 
+    # Registration = signup
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
+    'dj_rest_auth.registration',
 
+    # CORS
     'corsheaders',
 
     # native apps
@@ -57,7 +62,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
 ]
 
 SITE_ID = 1
@@ -155,24 +159,23 @@ MEDIA_ROOT = BASE_DIR/'media'
 MEDIA_URL = '/media/'
 
 
-# 교차 출처 관련
+# CORS (Vue LocalHost 교차 통신)
 CORS_ALLOWED_ORIGINS = [
     # Vue LocalHost
     'http://localhost:8080',
-    'http://127.0.0.1:8001',
-	]
+]
 
 
 # 인증/권한 관련
 REST_FRAMEWORK = {
-    # 기본 인증방식 설정
+    # 기본 인증방식 설정 => (Token)
     'DEFAULT_AUTHENTICATION_CLASSES': [
       'rest_framework.authentication.TokenAuthentication',  
     ],
     
-    # 기본 권한 설정
+    # 기본 권한 설정 => (AllowAny)
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',  # 기본적으로 모두에게 허용
-        # 'rest_framework.permissions.IsAuthenticated',  # 기본적으로 인증받아야 사용
+        # 인증 유무 관계없이 서비스 이용가능
+        'rest_framework.permissions.AllowAny',
     ],
 }
