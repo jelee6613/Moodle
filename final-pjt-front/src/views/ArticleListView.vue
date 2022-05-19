@@ -1,6 +1,6 @@
 <template>
   <div>
-    <comment-list-item></comment-list-item>
+    <article-list-item></article-list-item>
   </div>
 </template>
 
