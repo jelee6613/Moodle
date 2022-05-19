@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
 
-    # 'dj_rest.auth',
-    # 'dj_rest.auth.registration',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
 
     'allauth',
     'allauth.account',
@@ -163,16 +163,16 @@ CORS_ALLOWED_ORIGINS = [
 	]
 
 
-# # 인증/권한 관련
-# REST_FRAMEWORK = {
-#     # 기본 인증방식 설정
-#     'DEFAULT_AUTHENTICATION_CLASSES': [
-#       'rest_framework.authentication.TokenAuthentication',  
-#     ],
+# 인증/권한 관련
+REST_FRAMEWORK = {
+    # 기본 인증방식 설정
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+      'rest_framework.authentication.TokenAuthentication',  
+    ],
     
-#     # 기본 권한 설정
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.AllowAny',  # 기본적으로 모두에게 허용
-#         # 'rest_framework.permissions.IsAuthenticated',  # 기본적으로 인증받아야 사용
-#     ],
-# }
+    # 기본 권한 설정
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',  # 기본적으로 모두에게 허용
+        # 'rest_framework.permissions.IsAuthenticated',  # 기본적으로 인증받아야 사용
+    ],
+}
