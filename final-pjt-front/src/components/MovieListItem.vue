@@ -1,9 +1,8 @@
 <template>
   <div>
     <router-link
-      :to="{ name: 'movieDetail', params: {moviePk: movie.pk}}"
+      :to="{ name: 'movieDetail', params: { moviePk: movie.id }}"
     >{{ movie.title }}</router-link>
-    
     {{ movie }}
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
     movie detail
-    <h1>{{ movie }}</h1>
+    <h1>{{ movie.title }}</h1>
 
     <p>
       {{ movie }}
@@ -11,13 +11,16 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
     name: 'MovieDetailView',
-    date() {
+    data() {
       return {
         moviePk: this.$route.params.moviePk
       }
+    },
+    computed: {
+      ...mapGetters(['movie'])
     },
     methods: {
       ...mapActions(['fetchMovie'])
