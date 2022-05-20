@@ -7,12 +7,18 @@ from .models import Movie
 
 from .serializers.movie import MovieListSerializer, MovieDetailSerializer
 
-from rest_framework.decorators import api_view
+from rest_framework import status
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.response import Response
 
+
 @api_view(['GET', 'POST'])
+@permission_classes([AllowAny])
 def movie_list(request):
-    if request.method == 'POST':
+
+    @permission_classes([IsAdminUser])
+    def movie_create():
         url = 'https://api.themoviedb.org/3'
         path_get_movie_list = '/movie/top_rated'
         api_key = '04f1192a9aa395adc14e461889d716f8'
@@ -79,16 +85,44 @@ def movie_list(request):
                         new_movie.director = crew['name']
                         break
                 new_movie.save()
+
+    if request.method == 'POST':
+        movie_create()
     
     movies = Movie.objects.all()
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
     
-@api_view(['GET'])
+
+@api_view(['GET', 'PUT', 'DELETE'])
 def movie_detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
-    serializer = MovieDetailSerializer(movie)
-    return Response(serializer.data)
+
+    def movie_get():
+        serializer = MovieDetailSerializer(movie)
+        return Response(serializer.data)
+
+    @permission_classes([IsAdminUser])
+    def movie_update():
+        serializer = MovieDetailSerializer(movie, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+
+    @permission_classes([IsAdminUser])
+    def movie_delete():
+        movie.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    if request.method == 'GET':
+        movie_get()
+
+    elif request.method == 'PUT':
+        movie_update()
+
+    elif request.method == 'DELETE':
+        movie_delete()
+
 
 @api_view(['GET'])
 def movie_recommendations(request):
@@ -96,7 +130,11 @@ def movie_recommendations(request):
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
 def movie_watched(request, username, movie_id):
-    pass
+    if request.method == 'GET':
+        pass
+
+    elif request.method == 'POST':
+        pass
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
 def movie_rate(request, username, movie_id):
