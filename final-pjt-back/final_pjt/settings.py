@@ -173,9 +173,9 @@ REST_FRAMEWORK = {
       'rest_framework.authentication.TokenAuthentication',  
     ],
     
-    # 기본 권한 설정 => (AllowAny)
+    # 기본 권한 설정 => (IsAuthenticated)
     'DEFAULT_PERMISSION_CLASSES': [
-        # 인증 유무 관계없이 서비스 이용가능
-        'rest_framework.permissions.AllowAny',
+        # 인증 받은 사용자만 서비스 이용가능
+        'rest_framework.permissions.IsAuthenticated',
     ],
 }
