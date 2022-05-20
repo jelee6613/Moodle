@@ -16,5 +16,4 @@ urlpatterns = [
     path('movies/<str:username>/watched/<int:movie_id>/', views.movie_watched),
     # 영화 평점: 생성, 조회, 수정, 삭제
     path('movies/<str:username>/watched/<int:movie_id>/rate/', views.movie_rate),
-
 ]
