@@ -5,6 +5,8 @@ import requests
 
 from .models import Movie
 
+from .serializers.movie import MovieListSerializer, MovieDetailSerializer
+
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -77,11 +79,10 @@ def movie_list(request):
                         new_movie.director = crew['name']
                         break
                 new_movie.save()
-
-        return Response(movies)
     
-    elif request.method == 'GET':
-        pass
+    movies = Movie.objects.all()
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
     
 @api_view(['GET'])
 def movie_detail(request):
