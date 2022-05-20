@@ -49,14 +49,13 @@ export default ({
           })
           .catch( err => console.error(err))
     },
-    fetchMovie({ commit, getters }) {
+    fetchMovie({ commit }, moviePk) {
         // 영화 디테일 페이지 받아오기
         // GET: movies movie URL
         // 성공하면 응답으로 받은 영화 객체를 state.movie에 저장
         // 실패하면 단순 에러일 때는 에러 메세지 표시, 404 에러일 때는 NotFound404로 이동
-        const movieId = getters.movie.pk
         axios({
-          url: drf.movies.movie(movieId),
+          url: drf.movies.movie(moviePk),
           method: 'get'
         })
           .then( res => {
@@ -70,12 +69,6 @@ export default ({
             }
           })
     },
-    setMovie({ commit }, movie) {
-      // 단일 영화 저장하기
-      // state.movie에 movie 객체 저장 후 MovieDetailView로 라우팅
-      commit('SET_MOVIE', movie)
-      router.push({ name: `movieDetail(${movie.pk})`})
-    }
   },
 })
   
