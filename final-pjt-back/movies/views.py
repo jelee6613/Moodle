@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 
 import requests
@@ -85,8 +85,10 @@ def movie_list(request):
     return Response(serializer.data)
     
 @api_view(['GET'])
-def movie_detail(request):
-    pass
+def movie_detail(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    serializer = MovieDetailSerializer(movie)
+    return Response(serializer.data)
 
 @api_view(['GET'])
 def movie_recommendations(request):
