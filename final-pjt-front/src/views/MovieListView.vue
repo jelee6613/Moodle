@@ -52,7 +52,7 @@ export default {
   methods: {
     ...mapActions(['fetchMoviesUpdate', 'fetchMovies'])
   },
-  created() {
+  mounted() {
     this.fetchMovies()
   },
 }
