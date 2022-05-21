@@ -37,9 +37,10 @@ export default ({
           data: keyword,
           headers: getters.authHeader
       })
-        .then( () => {
-          alert('영화가 추가되었습니다.')
-          // commit('SET_MOVIES', res.data)
+        .then( res => {
+          if (res.status === 201) {
+            alert('영화가 추가되었습니다.')
+          }
         })
         .catch( err => {
           console.error(err)

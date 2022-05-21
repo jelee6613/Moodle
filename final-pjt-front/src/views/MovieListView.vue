@@ -3,7 +3,7 @@
     <p>MovieListView</p>
 
     <div>
-      <form @submit="fetchMoviesSearch">
+      <form @submit.prevent="fetchMoviesSearch(keyword)">
         <label for="keyword">검색어</label>
         <input type="text" v-model="keyword" id="keyword" required>
       </form>

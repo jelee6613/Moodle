@@ -4,7 +4,7 @@ import axios from "axios"
 
 export default ({
   state: {
-    token: localStorage.getItem('token') || '',
+    token: '',
     currentUser: {},
     profile: {},
     authError: null,
@@ -26,11 +26,12 @@ export default ({
   actions: {
     saveToken({ commit }, token) {
       commit('SET_TOKEN', token)
-      localStorage.setItem('token', token)
+      // localStorage.setItem('token', token)
     },
     removeToken({ commit }) {
       commit('SET_TOKEN', '')
       localStorage.setItem('token', '')
+      localStorage.setItem('user', {})
     },
     signup({ commit, dispatch }, credentials) {
       // 회원가입
@@ -96,7 +97,8 @@ export default ({
           headers: getters.authHeader
         })
           .then( res => {
-            commit('SET_CURRENT_USER', res.data)
+            const user = JSON.stringify(res.data)
+            commit('SET_CURRENT_USER', user)
           })
           .catch( err => {
             if (err.response.data === 401) {
