@@ -1,6 +1,8 @@
 <template>
   <div>
     <h2>ArticleListView</h2>
+    
+    <router-link :to="{ name: 'articleCreate' }">새 글 작성하기</router-link>
 
     <div>
       <ul>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    movie detail
+    <h2>movie detail</h2>
     <h1>{{ movie.title }}</h1>
 
     <p>
@@ -16,7 +16,7 @@ export default {
   name: 'MovieDetailView',
   data() {
     return {
-      moviePk: this.$route.params.moviePk
+      movieTitle: this.$route.params.movieTitle
     }
   },
   computed: {
@@ -26,7 +26,7 @@ export default {
     ...mapActions(['fetchMovie'])
   },
   created() {
-    this.fetchMovie(this.moviePk)
+    this.fetchMovie(this.movieTitle)
   }
 }
 </script>

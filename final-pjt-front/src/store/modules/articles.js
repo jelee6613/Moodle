@@ -47,6 +47,97 @@ export default ({
           }
         })
     },
+    createArticle({ commit, getters }, article) {
+      // POST articles articles
+      axios({
+        url: drf.articles.articles,
+        method: 'post',
+        data: article,
+        headers: getters.authHeader
+      })
+        .then( res => {
+          commit('SET_ARTICLE', res.data)
+          router.push({
+            name: 'articlearticleDetail',
+            params: { articlePk: getters.article.pk }
+          })
+        })
+        .catch( err => console.error(err) )
+    },
+    updateArticle({ commit, getters }, { pk, title, content }) {
+      // PUT articles article
+      axios({
+        url: drf.articles.article(pk),
+        method: 'put',
+        data: { title, content },
+        headers: getters.authHeader
+      })
+        .then( res => {
+          commit('SET_ARTICLE', res.data)
+          router.push({
+            name: 'articlearticleDetail',
+            params: { articlePk: getters.article.pk }
+          })
+        })
+        .catch( err => console.error(err) )
+    },
+    deleteArticle({commit, getters }, articlePk) {
+      // DELETE articles article
+      if (confirm('정말 삭제하시겠습니까?')) {
+        axios({
+          url: drf.articles.article(articlePk),
+          method: 'delete',
+          headers: getters.authHeader
+        })
+          .then( () => {
+            commit('SET_ARTICLE', {})
+            router.push({ name: 'articles' })
+          })
+          .catch( err => console.error(err) )
+      }
+    },
+    /*
+    likeArticle({ commit, getters }, articlePk) {
+      // POST articles likeArticle
+      axios({
+        url: drf.articles.likeArticle,
+        method: 'post',
+        headers: getters.authHeader
+      })
+        .then( res => )
+        .catch( err => console.error(err) )
+    },
+    createComment({ commit, getters }, { articlePk, content }) {
+      // POST articles comments
+      axios({
+        url: drf.articles.comments,
+        method: 'post',
+        headers: getters.authHeader
+      })
+        .then( res => )
+        .catch( err => console.error(err) )
+    },
+    updateComment({ commit, getters }, { articlePk, commentPk, content }) {
+      // PUT articles comment
+      axios({
+        url: drf.articles.comment,
+        method: 'put',
+        headers: getters.authHeader
+      })
+        .then( res => )
+        .catch( err => console.error(err) )
+    },
+    deleteComment({ commit, getters }, { articlePk, commentPk }) {
+      // DELETE articles comment
+      axios({
+        url: drf.articles.comment,
+        method: 'delete',
+        headers: getters.authHeader
+      })
+        .then( res => )
+        .catch( err => console.error(err) )
+    }
+    */
   },
 })
   

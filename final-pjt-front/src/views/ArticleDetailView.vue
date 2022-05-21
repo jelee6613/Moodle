@@ -12,11 +12,11 @@
 
     <!-- Article Edit/Delete -->
     <div v-if="isAuthor">
-      <router-link :to="{ name: 'articleEdit', params: { articlePk}}">
+      <router-link :to="{ name: 'articleEdit', params: { articlePk }}">
         <button>수정</button>
       </router-link>
       |
-      <button>삭제</button>
+      <button @click="deleteArticle(articlePk)">삭제</button>
     </div>
 
     <!-- Article Like -->
@@ -52,7 +52,7 @@ export default {
       }
     },
     methods: {
-      ...mapActions(['fetchArticle'])
+      ...mapActions(['fetchArticle', 'deleteArticle'])
     },
     created() {
       this.fetchArticle(this.articlePk)

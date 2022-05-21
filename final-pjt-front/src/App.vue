@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-link :to="{ name: 'movieList' }">Home</router-link> | 
     <router-link :to="{ name: 'signup' }">Signup</router-link> | 
     <router-link :to="{ name: 'login' }">Login</router-link> | 
     <router-link :to="{ name: 'logout' }">Logout</router-link> | 
@@ -18,7 +19,7 @@ export default {
   computed: {
     ...mapGetters(['currentUser']),
     user() {
-      return JSON.parse(this.currentUser)
+      return JSON.parse(JSON.stringify(this.currentUser))
     }
   }
 }
