@@ -17,57 +17,57 @@ export default ({
   },
   actions: {
     fetchMoviesUpdate({ commit }) {
-        // TMDB API 통신 요청하기
-        // POST: movies movies URL
-        // 성공하면 응답으로 받은 영화 리스트를 state.movies에 저장
-        // 실패하면 에러 메세지 표시
-        // state.movies 초기화 후 axios 통신
-        commit('SET_MOVIES', [])
+      // TMDB API 통신 요청하기
+      // POST: movies movies URL
+      // 성공하면 응답으로 받은 영화 리스트를 state.movies에 저장
+      // 실패하면 에러 메세지 표시
+      // state.movies 초기화 후 axios 통신
+      commit('SET_MOVIES', [])
 
-        axios({
-            url: drf.movies.movies(),
-            method: 'post',
+      axios({
+          url: drf.movies.movies(),
+          method: 'post',
+      })
+        .then( res => {
+          commit('SET_MOVIES', res.data)
         })
-          .then( res => {
-            commit('SET_MOVIES', res.data)
-          })
-          .catch( err => console.error(err))
+        .catch( err => console.error(err))
     },
     fetchMovies({ commit }) {
-        // 영화 목록 페이지 받아오기
-        // GET: movies movies URL
-        // 성공하면 응답으로 받은 영화 리스트를 state.movies에 저장
-        // 실패하면 에러 메세지 표시
-        commit('SET_MOVIES', [])
-        
-        axios({
-          url: drf.movies.movies(),
-          method: 'get',
+      // 영화 목록 페이지 받아오기
+      // GET: movies movies URL
+      // 성공하면 응답으로 받은 영화 리스트를 state.movies에 저장
+      // 실패하면 에러 메세지 표시
+      commit('SET_MOVIES', [])
+      
+      axios({
+        url: drf.movies.movies(),
+        method: 'get',
+      })
+        .then( res => {
+          commit('SET_MOVIES', res.data)
         })
-          .then( res => {
-            commit('SET_MOVIES', res.data)
-          })
-          .catch( err => console.error(err))
+        .catch( err => console.error(err))
     },
     fetchMovie({ commit }, moviePk) {
-        // 영화 디테일 페이지 받아오기
-        // GET: movies movie URL
-        // 성공하면 응답으로 받은 영화 객체를 state.movie에 저장
-        // 실패하면 단순 에러일 때는 에러 메세지 표시, 404 에러일 때는 NotFound404로 이동
-        axios({
-          url: drf.movies.movie(moviePk),
-          method: 'get'
+      // 영화 디테일 페이지 받아오기
+      // GET: movies movie URL
+      // 성공하면 응답으로 받은 영화 객체를 state.movie에 저장
+      // 실패하면 단순 에러일 때는 에러 메세지 표시, 404 에러일 때는 NotFound404로 이동
+      axios({
+        url: drf.movies.movie(moviePk),
+        method: 'get'
+      })
+        .then( res => {
+          commit('SET_MOVIE', res.data)
         })
-          .then( res => {
-            commit('SET_MOVIE', res.data)
-          })
-          .catch( err => {
-            if (err.response.data === 404) {
-              router.push({ name: 'NotFound'})
-            } else {
-              console.error(err)
-            }
-          })
+        .catch( err => {
+          if (err.response.data === 404) {
+            router.push({ name: 'NotFound'})
+          } else {
+            console.error(err)
+          }
+        })
     },
   },
 })
