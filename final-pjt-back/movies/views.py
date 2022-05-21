@@ -17,14 +17,14 @@ User = get_user_model()
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def movie_list():
+def movie_list(request):
     movies = Movie.objects.all()
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
 @api_view(['POST'])
 @permission_classes([IsAdminUser])
-def movie_create():
+def movie_create(request):
     url = 'https://api.themoviedb.org/3'
     path_get_movie_list = '/movie/top_rated'
     api_key = '04f1192a9aa395adc14e461889d716f8'
@@ -91,6 +91,10 @@ def movie_create():
                     new_movie.director = crew['name']
                     break
             new_movie.save()
+
+    movies = Movie.objects.all()
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
