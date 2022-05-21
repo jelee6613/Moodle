@@ -3,7 +3,7 @@
     <router-link
       :to="{ name: 'movieDetail', params: { moviePk: movie.id }}"
     >{{ movie.title }}</router-link>
-    {{ movie }}
+    {{ movie.poster_path }}
   </div>
 </template>
 

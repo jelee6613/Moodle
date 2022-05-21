@@ -1,8 +1,10 @@
 <template>
   <div>
     <p>MovieListView</p>
-    
-    <button @click="fetchMoviesUpdate">TMDB API 불러오기</button>
+
+    <div>
+      <button @click="fetchMoviesUpdate">TMDB API 불러오기</button>
+    </div>
 
     <movie-list-item
       v-for="movie in movies"

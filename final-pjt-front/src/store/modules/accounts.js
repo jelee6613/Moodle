@@ -21,6 +21,7 @@ export default ({
     SET_TOKEN: (state, token) => state.token = token,
     SET_PROFILE: (state, profile) => state.profile = profile,
     SET_AUTH_ERROR: (state, error) => state.authError = error,
+    SET_CURRENT_USER: (state, user) => state.currentUser = user
   },
   actions: {
     saveToken({ commit }, token) {
@@ -95,6 +96,7 @@ export default ({
           headers: getters.authHeader
         })
           .then( res => {
+            console.log(res)
             commit('SET_CURRENT_USER', res.data)
           })
           .catch( err => {

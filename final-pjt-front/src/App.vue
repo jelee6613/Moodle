@@ -4,13 +4,19 @@
     <router-link :to="{ name: 'login' }">Login</router-link>
     <router-link :to="{ name: 'logout' }">Logout</router-link>
 
+    <p>반갑습니다. {{ currentUser.username }}님!</p>
     <router-view/>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'App',
+  computed: {
+    ...mapGetters(['currentUser'])
+  }
 }
 </script>
 <style>
