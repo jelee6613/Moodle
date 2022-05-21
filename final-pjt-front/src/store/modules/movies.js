@@ -25,7 +25,7 @@ export default ({
       commit('SET_MOVIES', [])
 
       axios({
-          url: drf.movies.movies(),
+          url: drf.movies.getMovies(),
           method: 'post',
       })
         .then( res => {

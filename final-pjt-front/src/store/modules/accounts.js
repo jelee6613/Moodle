@@ -66,11 +66,10 @@ export default ({
           router.push({ name: 'movieList' })
         })
         .catch( err => {
-          console.error(err.response.data)
           commit('SET_AUTH_ERROR', err.response.data)
         })
     },
-    logout({ getters, dispatch }) {
+    logout({ commit, getters, dispatch }) {
       axios({
         url: drf.accounts.logout(),
         method: 'post',
@@ -78,6 +77,7 @@ export default ({
       })
         .then( () => {
           dispatch('removeToken')
+          commit('SET_CURRENT_USER', {})
           alert('로그아웃 되었습니다.')
           router.push({ name: 'movieList' })
         })
@@ -106,6 +106,10 @@ export default ({
             }
           })
       }
+    },
+    fetchProfile() {
+      // 프로필페이지
+      // GET accounts profile
     }
   },
 
