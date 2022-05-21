@@ -115,26 +115,6 @@ def movie_list(request):
                 # 장르 id => 한글화 작업
                 genres = movie['genre_ids']
                 movie_genres = []
-                genres_dict = {
-                    28: '액션',
-                    12: '모험',
-                    16: '애니메이션',
-                    35: '코미디',
-                    80: '범죄',
-                    99: '다큐멘터리',
-                    18: '드라마',
-                    10751: '가족',
-                    14: '판타지',
-                    36: '역사',
-                    27: '공포',
-                    10402: '음악',
-                    9648: '미스테리',
-                    10749: '로맨스',
-                    878: 'SF',
-                    53: '스릴러',
-                    10752: '전쟁',
-                    37: '서부',
-                }
                 for genre in genres:
                     if genres_dict[genre]:
                         movie_genres.append(genres_dict[genre])
@@ -159,10 +139,10 @@ def movie_list(request):
                 new_movie.save()
 
     response_popular = requests.get(url+path_popular, params=params)
-    popular = response_popular.json()
-    popular_movies = popular['results']
+    popular_json = response_popular.json()
+    popular_datas = popular_json['results']
 
-    for movie in popular_movies:
+    for movie in popular_datas:
         
         if not Movie.objects.filter(title=movie['title']).exists():
 
@@ -178,26 +158,6 @@ def movie_list(request):
                 # 장르 id => 한글화 작업
                 genres = movie['genre_ids']
                 movie_genres = []
-                genres_dict = {
-                    28: '액션',
-                    12: '모험',
-                    16: '애니메이션',
-                    35: '코미디',
-                    80: '범죄',
-                    99: '다큐멘터리',
-                    18: '드라마',
-                    10751: '가족',
-                    14: '판타지',
-                    36: '역사',
-                    27: '공포',
-                    10402: '음악',
-                    9648: '미스테리',
-                    10749: '로맨스',
-                    878: 'SF',
-                    53: '스릴러',
-                    10752: '전쟁',
-                    37: '서부',
-                }
                 for genre in genres:
                     if genres_dict[genre]:
                         movie_genres.append(genres_dict[genre])
@@ -218,13 +178,13 @@ def movie_list(request):
                     if crew['department'] == 'Directing':
                         new_movie.director = crew['name']
                         break
-
+                
                 new_movie.save()
 
     res = {
         'now_playing': now_playing_movies,
         'upcoming': upcoming_movies,
-        'popular': popular_movies,
+        'popular': popular_datas,
     }
 
     return Response(res)
@@ -313,34 +273,11 @@ def movie_create(request):
     return Response(status=status.HTTP_201_CREATED)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def movie_detail(request, movie_id):
-    movie = get_object_or_404(Movie, pk=movie_id)
-
-    def movie_get():
-        serializer = MovieDetailSerializer(movie)
-        return Response(serializer.data)
-
-    @permission_classes([IsAdminUser])
-    def movie_update():
-        serializer = MovieDetailSerializer(movie, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
-
-    @permission_classes([IsAdminUser])
-    def movie_delete():
-        movie.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-
-    if request.method == 'GET':
-        movie_get()
-
-    elif request.method == 'PUT':
-        movie_update()
-
-    elif request.method == 'DELETE':
-        movie_delete()
+@api_view(['GET'])
+def movie_detail(request, movie_title):
+    movie = get_object_or_404(Movie, title=movie_title)
+    serializer = MovieDetailSerializer(movie)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])

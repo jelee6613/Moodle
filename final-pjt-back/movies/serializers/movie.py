@@ -18,3 +18,4 @@ class MovieValidationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = ('title', 'overview', 'poster_path', 'release_date',)
+
