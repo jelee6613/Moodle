@@ -1,17 +1,35 @@
 <template>
   <div>
-    <article-list-item></article-list-item>
+    <h2>ArticleListView</h2>
+
+    <div>
+      <ul>
+        <li v-for="article in articles" :key="article.pk">
+
+          <router-link :to="{ name: 'articleDetail', params: {articlePk: article.pk}}">
+            {{ article.title }}
+          </router-link>
+
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import ArticleListItem from '../components/ArticleListItem.vue'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
-    name: 'ArticleListView',
-    components: {
-      ArticleListItem,
-    },
+  name: 'ArticleListView',
+  computed: {
+    ...mapGetters(['articles'])
+  },
+  methods: {
+    ...mapActions(['fetchArticles'])
+  },
+  created() {
+    this.fetchArticles()
+  }
 }
 </script>
 

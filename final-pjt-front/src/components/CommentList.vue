@@ -7,6 +7,9 @@
 <script>
 export default {
     name: 'CommentList',
+    props: {
+      comments: Array
+    }
 }
 </script>
 

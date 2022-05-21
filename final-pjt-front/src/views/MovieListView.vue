@@ -55,7 +55,7 @@ export default {
   methods: {
     ...mapActions(['fetchMoviesSearch', 'fetchMovies'])
   },
-  mounted() {
+  created() {
     this.fetchMovies()
   },
 }
