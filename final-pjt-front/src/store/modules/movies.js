@@ -4,14 +4,23 @@ import axios from "axios"
 
 export default ({
   state: {
+    nowPlayings: [],
+    upcomings: [],
+    populars: [],
     movies: [],
     movie: {},
   },
   getters: {
+    nowPlayings: state => state.nowPlayings,
+    upcomings: state => state.upcomings,
+    populars: state => state.populars,
     movies: state => state.movies,
     movie: state => state.movie,
   },
   mutations: {
+    SET_NOW_PLAYINGS: (state, movies) => state.nowPlayings = movies,
+    SET_UPCOMINGS: (state, movies) => state.upcomings = movies,
+    SET_POPULARS: (state, movies) => state.populars = movies,
     SET_MOVIES: (state, movies) => state.movies = movies,
     SET_MOVIE: (state, movie) => state.movie = movie
   },
@@ -31,6 +40,9 @@ export default ({
       })
         .then( res => {
           commit('SET_MOVIES', res.data)
+          commit('SET_NOW_PLAYINGS', res.data.now_playing)
+          commit('SET_UPCOMINGS', res.data.upcoming)
+          commit('SET_POPULARS', res.data.popular)
         })
         .catch( err => console.error(err))
     },
@@ -47,6 +59,10 @@ export default ({
       })
         .then( res => {
           commit('SET_MOVIES', res.data)
+          commit('SET_NOW_PLAYINGS', res.data.now_playing)
+          commit('SET_UPCOMINGS', res.data.upcoming)
+          commit('SET_POPULARS', res.data.popular)
+
         })
         .catch( err => console.error(err))
     },
