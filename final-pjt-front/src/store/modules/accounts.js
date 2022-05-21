@@ -96,7 +96,6 @@ export default ({
           headers: getters.authHeader
         })
           .then( res => {
-            console.log(res)
             commit('SET_CURRENT_USER', res.data)
           })
           .catch( err => {
