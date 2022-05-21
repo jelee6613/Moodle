@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="signup">
     <h1>회원가입</h1>
 
     <form @submit.prevent="signup(credentials)">
@@ -44,5 +44,7 @@ export default {
 </script>
 
 <style>
-
+  .signup {
+    
+  }
 </style>
