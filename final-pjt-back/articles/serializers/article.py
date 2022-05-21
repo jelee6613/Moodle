@@ -10,7 +10,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
 
         class Meta:
             model = User
-            fields = ('username',)
+            fields = ('pk', 'username',)
     
     user = UserSerializer(read_only=True)
     like_users = UserSerializer(read_only=True, many=True)
@@ -28,7 +28,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
         class Meta:
             model = User
-            fields = ('username',)
+            fields = ('pk', 'username',)
     
     user = UserSerializer(read_only=True)
     like_users = UserSerializer(read_only=True, many=True)

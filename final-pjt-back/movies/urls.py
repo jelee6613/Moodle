@@ -10,8 +10,8 @@ urlpatterns = [
     path('', views.movie_list),
     # Open API 호출 => Movie DB 저장
     path('movies/', views.movie_create),
-    # 단일: 조회, 수정, 삭제
-    path('movies/<int:movie_id>/', views.movie_detail),
+    # 단일: 조회
+    path('movies/<str:movie_title>/', views.movie_detail),
     # 추천영화: 조회
     path('movies/recommendations/', views.movie_recommendations),
     # 내가 본 영화: 등록/취소
