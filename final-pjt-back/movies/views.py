@@ -231,11 +231,12 @@ def movie_list(request):
 @api_view(['POST'])
 @permission_classes([IsAdminUser])
 def movie_create(request):
+
     url = 'https://api.themoviedb.org/3'
     path_get_movie_list = '/search/movie'
     api_key = '04f1192a9aa395adc14e461889d716f8'
-    
-    keyword = request.data.keyword
+
+    keyword = request.data
 
     params = {
         'api_key': api_key,

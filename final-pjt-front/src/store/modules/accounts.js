@@ -2,7 +2,7 @@ import drf from "@/api/drf"
 import router from "@/router"
 import axios from "axios"
 
-export default ({
+export default {
   state: {
     token: '',
     currentUser: {},
@@ -113,6 +113,5 @@ export default ({
       // GET accounts profile
     }
   },
-
-})
+}
   
