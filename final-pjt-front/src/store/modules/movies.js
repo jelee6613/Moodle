@@ -9,15 +9,15 @@ export default ({
   },
   getters: {
     movies: state => state.movies,
-    movie: state => state.movie
+    movie: state => state.movie,
   },
   mutations: {
     SET_MOVIES: (state, movies) => state.movies = movies,
     SET_MOVIE: (state, movie) => state.movie = movie
   },
   actions: {
-    fetchMoviesUpdate({ commit }) {
-      // TMDB API 통신 요청하기
+    fetchMoviesUpdate({ commit, getters }) {
+      // 관리자 권한만 TMDB API 통신 요청하기
       // POST: movies movies URL
       // 성공하면 응답으로 받은 영화 리스트를 state.movies에 저장
       // 실패하면 에러 메세지 표시
@@ -27,6 +27,7 @@ export default ({
       axios({
           url: drf.movies.getMovies(),
           method: 'post',
+          headers: getters.authHeader
       })
         .then( res => {
           commit('SET_MOVIES', res.data)
