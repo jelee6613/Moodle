@@ -17,6 +17,27 @@ User = get_user_model()
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def movie_list(request):
+    genres_dict = {
+        28: '액션',
+        12: '모험',
+        16: '애니메이션',
+        35: '코미디',
+        80: '범죄',
+        99: '다큐멘터리',
+        18: '드라마',
+        10751: '가족',
+        14: '판타지',
+        36: '역사',
+        27: '공포',
+        10402: '음악',
+        9648: '미스테리',
+        10749: '로맨스',
+        878: 'SF',
+        53: '스릴러',
+        10752: '전쟁',
+        37: '서부',
+    }
+
     url = 'https://api.themoviedb.org/3'  
 
     path_now_playing = '/movie/now_playing'
@@ -50,26 +71,6 @@ def movie_list(request):
                 # 장르 id => 한글화 작업
                 genres = movie['genre_ids']
                 movie_genres = []
-                genres_dict = {
-                    28: '액션',
-                    12: '모험',
-                    16: '애니메이션',
-                    35: '코미디',
-                    80: '범죄',
-                    99: '다큐멘터리',
-                    18: '드라마',
-                    10751: '가족',
-                    14: '판타지',
-                    36: '역사',
-                    27: '공포',
-                    10402: '음악',
-                    9648: '미스테리',
-                    10749: '로맨스',
-                    878: 'SF',
-                    53: '스릴러',
-                    10752: '전쟁',
-                    37: '서부',
-                }
                 for genre in genres:
                     if genres_dict[genre]:
                         movie_genres.append(genres_dict[genre])
