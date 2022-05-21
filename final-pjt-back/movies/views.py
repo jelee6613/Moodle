@@ -274,6 +274,7 @@ def movie_create(request):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def movie_detail(request, movie_title):
     movie = get_object_or_404(Movie, title=movie_title)
     serializer = MovieDetailSerializer(movie)
