@@ -25,26 +25,25 @@ export default ({
     SET_MOVIE: (state, movie) => state.movie = movie
   },
   actions: {
-    fetchMoviesUpdate({ commit, getters }) {
+    fetchMoviesSearch({ getters }, keyword) {
       // 관리자 권한만 TMDB API 통신 요청하기
       // POST: movies movies URL
       // 성공하면 응답으로 받은 영화 리스트를 state.movies에 저장
       // 실패하면 에러 메세지 표시
-      // state.movies 초기화 후 axios 통신
-      commit('SET_MOVIES', [])
 
       axios({
           url: drf.movies.getMovies(),
           method: 'post',
+          data: keyword,
           headers: getters.authHeader
       })
-        .then( res => {
-          commit('SET_MOVIES', res.data)
-          commit('SET_NOW_PLAYINGS', res.data.now_playing)
-          commit('SET_UPCOMINGS', res.data.upcoming)
-          commit('SET_POPULARS', res.data.popular)
+        .then( () => {
+          alert('영화가 추가되었습니다.')
+          // commit('SET_MOVIES', res.data)
         })
-        .catch( err => console.error(err))
+        .catch( err => {
+          console.error(err)
+        })
     },
     fetchMovies({ commit }) {
       // 영화 목록 페이지 받아오기

@@ -3,7 +3,11 @@
     <p>MovieListView</p>
 
     <div>
-      <button @click="fetchMoviesUpdate">TMDB API 불러오기</button>
+      <form @submit="fetchMoviesSearch">
+        <label for="keyword">검색어</label>
+        <input type="text" v-model="keyword" id="keyword" required>
+      </form>
+      <!-- <button @click="fetchMoviesUpdate">TMDB API 불러오기</button> -->
     </div>
 
     <div>
@@ -30,12 +34,6 @@
         :movie="upcoming"
       ></movie-list-item>
     </div>
-
-    <!-- <movie-list-item
-      v-for="movie in movies"
-      :key="movie.pk"
-      :movie="movie"
-    ></movie-list-item> -->
   </div>
 </template>
 
@@ -45,14 +43,19 @@ import MovieListItem from '@/components/MovieListItem.vue'
 
 export default {
   name: 'MovieListView',
+  data() {
+    return {
+      keyword: ''
+    }
+  },
   components: { MovieListItem },
   computed: {
     ...mapGetters(['nowPlayings', 'upcomings', 'populars'])
   },
   methods: {
-    ...mapActions(['fetchMoviesUpdate', 'fetchMovies'])
+    ...mapActions(['fetchMoviesSearch', 'fetchMovies'])
   },
-  created() {
+  mounted() {
     this.fetchMovies()
   },
 }
