@@ -16,10 +16,11 @@ export default {
     },
     movies: {
         movies: () => HOST,
+        getMovies: () => HOST + MOVIES,
         movie: moviePk => HOST + MOVIES + moviePk,
         movieRecommendation: () => HOST + MOVIES + 'recommendations/',
-        watchedMovie: (username, moviePk) => HOST + MOVIES + username + '/watched/' + moviePk,
-        movieRate: (username, moviePk) => HOST + MOVIES + username + '/watched/' + moviePk + '/rate/'
+        watchedMovie: moviePk => HOST + MOVIES + 'watched/' + moviePk,
+        movieRate: moviePk => HOST + MOVIES + 'watched/' + moviePk + '/rate/'
     },
     articles: {
         articles: () => HOST + COMMUNITY,
