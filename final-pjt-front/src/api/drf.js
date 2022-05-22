@@ -17,7 +17,7 @@ export default {
     movies: {
         movies: () => HOST,
         getMovies: () => HOST + MOVIES,
-        movie: movieTitle => HOST + MOVIES + movieTitle,
+        movie: moviePk => HOST + MOVIES + moviePk,
         movieRecommendation: () => HOST + MOVIES + 'recommendations/',
         watchedMovie: moviePk => HOST + MOVIES + 'watched/' + moviePk,
         movieRate: moviePk => HOST + MOVIES + 'watched/' + moviePk + '/rate/'

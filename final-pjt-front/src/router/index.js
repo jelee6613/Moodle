@@ -49,7 +49,7 @@ const routes = [
     component: MovieListView
   },
   {
-    path: '/movies/:movieTitle',
+    path: '/movies/:moviePk',
     name: 'movieDetail',
     component: MovieDetailView
   },

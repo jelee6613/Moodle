@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link
-      :to="{ name: 'movieDetail', params: { movieTitle: movie.title.trim() }}"
+      :to="{ name: 'movieDetail', params: { moviePk: movie.id }}"
     >{{ movie.title }}</router-link>
     {{ movie.poster_path }}
   </div>

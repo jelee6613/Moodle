@@ -16,7 +16,7 @@ export default {
   name: 'MovieDetailView',
   data() {
     return {
-      movieTitle: this.$route.params.movieTitle
+      moviePk: this.$route.params.moviePk
     }
   },
   computed: {
@@ -26,7 +26,7 @@ export default {
     ...mapActions(['fetchMovie'])
   },
   created() {
-    this.fetchMovie(this.movieTitle)
+    this.fetchMovie(this.moviePk)
   }
 }
 </script>
