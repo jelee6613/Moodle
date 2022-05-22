@@ -268,8 +268,9 @@ def movie_create(request):
 
 
 @api_view(['GET'])
-def movie_detail(request, movie_title):
-    movie = get_object_or_404(Movie, title=movie_title)
+@permission_classes([AllowAny])
+def movie_detail(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
     serializer = MovieDetailSerializer(movie)
     return Response(serializer.data)
 
