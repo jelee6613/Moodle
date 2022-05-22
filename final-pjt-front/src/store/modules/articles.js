@@ -107,37 +107,49 @@ export default ({
         .then( res => )
         .catch( err => console.error(err) )
     },
+    */
     createComment({ commit, getters }, { articlePk, content }) {
       // POST articles comments
+      const comment = { content }
+
       axios({
-        url: drf.articles.comments,
+        url: drf.articles.comments(articlePk),
         method: 'post',
+        data: comment,
         headers: getters.authHeader
       })
-        .then( res => )
+        .then( res => {
+          commit('SET_ARTICLE_COMMENTS', res.data)
+        })
         .catch( err => console.error(err) )
     },
     updateComment({ commit, getters }, { articlePk, commentPk, content }) {
       // PUT articles comment
+      const comment = { content }
+
       axios({
-        url: drf.articles.comment,
+        url: drf.articles.comment(articlePk, commentPk),
         method: 'put',
+        data: comment,
         headers: getters.authHeader
       })
-        .then( res => )
+        .then( res => {
+          commit('SET_ARTICLE_COMMENTS', res.data)
+        })
         .catch( err => console.error(err) )
     },
     deleteComment({ commit, getters }, { articlePk, commentPk }) {
       // DELETE articles comment
       axios({
-        url: drf.articles.comment,
+        url: drf.articles.comment(articlePk, commentPk),
         method: 'delete',
+        data: {},
         headers: getters.authHeader
       })
-        .then( res => )
+        .then( res => 
+          commit('SET_ARTICLE_COMMENTS', res.data))
         .catch( err => console.error(err) )
     }
-    */
   },
 })
   
