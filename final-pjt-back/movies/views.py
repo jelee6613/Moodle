@@ -14,172 +14,88 @@ from rest_framework.response import Response
 
 User = get_user_model()
 
+genres_dict = {
+    28: '액션',
+    12: '모험',
+    16: '애니메이션',
+    35: '코미디',
+    80: '범죄',
+    99: '다큐멘터리',
+    18: '드라마',
+    10751: '가족',
+    14: '판타지',
+    36: '역사',
+    27: '공포',
+    10402: '음악',
+    9648: '미스테리',
+    10749: '로맨스',
+    878: 'SF',
+    53: '스릴러',
+    10752: '전쟁',
+    37: '서부',
+}
+
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def movie_list(request):
-    genres_dict = {
-        28: '액션',
-        12: '모험',
-        16: '애니메이션',
-        35: '코미디',
-        80: '범죄',
-        99: '다큐멘터리',
-        18: '드라마',
-        10751: '가족',
-        14: '판타지',
-        36: '역사',
-        27: '공포',
-        10402: '음악',
-        9648: '미스테리',
-        10749: '로맨스',
-        878: 'SF',
-        53: '스릴러',
-        10752: '전쟁',
-        37: '서부',
-    }
 
-    url = 'https://api.themoviedb.org/3'  
-
-    path_now_playing = '/movie/now_playing'
-    path_upcoming = '/movie/upcoming'
-    path_popular = '/movie/popular'
-
+    URL = 'https://api.themoviedb.org/3'  
     api_key = '04f1192a9aa395adc14e461889d716f8'
     params = {
         'api_key': api_key,
         'language': 'ko',
     }
 
-    response_now_playing = requests.get(url+path_now_playing, params=params)
-    now_playing_json = response_now_playing.json()
-    now_playing_datas = now_playing_json['results']
-    
-    now_playing_movies = []
-    for movie in now_playing_datas:
-
-        # TMDB에서 title, overview, poster_path, release_date가 정상적인 영화만 가져옴
-        serializer = MovieValidationSerializer(data=movie)
-        if serializer.is_valid():
-    
-            if not Movie.objects.filter(poster_path=movie['poster_path']).exists():
-                
-                # 장르 id => 한글화 작업
-                genres = movie['genre_ids']
-                movie_genres = []
-                for genre in genres:
-                    if genres_dict[genre]:
-                        movie_genres.append(genres_dict[genre])
-
-                # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
-                movie_id = movie['id']
-                path_get_credits = f'/movie/{movie_id}/credits'
-                response_credits = requests.get(url+path_get_credits, params=params)
-                credits = response_credits.json()
-
-                # 영화 제작자 명단인 credits의 crew값을 변수화 => crews
-                crews = credits['crew']
-
-                # 직책이 Directing인 crew의 이름을 director 필드에 저장
-                for crew in crews:
-                    if crew['department'] == 'Directing':
-                        movie_director = crew['name']
-                        break
-                    
-                serializer.save(genre=movie_genres, director=movie_director)
- 
-            now_playing_movie = get_object_or_404(Movie, poster_path=movie['poster_path'])
-            serializer = MovieDetailSerializer(now_playing_movie)
-            now_playing_movies.append(serializer.data)
-
-
-    response_upcoming = requests.get(url+path_upcoming, params=params)
-    upcoming_json = response_upcoming.json()
-    upcoming_datas = upcoming_json['results']
-
-    upcoming_movies = []
-    for movie in upcoming_datas:
-        
-        # TMDB에서 title, overview, poster_path, release_date가 정상적인 영화만 가져옴
-        serializer = MovieValidationSerializer(data=movie)
-        if serializer.is_valid():
-    
-            if not Movie.objects.filter(poster_path=movie['poster_path']).exists():
-                
-                # 장르 id => 한글화 작업
-                genres = movie['genre_ids']
-                movie_genres = []
-                for genre in genres:
-                    if genres_dict[genre]:
-                        movie_genres.append(genres_dict[genre])
-
-                # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
-                movie_id = movie['id']
-                path_get_credits = f'/movie/{movie_id}/credits'
-                response_credits = requests.get(url+path_get_credits, params=params)
-                credits = response_credits.json()
-
-                # 영화 제작자 명단인 credits의 crew값을 변수화 => crews
-                crews = credits['crew']
-
-                # 직책이 Directing인 crew의 이름을 director 필드에 저장
-                for crew in crews:
-                    if crew['department'] == 'Directing':
-                        movie_director = crew['name']
-                        break
-                    
-                serializer.save(genre=movie_genres, director=movie_director)
-     
-            upcoming_movie = get_object_or_404(Movie, poster_path=movie['poster_path'])
-            serializer = MovieDetailSerializer(upcoming_movie)
-            upcoming_movies.append(serializer.data)
-
-
-    response_popular = requests.get(url+path_popular, params=params)
-    popular_json = response_popular.json()
-    popular_datas = popular_json['results']
-
-    popular_movies = []
-    for movie in popular_datas:
-        
-        # TMDB에서 title, overview, poster_path, release_date가 정상적인 영화만 가져옴
-        serializer = MovieValidationSerializer(data=movie)
-        if serializer.is_valid():
-    
-            if not Movie.objects.filter(poster_path=movie['poster_path']).exists():
-                
-                # 장르 id => 한글화 작업
-                genres = movie['genre_ids']
-                movie_genres = []
-                for genre in genres:
-                    if genres_dict[genre]:
-                        movie_genres.append(genres_dict[genre])
-
-                # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
-                movie_id = movie['id']
-                path_get_credits = f'/movie/{movie_id}/credits'
-                response_credits = requests.get(url+path_get_credits, params=params)
-                credits = response_credits.json()
-
-                # 영화 제작자 명단인 credits의 crew값을 변수화 => crews
-                crews = credits['crew']
-
-                # 직책이 Directing인 crew의 이름을 director 필드에 저장
-                for crew in crews:
-                    if crew['department'] == 'Directing':
-                        movie_director = crew['name']
-                        break
-                    
-                serializer.save(genre=movie_genres, director=movie_director)
-            
-            popular_movie = get_object_or_404(Movie, poster_path=movie['poster_path'])
-            serializer = MovieDetailSerializer(popular_movie)
-            popular_movies.append(serializer.data)
+    GET_MOVIES_PATHS_DICT = {
+        'now_playing': '/movie/now_playing',
+        'upcoming': '/movie/upcoming',
+        'popular': '/movie/popular',
+    }
 
     res = {
-        'now_playing': now_playing_movies,
-        'upcoming': upcoming_movies,
-        'popular': popular_movies,
+
     }
+
+    for GET_MOVIES_PATH_NAME, GET_MOVIES_PATH in GET_MOVIES_PATHS_DICT.items():
+        response_movies = requests.get(URL+GET_MOVIES_PATH, params=params)
+        response_movies_json = response_movies.json()
+        movies_data = response_movies_json['results']
+
+        movies = []
+        for movie_data in movies_data:
+
+            serializer = MovieValidationSerializer(data=movie_data)
+            if serializer.is_valid():
+                if not Movie.objects.filter(poster_path=movie_data['poster_path']).exists():
+                
+                    # 장르 id => 한글화 작업
+                    genres_datas = movie_data['genre_ids']
+                    movie_genres = []
+                    for genre_data in genres_datas:
+                        if genres_dict[genre_data]:
+                            movie_genres.append(genres_dict[genre_data])
+
+                    # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
+                    GET_CREDITS_PATH = f'/movie/{movie_data["id"]}/credits'
+                    response_credits = requests.get(URL+GET_CREDITS_PATH, params=params)
+                    response_credits_json = response_credits.json()
+
+                    # 영화 제작자 명단인 credits의 crew값을 변수화 => crews
+                    crews_data = response_credits_json['crew']
+
+                    # 직책이 Directing인 crew의 이름을 director 필드에 저장
+                    for crew_data in crews_data:
+                        if crew_data['department'] == 'Directing':
+                            movie_director = crew_data['name']
+                            break
+                        
+                    serializer.save(genre=movie_genres, director=movie_director)
+    
+                movie = get_object_or_404(Movie, poster_path=movie_data['poster_path'])
+                serializer = MovieDetailSerializer(movie)
+                movies.append(serializer.data)
+        
+        res[GET_MOVIES_PATH_NAME] = movies
 
     return Response(res)
 
@@ -187,82 +103,53 @@ def movie_list(request):
 @permission_classes([IsAdminUser])
 def movie_create(request):
 
-    url = 'https://api.themoviedb.org/3'
-    path_get_movie_list = '/search/movie'
+    URL = 'https://api.themoviedb.org/3'
     api_key = '04f1192a9aa395adc14e461889d716f8'
-
-    keyword = request.data
-
     params = {
         'api_key': api_key,
         'query': keyword,
         'language': 'ko'
     }
+    keyword = request.data
+    
+    SEARCH_MOVIES_PATH = '/search/movie'
 
-    response_movie_list = requests.get(url+path_get_movie_list, params=params)
-    movie_list = response_movie_list.json()
-    movies = movie_list['results']
+    response_movies = requests.get(URL+SEARCH_MOVIES_PATH, params=params)
+    response_movies_json = response_movies.json()
+    movies_data = response_credits_json['results']
 
     # 전체 영화 for문 순회
-    for movie in movies:
+    for movie_data in movies_data:
+
+        # TMDB에서 title, overview, poster_path, release_date가 정상적인 영화만 가져옴
+        serializer = MovieValidationSerializer(data=movie_data)
+        if serializer.is_valid():
         
-        if not Movie.objects.filter(title=movie['title']).exists():
-
-            serializer = MovieValidationSerializer(data=movie)
-            if serializer.is_valid():
+            if not Movie.objects.filter(poster_path=movie_data['poster_path']).exists():
                 
-                # Movie에 넣을 영화 객체 만들기
-                new_movie = Movie()
-                new_movie.title = movie['title']
-                new_movie.overview = movie['overview']
-                new_movie.poster_path = movie['poster_path']
-                new_movie.release_date = movie['release_date']
-
                 # 장르 id => 한글화 작업
-                genres = movie['genre_ids']
+                genres = movie_data['genre_ids']
                 movie_genres = []
-                genres_dict = {
-                    28: '액션',
-                    12: '모험',
-                    16: '애니메이션',
-                    35: '코미디',
-                    80: '범죄',
-                    99: '다큐멘터리',
-                    18: '드라마',
-                    10751: '가족',
-                    14: '판타지',
-                    36: '역사',
-                    27: '공포',
-                    10402: '음악',
-                    9648: '미스테리',
-                    10749: '로맨스',
-                    878: 'SF',
-                    53: '스릴러',
-                    10752: '전쟁',
-                    37: '서부',
-                }
+            
                 for genre in genres:
                     if genres_dict[genre]:
                         movie_genres.append(genres_dict[genre])
 
-                new_movie.genre = movie_genres
-
                 # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
-                movie_id = movie['id']
-                path_get_credits = f'/movie/{movie_id}/credits'
-                response_credits = requests.get(url+path_get_credits, params=params)
-                credits = response_credits.json()
+                GET_CREDITS_PATH = f'/movie/{movie_data["id"]}/credits'
+                response_credits = requests.get(URL+GET_CREDITS_PATH, params=params)
+                response_credits_json = response_credits.json()
 
                 # 영화 제작자 명단인 credits의 crew값을 변수화 => crews
-                crews = credits['crew']
+                crews_data = response_credits_json['crew']
 
                 # 직책이 Directing인 crew의 이름을 director 필드에 저장
-                for crew in crews:
-                    if crew['department'] == 'Directing':
-                        new_movie.director = crew['name']
+                for crew_data in crews_data:
+                    if crew_data['department'] == 'Directing':
+                        movie_director = crew_data['name']
                         break
 
-                new_movie.save()
+                serializer.save(genre=movie_genres, director=movie_director)
 
     return Response(status=status.HTTP_201_CREATED)
 
