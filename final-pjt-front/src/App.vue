@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <router-link :to="{ name: 'signup' }">Signup</router-link>
-    <router-link :to="{ name: 'login' }">Login</router-link>
-    <router-link :to="{ name: 'logout' }">Logout</router-link>
+    <router-link :to="{ name: 'movieList' }">Home</router-link> | 
+    <router-link :to="{ name: 'signup' }">Signup</router-link> | 
+    <router-link :to="{ name: 'login' }">Login</router-link> | 
+    <router-link :to="{ name: 'logout' }">Logout</router-link> | 
+    <router-link :to="{ name: 'articleList' }">Community</router-link>
 
     <p>반갑습니다. {{ user.username }}님!</p>
     <router-view/>
@@ -17,7 +19,7 @@ export default {
   computed: {
     ...mapGetters(['currentUser']),
     user() {
-      return JSON.parse(this.currentUser)
+      return JSON.parse(JSON.stringify(this.currentUser))
     }
   }
 }

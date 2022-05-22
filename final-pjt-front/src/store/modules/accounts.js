@@ -10,7 +10,6 @@ export default {
     authError: null,
   },
   getters: {
-    // isSuperUser: state => state.currentUser.is_superuser,
     isLoggedIn: state => !!state.token,
     currentUser: state => state.currentUser,
     profile: state => state.profile,
@@ -30,8 +29,9 @@ export default {
     },
     removeToken({ commit }) {
       commit('SET_TOKEN', '')
-      localStorage.setItem('token', '')
-      localStorage.setItem('user', {})
+      localStorage.removeItem('vuex')
+      // localStorage.setItem('token', '')
+      // localStorage.setItem('user', {})
     },
     signup({ commit, dispatch }, credentials) {
       // 회원가입
@@ -97,8 +97,8 @@ export default {
           headers: getters.authHeader
         })
           .then( res => {
-            const user = JSON.stringify(res.data)
-            commit('SET_CURRENT_USER', user)
+            // const user = JSON.stringify(res.data)
+            commit('SET_CURRENT_USER', res.data)
           })
           .catch( err => {
             if (err.response.data === 401) {

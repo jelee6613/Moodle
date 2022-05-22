@@ -3,7 +3,7 @@
     <p>MovieListView</p>
 
     <div>
-      <form @submit.prevent="fetchMoviesSearch(keyword)">
+      <form @submit.prevent="onSubmit">
         <label for="keyword">검색어</label>
         <input type="text" v-model="keyword" id="keyword" required>
       </form>
@@ -53,9 +53,13 @@ export default {
     ...mapGetters(['nowPlayings', 'upcomings', 'populars'])
   },
   methods: {
-    ...mapActions(['fetchMoviesSearch', 'fetchMovies'])
+    ...mapActions(['fetchMoviesSearch', 'fetchMovies']),
+    onSubmit() {
+      this.fetchMoviesSearch(this.keyword)
+      this.keyword = ''
+    }
   },
-  mounted() {
+  created() {
     this.fetchMovies()
   },
 }

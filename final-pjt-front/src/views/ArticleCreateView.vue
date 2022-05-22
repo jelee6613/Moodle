@@ -1,18 +1,25 @@
 <template>
   <div>
-    <article-form></article-form>
+    <h1>New Article</h1>
+    <article-form :article="article" action="create"></article-form>
   </div>
 </template>
 
 <script>
-import ArticleForm from '../components/ArticleForm.vue'
-
+import ArticleForm from '@/components/ArticleForm.vue'
 
 export default {
     name: 'ArticleCreateView',
-    components: {
-      ArticleForm,
-    },
+    components: { ArticleForm },
+    data() {
+      return {
+        article: {
+          pk: null,
+          title: '',
+          content: ''
+        }
+      }
+    }
 }
 </script>
 
