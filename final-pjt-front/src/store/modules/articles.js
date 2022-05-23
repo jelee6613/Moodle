@@ -145,11 +145,7 @@ export default {
         headers: getters.authHeader
       })
         .then( res => {
-          console.log(res)
-          if (res.status === 204) {
-            alert('정상적으로 삭제되었습니다.')
-            commit('SET_ARTICLE_COMMENTS', res.data)
-          }
+          alert('정상적으로 삭제되었습니다.')
           commit('SET_ARTICLE_COMMENTS', res.data)
         })
         .catch( err => console.error(err) )
