@@ -12,7 +12,7 @@
 
     <!-- Article Edit/Delete -->
     <div v-if="isAuthor">
-      <router-link :to="{ name: 'articleEdit', params: { articlePk: articlePk }}">
+      <router-link :to="{ name: 'articleEdit', params: { articlePk }}">
         <button>수정</button>
       </router-link>
       |
@@ -21,7 +21,8 @@
 
     <!-- Article Like -->
     <div>
-      좋아요: {{ likecount }}
+      좋아요: {{ article.like_count }}
+      <button @click="likeArticle(articlePk)">좋아요</button>
     </div>
 
     <hr />
@@ -52,7 +53,7 @@ export default {
       }
     },
     methods: {
-      ...mapActions(['fetchArticle', 'deleteArticle'])
+      ...mapActions(['fetchArticle', 'deleteArticle', 'likeArticle']),
     },
     created() {
       this.fetchArticle(this.articlePk)

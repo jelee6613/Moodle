@@ -1,15 +1,17 @@
 <template>
   <div class="main" id="app">
-    <router-link :to="{ name: 'movieList' }">Home</router-link>
-    <router-link :to="{ name: 'logout' }" v-if="isLoggedIn">Logout</router-link>
-    <div class="d-inline" v-else>
-      <router-link :to="{ name: 'signup' }">Signup</router-link> 
-      <router-link :to="{ name: 'login' }">Login</router-link>
-    </div>
-    <router-link :to="{ name: 'articleList' }">Community</router-link>
+    <div class="container">
+      <router-link :to="{ name: 'movieList' }">Home</router-link>
+      <router-link :to="{ name: 'logout' }" v-if="isLoggedIn">Logout</router-link>
+      <div class="d-inline" v-else>
+        <router-link :to="{ name: 'signup' }">Signup</router-link> 
+        <router-link :to="{ name: 'login' }">Login</router-link>
+      </div>
+      <router-link :to="{ name: 'articleList' }">Community</router-link>
 
-    <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
-    <router-view/>
+      <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
+      <router-view/>  
+    </div>
   </div>
 </template>
 

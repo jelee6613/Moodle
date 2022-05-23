@@ -34,12 +34,12 @@ const routes = [
     component: SignupView
   },
   {
-    path: '/accounts/profile/:username',
+    path: '/accounts/:username',
     name: 'profile',
     component: ProfileView
   },
   {
-    path: '/accounts/profile/:username/watched',
+    path: '/accounts/:username/watched',
     name: 'watched',
     component: WatchedView
   },
