@@ -73,6 +73,7 @@ export default {
         headers: getters.authHeader
       })
         .then( res => {
+          console.log(res)
           commit('SET_ARTICLE', res.data)
           router.push({
             name: 'articleDetail',
@@ -91,7 +92,7 @@ export default {
         })
           .then( () => {
             commit('SET_ARTICLE', {})
-            router.push({ name: 'articles' })
+            router.push({ name: 'articleList' })
           })
           .catch( err => console.error(err) )
       }
