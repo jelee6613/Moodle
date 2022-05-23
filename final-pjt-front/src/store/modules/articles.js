@@ -19,7 +19,7 @@ export default {
   mutations: {
     SET_ARTICLES: (state, articles) => state.articles = articles,
     SET_ARTICLE: (state, article) => state.article = article,
-    SET_ARTICLE_COMMENTS: (state, comments) => { state.article.comments = comments }
+    SET_ARTICLE_COMMENTS: (state, comments) => { state.article.comment_set = comments }
   },
   actions: {
     fetchArticles({ commit, getters }) {
