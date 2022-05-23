@@ -59,7 +59,6 @@ def comment_create(request, article_id):
     serializer = CommentSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(user=request.user, article=article)
-    # comments = Comment.objects.all().filter(article_id=article_id)
     serializer = CommentSerializer(article.comment_set, many=True)
     return Response(serializer.data)
 
