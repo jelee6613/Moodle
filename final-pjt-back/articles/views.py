@@ -56,10 +56,12 @@ def article_like_or_cancel(request, article_id):
 @api_view(['POST'])
 def comment_create(request, article_id):
     article = get_object_or_404(Article, pk=article_id)
-    serializer = ArticleSerializer(data=request.data)
+    serializer = CommentSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(user=request.user, article=article)
-        return Response(serializer.data)
+    # comments = Comment.objects.all().filter(article_id=article_id)
+    serializer = CommentSerializer(article.comment_set, many=True)
+    return Response(serializer.data)
 
 @api_view(['PUT', 'DELETE'])
 def comment_update_or_delete(request, article_id, comment_id):
@@ -69,9 +71,10 @@ def comment_update_or_delete(request, article_id, comment_id):
         serializer = CommentSerializer(comment, data=request.data)
         if serializer.is_valid(raise_exception=True):
             serializer.save()
+            serializer = CommentSerializer(article.comment_set, many=True)
             return Response(serializer.data)
     
     elif request.method=='DELETE':
         comment.delete()
-        serializer = ArticleSerializer(article)
-        return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
+        serializer = CommentSerializer(article.comment_set, many=True)
+        return Response(serializer.data)

@@ -28,7 +28,7 @@
     <hr />
 
     <!-- Comments -->
-    <comment-list :comments="article.comments"></comment-list>
+    <comment-list :comments="article.comment_set"></comment-list>
   </div>
 </template>
 

@@ -26,7 +26,7 @@ export default {
         articles: () => HOST + COMMUNITY,
         article: articlePk => HOST + COMMUNITY + articlePk + '/',
         comments: articlePk => HOST + COMMUNITY + articlePk + '/comment/',
-        comment: (articlePk, commentPk) => HOST + COMMUNITY + `${articlePk}/` + 'comment/' + commentPk + '/',
+        comment: (articlePk, commentPk) => HOST + COMMUNITY + articlePk + '/comment/' + commentPk + '/',
         likeArticle: articlePk => HOST + COMMUNITY + articlePk + '/like/'
     }
 }

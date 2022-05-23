@@ -6,7 +6,7 @@
 
     <div>
       <ul>
-        <li v-for="article in articles" :key="article.pk">
+        <li v-for="article in articles" :key="article.id">
 
           <router-link :to="{ name: 'articleDetail', params: { articlePk: article.id }}">
             {{ article.title }}

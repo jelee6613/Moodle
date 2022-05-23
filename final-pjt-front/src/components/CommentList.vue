@@ -3,7 +3,7 @@
     <ul>
       <comment-list-item
         v-for="comment in comments"
-        :key="comment.pk"
+        :key="comment.id"
         :comment="comment"
       ></comment-list-item>
     </ul>
