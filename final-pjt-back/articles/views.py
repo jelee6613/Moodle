@@ -56,7 +56,7 @@ def article_like_or_cancel(request, article_id):
 @api_view(['POST'])
 def comment_create(request, article_id):
     article = get_object_or_404(Article, pk=article_id)
-    serializer = CommentSerializer(data=request.data)
+    serializer = ArticleSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(user=request.user, article=article)
         return Response(serializer.data)
