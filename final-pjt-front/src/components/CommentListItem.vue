@@ -13,7 +13,7 @@
         <button @click="switchIsEditing">취소</button>
       </span>
 
-      <span v-if="user.username === comment.user.username && !isEditing">
+      <span v-if="currentUser.username === comment.user.username && !isEditing">
         <button @click="switchIsEditing">수정</button>
         <button @click="deleteComment(payload)">삭제</button>
       </span>
@@ -41,9 +41,9 @@ export default {
     },
     computed: {
       ...mapGetters(['currentUser']),
-      user() {
-        return JSON.parse(JSON.stringify(this.currentUser))
-      }
+      // user() {
+      //   return JSON.parse(JSON.stringify(this.currentUser))
+      // }
     },
     methods: {
       ...mapActions(['updateComment', 'createComment']),
