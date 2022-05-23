@@ -59,7 +59,7 @@ export default {
           commit('SET_ARTICLE', res.data)
           router.push({
             name: 'articleDetail',
-            params: { articlePk: getters.article.pk }
+            params: { articlePk: getters.article.id }
           })
         })
         .catch( err => console.error(err) )
@@ -76,7 +76,7 @@ export default {
           commit('SET_ARTICLE', res.data)
           router.push({
             name: 'articleDetail',
-            params: { articlePk: getters.article.pk }
+            params: { articlePk: getters.article.id }
           })
         })
         .catch( err => console.error(err) )
@@ -96,18 +96,16 @@ export default {
           .catch( err => console.error(err) )
       }
     },
-    /*
     likeArticle({ commit, getters }, articlePk) {
       // POST articles likeArticle
       axios({
-        url: drf.articles.likeArticle,
+        url: drf.articles.likeArticle(articlePk),
         method: 'post',
         headers: getters.authHeader
       })
-        .then( res => )
+        .then( res => commit('SET_ARTICLE', res.data ))
         .catch( err => console.error(err) )
     },
-    */
     createComment({ commit, getters }, { articlePk, content }) {
       // POST articles comments
       const comment = { content }
@@ -125,7 +123,7 @@ export default {
     },
     updateComment({ commit, getters }, { articlePk, commentPk, content }) {
       // PUT articles comment
-      const comment = { content }
+      const comment = ({ content })
 
       axios({
         url: drf.articles.comment(articlePk, commentPk),
