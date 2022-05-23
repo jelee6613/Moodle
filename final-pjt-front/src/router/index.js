@@ -74,7 +74,7 @@ const routes = [
     component: ArticleCreateView
   },
   {
-    path: '/community/:articleId/edit',
+    path: '/community/:articlePk/edit',
     name: 'articleEdit',
     component: ArticleEditView
   },

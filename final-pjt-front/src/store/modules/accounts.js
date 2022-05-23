@@ -25,13 +25,13 @@ export default {
   actions: {
     saveToken({ commit }, token) {
       commit('SET_TOKEN', token)
-      // localStorage.setItem('token', token)
+      localStorage.setItem('token', token)
     },
     removeToken({ commit }) {
       commit('SET_TOKEN', '')
+      commit('SET_AUTH_ERROR', null)
       localStorage.removeItem('vuex')
-      // localStorage.setItem('token', '')
-      // localStorage.setItem('user', {})
+      localStorage.setItem('token', '')
     },
     signup({ commit, dispatch }, credentials) {
       // 회원가입
@@ -50,7 +50,6 @@ export default {
           router.push({ name: 'movieList' })
         })
         .catch( err => {
-          console.error(err.response.data)
           commit('SET_AUTH_ERROR', err.response.data)
         })
     },

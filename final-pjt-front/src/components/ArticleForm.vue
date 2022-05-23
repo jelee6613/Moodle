@@ -41,7 +41,7 @@ export default {
         this.createArticle(this.newArticle)
       } else if (this.action === 'update') {
         const payload = {
-          pk: this.article.pk,
+          pk: this.article.id,
           ...this.newArticle          
         }
         this.updateArticle(payload)

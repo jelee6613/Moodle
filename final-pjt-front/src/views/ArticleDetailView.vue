@@ -12,7 +12,7 @@
 
     <!-- Article Edit/Delete -->
     <div v-if="isAuthor">
-      <router-link :to="{ name: 'articleEdit', params: { articlePk }}">
+      <router-link :to="{ name: 'articleEdit', params: { articlePk: articlePk }}">
         <button>수정</button>
       </router-link>
       |
