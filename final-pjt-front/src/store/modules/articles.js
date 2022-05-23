@@ -3,7 +3,7 @@ import router from '@/router'
 import axios from 'axios'
 import _ from 'lodash'
 
-export default ({
+export default {
   state: {
     articles: [],
     article: {},
@@ -25,17 +25,17 @@ export default ({
     fetchArticles({ commit, getters }) {
       // GET articles articles
       axios({
-        url: drf.articles.articles,
+        url: drf.articles.articles(),
         method: 'get',
         headers: getters.authHeader
       })
         .then( res => commit('SET_ARTICLES', res.data) )
         .catch( err => console.error(err) )
     },
-    fetchArticle({ commit, getters }) {
+    fetchArticle({ commit, getters }, articlePk) {
       // GET articles article
       axios({
-        url: drf.articles.article,
+        url: drf.articles.article(articlePk),
         method: 'get',
         headers: getters.authHeader
       })
@@ -50,7 +50,7 @@ export default ({
     createArticle({ commit, getters }, article) {
       // POST articles articles
       axios({
-        url: drf.articles.articles,
+        url: drf.articles.articles(),
         method: 'post',
         data: article,
         headers: getters.authHeader
@@ -58,7 +58,7 @@ export default ({
         .then( res => {
           commit('SET_ARTICLE', res.data)
           router.push({
-            name: 'articlearticleDetail',
+            name: 'articleDetail',
             params: { articlePk: getters.article.pk }
           })
         })
@@ -75,7 +75,7 @@ export default ({
         .then( res => {
           commit('SET_ARTICLE', res.data)
           router.push({
-            name: 'articlearticleDetail',
+            name: 'articleDetail',
             params: { articlePk: getters.article.pk }
           })
         })
@@ -151,5 +151,5 @@ export default ({
         .catch( err => console.error(err) )
     }
   },
-})
+}
   
