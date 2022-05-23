@@ -144,8 +144,14 @@ export default {
         data: {},
         headers: getters.authHeader
       })
-        .then( res => 
-          commit('SET_ARTICLE_COMMENTS', res.data))
+        .then( res => {
+          console.log(res)
+          if (res.status === 204) {
+            alert('정상적으로 삭제되었습니다.')
+            commit('SET_ARTICLE_COMMENTS', res.data)
+          }
+          commit('SET_ARTICLE_COMMENTS', res.data)
+        })
         .catch( err => console.error(err) )
     }
   },
