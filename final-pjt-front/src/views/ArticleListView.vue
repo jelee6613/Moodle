@@ -8,7 +8,7 @@
       <ul>
         <li v-for="article in articles" :key="article.pk">
 
-          <router-link :to="{ name: 'articleDetail', params: {articlePk: article.pk}}">
+          <router-link :to="{ name: 'articleDetail', params: { articlePk: article.id }}">
             {{ article.title }}
           </router-link>
 
