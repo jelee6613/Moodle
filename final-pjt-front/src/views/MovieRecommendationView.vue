@@ -1,16 +1,17 @@
 <template>
   <div>
-    <router-link :to="{ name: 'RecommendedList'}">Recommended List</router-link>
     <quiz-form></quiz-form>
+    <recommended-list></recommended-list>
   </div>
 </template>
 
 <script>
 import QuizForm from '@/components/QuizForm.vue'
+import RecommendedList from '@/components/RecommendedList.vue'
 
 export default {
   name: 'MovieRecommendationView',
-  components: { QuizForm }
+  components: { QuizForm, RecommendedList }
 }
 </script>
 

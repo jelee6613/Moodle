@@ -104,7 +104,9 @@ export default {
         method: 'post',
         headers: getters.authHeader
       })
-        .then( res => commit('SET_ARTICLE', res.data ))
+        .then( res => {
+          commit('SET_ARTICLE', res.data )
+        })
         .catch( err => console.error(err) )
     },
     createComment({ commit, getters }, { articlePk, content }) {
