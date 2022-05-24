@@ -1,15 +1,32 @@
 <template>
   <div class="main" id="app">
-    <div class="container">
-      <router-link :to="{ name: 'movieList' }">Home</router-link>
-      <router-link :to="{ name: 'logout' }" v-if="isLoggedIn">Logout</router-link>
-      <div class="d-inline" v-else>
-        <router-link :to="{ name: 'signup' }">Signup</router-link> 
-        <router-link :to="{ name: 'login' }">Login</router-link>
+    <nav class="navbar navbar-expand-lg bg-none">
+      <router-link :to="{ name: 'movieList' }">
+        <img class="logo mr-4" src="https://lab.ssafy.com/uploads/-/system/appearance/header_logo/1/ssafy_logo.png" alt="">
+      </router-link>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav me-auto">
+          <li class="m-3">
+            <router-link :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
+          </li>
+          <li class="m-3">
+            <router-link :to="{ name: 'articleList' }">커뮤니티</router-link>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <router-link class="m-3" :to="{ name: 'logout' }" v-if="isLoggedIn">로그아웃</router-link>
+          <router-link class="m-3" :to="{ name: 'signup' }" v-if="!isLoggedIn">회원가입</router-link> 
+          <router-link class="m-3" :to="{ name: 'login' }" v-if="!isLoggedIn">로그인</router-link>
+        </div>
       </div>
-      <router-link :to="{ name: 'articleList' }">Community</router-link>
-
-      <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
+      </div>
       <router-view/>  
     </div>
   </div>
@@ -43,23 +60,46 @@ export default {
     font-style: normal;
 }
 
+body {
+  background-color: #26282B;
+}
+
 #app {
   font-family: IBMPlexSansKR-Regular, InfinitySans-RegularA1, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #fff !important;
 }
 
 nav {
-  padding: 30px;
+  padding: 1.2rem !important;
 }
 
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #5f85db;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #90b8f8;
+}
+
+.navbar-toggler {
+  color: #ffffff !important;
+  border: none;
+}
+
+.logo {
+  max-width: 55px;
+  margin-right: 1rem;
+}
+
+.account {
+  flex-direction: column;
 }
 </style>

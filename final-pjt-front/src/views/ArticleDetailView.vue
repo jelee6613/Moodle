@@ -20,9 +20,15 @@
     </div>
 
     <!-- Article Like -->
-    <div>
-      좋아요: {{ article.like_count }}
-      <button @click="likeArticle(articlePk)">좋아요</button>
+    <div >
+      <!-- {{likedArticle}} -->
+      <button v-if="currentUser.like_articles.includes(article.id)" class="like-btn" @click="likeArticle(articlePk)">
+        <i class="fa-solid fa-heart"></i> 
+      </button>
+      <button v-else class="like-btn" @click="likeArticle(articlePk)">
+        <i class="fa-regular fa-heart"></i> 
+      </button>
+      <span>좋아요 {{ article.like_count }}개</span>
     </div>
 
     <hr />
@@ -47,10 +53,10 @@ export default {
       }
     },
     computed: {
-      ...mapGetters(['article', 'isAuthor']),
+      ...mapGetters(['article', 'isAuthor', 'currentUser']),
       likeCount() {
         return this.article.like_users?.length
-      }
+      },
     },
     methods: {
       ...mapActions(['fetchArticle', 'deleteArticle', 'likeArticle']),
@@ -62,5 +68,9 @@ export default {
 </script>
 
 <style>
-
+  .like-btn {
+    color: red;
+    background: none;
+    border: none;
+  }
 </style>

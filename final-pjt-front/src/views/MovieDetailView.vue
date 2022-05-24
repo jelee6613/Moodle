@@ -5,6 +5,7 @@
 
     <p>
       {{ movie }}
+      {{ movieGenres }}
     </p>
 
   </div>
@@ -20,7 +21,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['movie'])
+    ...mapGetters(['movie']),
+    movieGenres() {
+      return JSON.parse(this.movie.genre)
+    }
   },
   methods: {
     ...mapActions(['fetchMovie'])
