@@ -4,7 +4,9 @@ from django.contrib.auth import get_user_model
 import requests
 import json
 
-from .models import Movie, WatchedMovie
+from movies.serializers.quiz import QuestionSerializer, ValueSerializer
+
+from .models import Movie, WatchedMovie, Value, Question
 
 from .serializers.movie import MovieDetailSerializer, MovieValidationSerializer
 
@@ -169,49 +171,66 @@ def movie_detail(request, movie_id):
     return Response(serializer.data)
 
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def movie_recommendations(request):
-    results = request.data['results']
-    recommendable_director = max(set(results), key=results.count)
 
-    user_genres = {
-        '액션': 0,
-        '모험': 0,
-        '애니메이션': 0,
-        '코미디': 0,
-        '범죄': 0,
-        '다큐멘터리': 0,
-        '드라마': 0,
-        '가족': 0,
-        '판타지': 0,
-        '역사': 0,
-        '공포': 0,
-        '음악': 0,
-        '미스테리': 0,
-        '로맨스': 0,
-        'SF': 0,
-        '스릴러': 0,
-        '전쟁': 0,
-        '서부': 0,
-    }
+    if request.method == 'GET':
+        quizzes = Value.objects.all()
+        serializer = ValueSerializer(quizzes, many=True)
+        return Response(serializer.data)
 
-    # JSON 파싱도구
-    jsonDec = json.decoder.JSONDecoder()
-
-    movies = request.user.movies.all()
-
-    for movie in movies:
-        genres = jsonDec.decode(movie.genre)
-        for genre in genres:
-            user_genres[genre] += 1
-
-    favorite_genres = list(filter(lambda x: x[1] > 0, user_genres.items()))
-    favorite_genres = sorted(favorite_genres, key=lambda x: x[1], reverse=True)
-    
-    for favorite_genre in favorite_genres:
+    elif request.method == 'POST':
+        results = request.data['results']
+        recommendable_director = max(set(results), key=results.count)
         director_movies = Movie.objects.all().filter(director=recommendable_director)
-        print(director_movies)
-    return Response()
+
+        user_genres = {
+            '액션': 0,
+            '모험': 0,
+            '애니메이션': 0,
+            '코미디': 0,
+            '범죄': 0,
+            '다큐멘터리': 0,
+            '드라마': 0,
+            '가족': 0,
+            '판타지': 0,
+            '역사': 0,
+            '공포': 0,
+            '음악': 0,
+            '미스테리': 0,
+            '로맨스': 0,
+            'SF': 0,
+            '스릴러': 0,
+            '전쟁': 0,
+            '서부': 0,
+        }
+
+        # JSON 파싱도구
+        jsonDec = json.decoder.JSONDecoder()
+
+        movies = request.user.movies.all()
+
+        # 사용자가 본 영화를 순회 => 각 영화의 장르를 파싱 => user_genres에 카운트
+        for movie in movies:
+            genres = jsonDec.decode(movie.genre)
+            for genre in genres:
+                user_genres[genre] += 1
+
+        # user_genres의 value가 있는 값만(사용자가 본 장르만) 튜플 형태(장르, 카운트)로 리스트에 담고, 카운트값 기준으로 내림차순
+        favorite_genres = sorted(list(filter(lambda x: x[1], user_genres.items())), key=lambda x: x[1], reverse=True)
+
+        # 사용자가 많이 본 장르 기반으로 추천 감독의 해당 장르 영화가 있는 지 탐색 
+        for favorite_genre in favorite_genres:
+            if director_movies.filter(genre__contains=favorite_genre[0]).exists():
+                recommendable_movie = director_movies.filter(genre__contains=favorite_genre[0]).order_by('?').first()
+                break
+        
+        # 추천 감독의 작품 중에 사용자가 본 장르가 없다면 감독의 전체 작품 중에서 랜덤 
+        else:
+            recommendable_movie = director_movies.order_by('?').first()
+            
+        serializer = MovieDetailSerializer(recommendable_movie)
+        return Response(serializer.data)
 
 
 ## 삭제 예정

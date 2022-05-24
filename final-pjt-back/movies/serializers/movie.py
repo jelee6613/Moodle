@@ -1,6 +1,5 @@
-from django.forms import FloatField
 from rest_framework import serializers
-from ..models import Movie, WatchedMovie
+from ..models import Movie
 
 class MovieListSerializer(serializers.ModelSerializer):
     
