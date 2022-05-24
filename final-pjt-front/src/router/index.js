@@ -49,14 +49,14 @@ const routes = [
     component: MovieListView
   },
   {
-    path: '/movies/:moviePk',
-    name: 'movieDetail',
-    component: MovieDetailView
-  },
-  {
     path: '/movies/recommendations',
     name: 'movieRecommendation',
     component: MovieRecommendationView
+  },
+  {
+    path: '/movies/:moviePk',
+    name: 'movieDetail',
+    component: MovieDetailView
   },
   {
     path: '/community',
@@ -64,14 +64,14 @@ const routes = [
     component: ArticleListView
   },
   {
-    path: '/community/:articlePk',
-    name: 'articleDetail',
-    component: ArticleDetailView
-  },
-  {
     path: '/community/create',
     name: 'articleCreate',
     component: ArticleCreateView
+  },
+  {
+    path: '/community/:articlePk',
+    name: 'articleDetail',
+    component: ArticleDetailView
   },
   {
     path: '/community/:articlePk/edit',

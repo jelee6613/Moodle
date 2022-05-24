@@ -10,7 +10,6 @@ export default {
     movies: [],
     movie: {},
     quizzes: [],
-    results: [],
   },
   getters: {
     nowPlayings: state => state.nowPlayings,
@@ -90,7 +89,7 @@ export default {
           }
         })
     },
-    fetchQuiz({ getters, commit }) {  // choices는 감독 이름이 저장된 리스트
+    fetchQuiz({ getters, commit }) {
       // 퀴즈 내용 받아오기
       // GET movies movieRecommendation URL
       // 성공하면 응답으로 받은 퀴즈 문항을 state.quizzes에 저장
@@ -110,7 +109,7 @@ export default {
     findRecommendation({ getters, commit }, results) {
       // 추천 영화 받아오기
       // POST movies movieRecommendation URL
-      // 성공하면
+      // 성공하면 응답으로 받은 영화를 state.movie에 저장
       // 실패하면 에러 메세지 표시
       axios({
         url: drf.movies.movieRecommendation(),
