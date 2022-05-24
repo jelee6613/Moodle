@@ -20,9 +20,9 @@
     </div>
 
     <!-- Article Like -->
-    <div >
+    <div>
       <!-- {{likedArticle}} -->
-      <button v-if="currentUser.like_articles.includes(article.id)" class="like-btn" @click="likeArticle(articlePk)">
+      <button v-if="article.like_users.find((user) => user.pk === currentUser.pk)" class="like-btn" @click="likeArticle(articlePk)">
         <i class="fa-solid fa-heart"></i> 
       </button>
       <button v-else class="like-btn" @click="likeArticle(articlePk)">
@@ -56,7 +56,7 @@ export default {
       ...mapGetters(['article', 'isAuthor', 'currentUser']),
       likeCount() {
         return this.article.like_users?.length
-      },
+      }
     },
     methods: {
       ...mapActions(['fetchArticle', 'deleteArticle', 'likeArticle']),
