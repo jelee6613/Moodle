@@ -10,7 +10,6 @@ export default {
     movies: [],
     movie: {},
     quizzes: [],
-    results: [],
   },
   getters: {
     nowPlayings: state => state.nowPlayings,
@@ -27,7 +26,6 @@ export default {
     SET_MOVIES: (state, movies) => state.movies = movies,
     SET_MOVIE: (state, movie) => state.movie = movie,
     SET_QUIZZES: (state, quizzes) => state.quizzes = quizzes,
-    SET_RESULTS: (state, results) => state.results = results,
   },
   actions: {
     fetchMoviesSearch({ getters }, keyword) {

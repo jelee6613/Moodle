@@ -59,7 +59,7 @@ export default {
       }
     },
     computed: {
-      ...mapGetters(['quizzes', 'results']),
+      ...mapGetters(['quizzes']),
       newQuizzes() {
         return _.chunk(this.quizzes, this.step)
       },
