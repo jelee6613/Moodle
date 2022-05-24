@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth import get_user_model
 
 import requests
+import json
 
 from .models import Movie, WatchedMovie
 
@@ -74,6 +75,9 @@ def movie_list(request):
                     for genre_data in genres_datas:
                         if genres_dict[genre_data]:
                             movie_genres.append(genres_dict[genre_data])
+                    
+                    # list객체 JSON화 => 추후 필드에 저장 & 파싱해서 사용
+                    movie_genres_json = json.dumps(movie_genres)
 
                     # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
                     GET_CREDITS_PATH = f'/movie/{movie_data["id"]}/credits'
@@ -88,8 +92,8 @@ def movie_list(request):
                         if crew_data['department'] == 'Directing':
                             movie_director = crew_data['name']
                             break
-                        
-                    serializer.save(genre=movie_genres, director=movie_director)
+                    
+                    serializer.save(genre=movie_genres_json, director=movie_director)
     
                 movie = get_object_or_404(Movie, poster_path=movie_data['poster_path'])
                 serializer = MovieDetailSerializer(movie)
@@ -98,6 +102,7 @@ def movie_list(request):
         res[GET_MOVIES_PATH_NAME] = movies
 
     return Response(res)
+
 
 @api_view(['POST'])
 @permission_classes([IsAdminUser])
@@ -116,7 +121,7 @@ def movie_create(request):
 
     response_movies = requests.get(URL+SEARCH_MOVIES_PATH, params=params)
     response_movies_json = response_movies.json()
-    movies_data = response_credits_json['results']
+    movies_data = response_movies_json['results']
 
     # 전체 영화 for문 순회
     for movie_data in movies_data:
@@ -130,10 +135,12 @@ def movie_create(request):
                 # 장르 id => 한글화 작업
                 genres = movie_data['genre_ids']
                 movie_genres = []
-            
                 for genre in genres:
                     if genres_dict[genre]:
                         movie_genres.append(genres_dict[genre])
+                
+                # list객체 JSON화 => 추후 필드에 저장 & 파싱해서 사용
+                movie_genres_json = json.dumps(movie_genres)
 
                 # movie의 id값으로 TMDB credits path 요청해서 감독 이름 구하기
                 GET_CREDITS_PATH = f'/movie/{movie_data["id"]}/credits'
@@ -149,7 +156,7 @@ def movie_create(request):
                         movie_director = crew_data['name']
                         break
 
-                serializer.save(genre=movie_genres, director=movie_director)
+                serializer.save(genre=movie_genres_json, director=movie_director)
 
     return Response(status=status.HTTP_201_CREATED)
 
@@ -164,8 +171,50 @@ def movie_detail(request, movie_id):
 
 @api_view(['GET'])
 def movie_recommendations(request):
-    pass
+    results = request.data['results']
+    recommendable_director = max(set(results), key=results.count)
 
+    user_genres = {
+        '액션': 0,
+        '모험': 0,
+        '애니메이션': 0,
+        '코미디': 0,
+        '범죄': 0,
+        '다큐멘터리': 0,
+        '드라마': 0,
+        '가족': 0,
+        '판타지': 0,
+        '역사': 0,
+        '공포': 0,
+        '음악': 0,
+        '미스테리': 0,
+        '로맨스': 0,
+        'SF': 0,
+        '스릴러': 0,
+        '전쟁': 0,
+        '서부': 0,
+    }
+
+    # JSON 파싱도구
+    jsonDec = json.decoder.JSONDecoder()
+
+    movies = request.user.movies.all()
+
+    for movie in movies:
+        genres = jsonDec.decode(movie.genre)
+        for genre in genres:
+            user_genres[genre] += 1
+
+    favorite_genres = list(filter(lambda x: x[1] > 0, user_genres.items()))
+    favorite_genres = sorted(favorite_genres, key=lambda x: x[1], reverse=True)
+    
+    for favorite_genre in favorite_genres:
+        director_movies = Movie.objects.all().filter(director=recommendable_director)
+        print(director_movies)
+    return Response()
+
+
+## 삭제 예정
 @api_view(['POST'])
 def movie_watched(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
@@ -188,10 +237,22 @@ def movie_rate(request, movie_id):
         # WatchedMovie 테이블에서 요청 유저가 해당 영화를 봤다는 data 변수화
         watched_movie = get_object_or_404(WatchedMovie, movie_id=movie_id, user_id=request.user.id)
 
-        # 요청 data에 rate을 watched_movie의 rate필드에 저장
-        if 5 >= request.data['rate'] >= 0:
+        # 평가했던 평점 그대로 재요청 보내면 내가 본 영화에서 삭제
+        if request.data['rate'] == watched_movie.rate:
+            request.user.movies.remove(movie)
+
+        else:
+            if 5 >= request.data['rate'] >= 0.5:
+                # 요청 data의 rate를 watched_movie의 rate필드에 저장/갱신
+                watched_movie.rate = request.data['rate']
+                watched_movie.save()
+    
+    else:
+        if 5 >= request.data['rate'] >= 0.5:
+            request.user.movies.add(movie)
+            watched_movie = get_object_or_404(WatchedMovie, movie_id=movie_id, user_id=request.user.id)
             watched_movie.rate = request.data['rate']
             watched_movie.save()
-    
+
     serializer = MovieDetailSerializer(movie)
     return Response(serializer.data)
