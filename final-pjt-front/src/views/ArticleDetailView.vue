@@ -21,7 +21,6 @@
 
     <!-- Article Like -->
     <div>
-      <!-- {{likedArticle}} -->
       <button v-if="article.like_users.find((user) => user.pk === currentUser.pk)" class="like-btn" @click="likeArticle(articlePk)">
         <i class="fa-solid fa-heart"></i> 
       </button>
