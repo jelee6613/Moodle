@@ -9,6 +9,7 @@ class Movie(models.Model):
     genre = models.CharField(max_length=30)
     overview = models.TextField()
     poster_path = models.TextField()
+    backdrop_path = models.TextField()
     director = models.CharField(max_length=30)
     average_vote = models.FloatField(default=0.0)
     release_date = models.DateField(null=True)

@@ -175,12 +175,18 @@ def movie_detail(request, movie_id):
 def movie_recommendations(request):
 
     if request.method == 'GET':
-        quizzes = Value.objects.all()
-        serializer = ValueSerializer(quizzes, many=True)
+        quizzes = Question.objects.all()
+        serializer = QuestionSerializer(quizzes, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        results = request.data['results']
+        # results = request.data['results']
+        
+        results = []
+        for value_id in request.data:
+            value = get_object_or_404(Value, id=value_id)
+            results.append(value.director)
+
         recommendable_director = max(set(results), key=results.count)
         director_movies = Movie.objects.all().filter(director=recommendable_director)
 
