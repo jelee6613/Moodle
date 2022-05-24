@@ -9,6 +9,8 @@ export default {
     populars: [],
     movies: [],
     movie: {},
+    quizzes: [],
+    results: [],
   },
   getters: {
     nowPlayings: state => state.nowPlayings,
@@ -16,13 +18,15 @@ export default {
     populars: state => state.populars,
     movies: state => state.movies,
     movie: state => state.movie,
+    quizzes: state => state.quizzes,
   },
   mutations: {
     SET_NOW_PLAYINGS: (state, movies) => state.nowPlayings = movies,
     SET_UPCOMINGS: (state, movies) => state.upcomings = movies,
     SET_POPULARS: (state, movies) => state.populars = movies,
     SET_MOVIES: (state, movies) => state.movies = movies,
-    SET_MOVIE: (state, movie) => state.movie = movie
+    SET_MOVIE: (state, movie) => state.movie = movie,
+    SET_QUIZZES: (state, quizzes) => state.quizzes = quizzes,
   },
   actions: {
     fetchMoviesSearch({ getters }, keyword) {
@@ -86,6 +90,39 @@ export default {
           }
         })
     },
+    fetchQuiz({ getters, commit }) {  // choices는 감독 이름이 저장된 리스트
+      // 퀴즈 내용 받아오기
+      // GET movies movieRecommendation URL
+      // 성공하면 응답으로 받은 퀴즈 문항을 state.quizzes에 저장
+      // 실패하면 에러 메세지 표시 
+      commit('SET_MOVIE', {})
+
+      axios({
+        url: drf.movies.movieRecommendation(),
+        method: 'get',
+        headers: getters.authHeader
+      })
+        .then( res => {
+          commit('SET_QUIZZES', res.data)
+        })
+        .catch( err => console.error(err) )
+    },
+    findRecommendation({ getters, commit }, results) {
+      // 추천 영화 받아오기
+      // POST movies movieRecommendation URL
+      // 성공하면
+      // 실패하면 에러 메세지 표시
+      axios({
+        url: drf.movies.movieRecommendation(),
+        method: 'post',
+        data: results,
+        headers: getters.authHeader,
+      })
+        .then( res => {
+          commit('SET_MOVIE', res.data)
+        })
+        .catch( err => console.error(err) )
+    }
   },
 }
   

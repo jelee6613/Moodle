@@ -10,10 +10,12 @@
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav me-auto">
           <li class="m-3">
-            <router-link :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
+            <router-link v-if="isLoggedIn" :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
+            <router-link v-else :to="{ name: 'login' }">오늘 뭐 보지</router-link>
           </li>
           <li class="m-3">
-            <router-link :to="{ name: 'articleList' }">커뮤니티</router-link>
+            <router-link v-if="isLoggedIn" :to="{ name: 'articleList' }">커뮤니티</router-link>
+            <router-link v-else :to="{ name: 'login' }">커뮤니티</router-link>
           </li>
         </ul>
         <div class="d-flex">

@@ -114,7 +114,7 @@ input.form-control:-webkit-autofill:active {
 
 .movie-list-item::-webkit-scrollbar-thumb {
   height: 30%;
-  background: #90b8f8;
+  background: #ffffff;
   border-radius: 50px;
   background-clip: padding-box;
   border: 2px solid transparent;
