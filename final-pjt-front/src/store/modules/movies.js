@@ -69,14 +69,15 @@ export default {
         })
         .catch( err => console.error(err))
     },
-    fetchMovie({ commit }, moviePk) {
+    fetchMovie({ commit, getters }, moviePk) {
       // 영화 디테일 페이지 받아오기
       // GET: movies movie URL
       // 성공하면 응답으로 받은 영화 객체를 state.movie에 저장
       // 실패하면 단순 에러일 때는 에러 메세지 표시, 404 에러일 때는 NotFound404로 이동
       axios({
         url: drf.movies.movie(moviePk),
-        method: 'get'
+        method: 'get',
+        headers: getters.isLoggedIn?getters.authHeader:''
       })
         .then( res => {
           commit('SET_MOVIE', res.data)

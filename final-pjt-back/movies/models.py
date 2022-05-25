@@ -13,6 +13,7 @@ class Movie(models.Model):
     director = models.CharField(max_length=30)
     average_vote = models.FloatField(default=0.0)
     release_date = models.DateField(null=True)
+    rate = models.FloatField(default=0.0)
 
 
 class WatchedMovie(models.Model):

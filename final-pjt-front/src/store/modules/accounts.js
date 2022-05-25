@@ -107,9 +107,37 @@ export default {
           })
       }
     },
-    fetchProfile() {
+    fetchProfile({ commit, getters, dispatch }, username) {
       // 프로필페이지
       // GET accounts profile
+      if (getters.isLoggedIn){
+        axios({
+          url: drf.accounts.profile(username),
+          method: 'get',
+          headers: getters.authHeader
+        })
+          .then( res => {
+            commit('SET_PROFILE', res.data)
+          })
+          .catch( err => {
+            if (err.response.data === 401) {
+              dispatch('removieToken')
+              router.push({ name: 'login' })
+            }
+          })
+      }
+    },
+    follow({ commit, getters }, username) {
+      // POST accounts follow
+      axios({
+        url: drf.accounts.follow(username),
+        method: 'post',
+        headers: getters.authHeader
+      })
+        .then( res => {
+          commit('SET_PROFILE', res.data)
+        })
+        .catch( err => console.error(err) )
     }
   },
 }

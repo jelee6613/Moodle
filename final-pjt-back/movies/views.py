@@ -1,8 +1,11 @@
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import get_user_model
+from django.db.models import Avg
 
 import requests
 import json
+
+from pprint import pprint
 
 from movies.serializers.quiz import QuestionSerializer, ValueSerializer
 
@@ -46,7 +49,8 @@ def movie_list(request):
     api_key = '04f1192a9aa395adc14e461889d716f8'
     params = {
         'api_key': api_key,
-        'language': 'ko',
+        'language': 'ko-KR',
+        'region': 'KR',
     }
 
     GET_MOVIES_PATHS_DICT = {
@@ -112,12 +116,13 @@ def movie_create(request):
 
     URL = 'https://api.themoviedb.org/3'
     api_key = '04f1192a9aa395adc14e461889d716f8'
+    keyword = request.data
     params = {
         'api_key': api_key,
         'query': keyword,
-        'language': 'ko'
+        'language': 'ko-KR',
+        'region': 'KR',
     }
-    keyword = request.data
     
     SEARCH_MOVIES_PATH = '/search/movie'
 
@@ -167,6 +172,18 @@ def movie_create(request):
 @permission_classes([AllowAny])
 def movie_detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
+    print(1)
+    if request.user.id:
+        if WatchedMovie.objects.filter(movie_id=movie_id, user_id=request.user.id).exists():
+            rate = WatchedMovie.objects.get(movie_id=movie_id, user_id=request.user.id).rate
+        else:
+            rate = 0.0
+    else:
+        rate = 0.0
+
+    movie.rate = rate
+    movie.save()
+
     serializer = MovieDetailSerializer(movie)
     return Response(serializer.data)
 
@@ -279,5 +296,8 @@ def movie_rate(request, movie_id):
             watched_movie.rate = request.data['rate']
             watched_movie.save()
 
+    movie_average_vote = WatchedMovie.objects.all().filter(movie_id=movie_id).aggregate(Avg('rate'))['rate__avg']
+    movie.average_vote = movie_average_vote
+    
     serializer = MovieDetailSerializer(movie)
     return Response(serializer.data)

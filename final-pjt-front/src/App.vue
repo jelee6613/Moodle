@@ -19,6 +19,7 @@
           </li>
         </ul>
         <div class="d-flex">
+          <router-link class="m-3" :to="{ name: 'profile', params: { username: currentUser.username }}" v-if="isLoggedIn">마이페이지</router-link>
           <router-link class="m-3" :to="{ name: 'logout' }" v-if="isLoggedIn">로그아웃</router-link>
           <router-link class="m-3" :to="{ name: 'signup' }" v-if="!isLoggedIn">회원가입</router-link> 
           <router-link class="m-3" :to="{ name: 'login' }" v-if="!isLoggedIn">로그인</router-link>

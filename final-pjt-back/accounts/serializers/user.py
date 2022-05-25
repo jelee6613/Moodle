@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
             model = User
             fields = ('pk', 'username')
 
-    movies = MovieDetailSerializer(many=True)
+    movies = MovieDetailSerializer(many=True, read_only=True)
     article_set = ArticleSerializer(many=True)
     followings = UserFollowSerializer(many=True)
     followers = UserFollowSerializer(many=True)
