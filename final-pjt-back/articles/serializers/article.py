@@ -12,11 +12,13 @@ class ArticleListSerializer(serializers.ModelSerializer):
 
         class Meta:
             model = User
-            fields = ('pk', 'username',)
+            fields = ('username',)
     
     user = UserSerializer(read_only=True)
-    like_users = UserSerializer(read_only=True, many=True)
+    comment_set = CommentSerializer(many=True, read_only=True)
+    like_users = UserSerializer(many=True, read_only=True)
     like_count = serializers.IntegerField(source='like_users.count', read_only=True)
+    comment_count = serializers.IntegerField(source='comment_set.count', read_only=True)
     
     class Meta:
         model = Article
@@ -33,7 +35,7 @@ class ArticleSerializer(serializers.ModelSerializer):
             fields = ('pk', 'username',)
     
     user = UserSerializer(read_only=True)
-    like_users = UserSerializer(read_only=True, many=True)
+    like_users = UserSerializer(many=True, read_only=True)
     like_count = serializers.IntegerField(source='like_users.count', read_only=True)
     comment_set = CommentSerializer(many=True, read_only=True)
 

@@ -3,9 +3,9 @@
     <h1>{{ article.title }}</h1>
 
     <p>
-      작성자: {{ article.user }} | 
-      작성일: {{ article.created_at }} |
-      최종수정일: {{ article.updated_at }}
+      작성자: {{ article.user.username }} | 
+      작성일: {{ article.created_at | date }} |
+      최종수정일: {{ article.updated_at | date }}
     </p>
 
     <p>{{ article.content }}</p>
@@ -40,6 +40,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import CommentList from '../components/CommentList.vue'
+import moment from 'moment'
 
 export default {
     name: 'ArticleDetailView',
@@ -59,6 +60,11 @@ export default {
     },
     methods: {
       ...mapActions(['fetchArticle', 'deleteArticle', 'likeArticle']),
+    },
+    filters: {
+      date(dateField) {
+        return moment(String(dateField)).format('YYYY/MM/DD HH:mm')
+      }
     },
     created() {
       this.fetchArticle(this.articlePk)
