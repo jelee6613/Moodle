@@ -13,7 +13,6 @@ class Movie(models.Model):
     director = models.CharField(max_length=30)
     average_vote = models.FloatField(default=0.0)
     release_date = models.DateField(null=True)
-    rate = models.FloatField(default=0.0)
 
 
 class WatchedMovie(models.Model):
@@ -28,6 +27,5 @@ class Question(models.Model):
 
 class Value(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    value_id = models.IntegerField()
     content = models.CharField(max_length=200)
     director = models.CharField(max_length=30, null=True)

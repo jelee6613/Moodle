@@ -11,7 +11,7 @@ from movies.serializers.quiz import QuestionSerializer, ValueSerializer
 
 from .models import Movie, WatchedMovie, Value, Question
 
-from .serializers.movie import MovieDetailSerializer, MovieValidationSerializer
+from .serializers.movie import MovieDetailSerializer, MovieValidationSerializer, WatchedMovieSerializer
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -172,18 +172,13 @@ def movie_create(request):
 @permission_classes([AllowAny])
 def movie_detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
-    print(1)
+
     if request.user.id:
         if WatchedMovie.objects.filter(movie_id=movie_id, user_id=request.user.id).exists():
-            rate = WatchedMovie.objects.get(movie_id=movie_id, user_id=request.user.id).rate
-        else:
-            rate = 0.0
-    else:
-        rate = 0.0
-
-    movie.rate = rate
-    movie.save()
-
+            watched_movie = get_object_or_404(WatchedMovie, movie_id=movie_id, user_id=request.user.id)
+            serializer = WatchedMovieSerializer(watched_movie)
+            return Response(serializer.data)
+    
     serializer = MovieDetailSerializer(movie)
     return Response(serializer.data)
 
@@ -273,6 +268,7 @@ def movie_watched(request, movie_id):
 @api_view(['POST'])
 def movie_rate(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
+    is_delete = False
 
     # 요청보낸 유저가 해당 영화를 본 적 있다면
     if request.user.movies.filter(pk=movie_id).exists():
@@ -281,6 +277,7 @@ def movie_rate(request, movie_id):
 
         # 평가했던 평점 그대로 재요청 보내면 내가 본 영화에서 삭제
         if request.data['rate'] == watched_movie.rate:
+            is_delete = True
             request.user.movies.remove(movie)
 
         else:
@@ -295,9 +292,18 @@ def movie_rate(request, movie_id):
             watched_movie = get_object_or_404(WatchedMovie, movie_id=movie_id, user_id=request.user.id)
             watched_movie.rate = request.data['rate']
             watched_movie.save()
-
-    movie_average_vote = WatchedMovie.objects.all().filter(movie_id=movie_id).aggregate(Avg('rate'))['rate__avg']
-    movie.average_vote = movie_average_vote
     
-    serializer = MovieDetailSerializer(movie)
-    return Response(serializer.data)
+    if WatchedMovie.objects.all().filter(movie_id=movie_id).exists():
+        movie_average_vote = WatchedMovie.objects.all().filter(movie_id=movie_id).aggregate(Avg('rate'))['rate__avg']
+        movie.average_vote = movie_average_vote
+        movie.save()
+    else:
+        movie.average_vote = 0.0
+        movie.save()
+    
+    if is_delete:
+        serializer = MovieDetailSerializer(movie)
+        return Response(serializer.data)
+    else:
+        serializer = WatchedMovieSerializer(watched_movie)    
+        return Response(serializer.data)

@@ -28,13 +28,13 @@
       평점
     </div>
     <star-rating
-      @click="test()"
-      v-model="movieRate"
+      
+      v-bind:rating="movieRate"
       v-bind:increment="0.5"
       v-bind:star-size="30"
       v-bind:rounded-corners="true"
       v-bind:clearable="true"
-      v-bind:rount-start-rating="true"
+      v-bind:round-start-rating="true"
     ></star-rating>
 
   </div>
@@ -48,7 +48,8 @@ export default {
   name: 'MovieDetailView',
   data() {
     return {
-      moviePk: this.$route.params.moviePk
+      moviePk: this.$route.params.moviePk,
+      rate: 0
     }
   },
   computed: {
@@ -65,9 +66,6 @@ export default {
   },
   methods: {
     ...mapActions(['fetchMovie']),
-    test() {
-      console.log(1)
-    }
   },
   created() {
     this.fetchMovie(this.moviePk)
