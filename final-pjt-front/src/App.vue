@@ -8,29 +8,56 @@
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav me-auto">
-          <li class="m-3">
-            <router-link v-if="isLoggedIn" :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
-            <router-link v-else :to="{ name: 'login' }">오늘 뭐 보지</router-link>
-          </li>
-          <li class="m-3">
-            <router-link v-if="isLoggedIn" :to="{ name: 'articleList' }">커뮤니티</router-link>
-            <router-link v-else :to="{ name: 'login' }">커뮤니티</router-link>
-          </li>
+        <ul class="navbar-nav col">
+          <div>
+            <li class="m-3">
+              <router-link v-if="isLoggedIn" :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
+              <router-link v-else :to="{ name: 'login' }">오늘 뭐 보지</router-link>
+            </li>
+          </div>
+          <div>
+            <li class="m-3">
+              <router-link v-if="isLoggedIn" :to="{ name: 'articleList' }">커뮤니티</router-link>
+              <router-link v-else :to="{ name: 'login' }">커뮤니티</router-link>
+            </li>
+          </div>
+          <div class="ms-lg-auto">
+            <li class="mx-3 navbar-text dropdown" v-if="isLoggedIn">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ currentUser.username }}님
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                <li class="m-3">
+                  <router-link class="dropdown-item" :to="{ name: 'profile', params: { username: currentUser.username }}">마이페이지</router-link>
+                </li>
+                <li class="m-3">
+                  <router-link class="dropdown-item" :to="{ name: 'logout' }">로그아웃</router-link>
+                </li>
+                <!-- <li class="m-3">
+                </li>
+                <li class="m-3">
+                </li> -->
+              </ul>
+            </li>
+            <div class="d-flex" v-else>
+              <div class="row">
+                <li class="col-12 col-lg-auto m-3">
+                  <router-link class="dropdown-item" :to="{ name: 'signup' }">회원가입</router-link> 
+                </li>
+                <li class="col-12 col-lg-auto m-3">
+                  <router-link class="dropdown-item" :to="{ name: 'login' }">로그인</router-link>
+                </li>
+              </div>
+            </div>
+          </div>
         </ul>
-        <div class="d-flex">
-          <router-link class="m-3" :to="{ name: 'profile', params: { username: currentUser.username }}" v-if="isLoggedIn">마이페이지</router-link>
-          <router-link class="m-3" :to="{ name: 'logout' }" v-if="isLoggedIn">로그아웃</router-link>
-          <router-link class="m-3" :to="{ name: 'signup' }" v-if="!isLoggedIn">회원가입</router-link> 
-          <router-link class="m-3" :to="{ name: 'login' }" v-if="!isLoggedIn">로그인</router-link>
-        </div>
       </div>
     </nav>
-    <div class="container">
+    <!-- <div class="container">
       <div class="text-center">
         <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
       </div>
-    </div>
+    </div> -->
     <router-view :key="$route.path"/>  
   </div>
 </template>
@@ -63,8 +90,44 @@ export default {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'IBMPlexSansKR-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SuseongDotum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-bold {
+  font-family: SuseongDotum;
+  font-size: 3rem;
+}
+
+.font-description {
+  font-family: LeferiPoint-WhiteObliqueA;
+  font-size: 1.15rem;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
 body {
   background-color: #26282B;
+  box-sizing: border-box;
 }
 
 #app {
@@ -76,12 +139,14 @@ body {
 
 nav {
   padding: 1.2rem !important;
+  background-color: transparent;
+  z-index: 1;
 }
 
 nav a {
-  font-size: 1.2rem;
-  color: #ffffff;
-  text-decoration: none;
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 nav a:hover {
@@ -95,6 +160,10 @@ nav a.router-link-exact-active {
 .navbar-toggler {
   color: #ffffff !important;
   border: none;
+}
+
+.dropdown-menu[data-bs-popper] {
+  right: 0;
 }
 
 a { 

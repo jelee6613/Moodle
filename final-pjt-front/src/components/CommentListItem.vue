@@ -1,11 +1,11 @@
 <template>
   <div class="comment-item mb-4">
-    <div class="comment-item-header d-flex justify-content-between mb-2">
+    <div class="comment-item-header d-flex justify-content-between mb-3">
       <div>
         <router-link :to="{ name: 'profile', params: { username: comment.user.username }}">
-          {{ comment.user.username }}
-        </router-link>
-        <span>{{ comment.created_at | date }} | {{ comment.updated_at | date}}</span>
+          <strong>{{ comment.user.username }}</strong>
+        </router-link>&nbsp;&nbsp;
+        <span class="comment-info">{{ comment.created_at | date }} 작성 | {{ comment.updated_at | date}} 수정</span>
       </div>
 
       <div v-if="currentUser.username === comment.user.username && !isEditing">
@@ -17,6 +17,7 @@
         </button>
       </div>
     </div>
+
     <div class="comment-item-body">
       <span v-if="isEditing">
         <input class="form-control" type="text" v-model="payload.content">
@@ -24,11 +25,10 @@
         <button @click="switchIsEditing">취소</button>
       </span>
       <div v-else class="comment-item-content">
-        {{ comment.content }}
+        <span>{{ comment.content }}</span>
       </div>
+    
     </div>
-
-
   </div>
 </template>
 
@@ -79,9 +79,8 @@ export default {
 <style>
   .comment-item {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 7px;
-
   }
 
   .comment-item button {
@@ -100,7 +99,12 @@ export default {
 
   }
 
-  .comment-item-body {
+  .comment-info {
+    color: #cdcdcd;
+    font-size: 0.9rem;
+  }
 
+  .comment-item-body {
+    word-wrap: break-word;
   }
 </style>

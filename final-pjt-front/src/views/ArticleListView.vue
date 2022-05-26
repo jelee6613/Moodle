@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>ArticleListView</h2>
+    <h2>커뮤니티</h2>
     
     <div class="d-flex flex-row-reverse">
       <button type="button" class="btn btn-dark">
