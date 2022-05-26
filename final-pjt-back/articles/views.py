@@ -31,18 +31,18 @@ def article_detail_or_update_or_delete(request, article_id):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        # 추가
-        if request.user.id == article.user:
+        if request.user == article.user:
             serializer = ArticleSerializer(article, data=request.data)
             if serializer.is_valid(raise_exception=True):
                 serializer.save()
                 return Response(serializer.data)
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
 
     elif request.method == 'DELETE':
-        # 추가
-        if request.user.id == article.user:
+        if request.user == article.user:
             article.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
 
 
 @api_view(['POST'])
@@ -70,14 +70,19 @@ def comment_create(request, article_id):
 def comment_update_or_delete(request, article_id, comment_id):
     article = get_object_or_404(Article, pk=article_id)
     comment = get_object_or_404(Comment, pk=comment_id)
+
     if request.method=='PUT':
-        serializer = CommentSerializer(comment, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            serializer = CommentSerializer(article.comment_set, many=True)
-            return Response(serializer.data)
+        if request.user == comment.user:
+            serializer = CommentSerializer(comment, data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                serializer = CommentSerializer(article.comment_set, many=True)
+                return Response(serializer.data)
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
     
     elif request.method=='DELETE':
-        comment.delete()
-        serializer = CommentSerializer(article.comment_set, many=True)
-        return Response(serializer.data)
+        if request.user == comment.user:
+            comment.delete()
+            serializer = CommentSerializer(article.comment_set, many=True)
+            return Response(serializer.data)
+        return Response(status=status.HTTP_401_UNAUTHORIZED)

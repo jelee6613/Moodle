@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
         "question": 1,
-        "content": "1번의 1번",
-        "director": "Ti West"
+        "content": "간단한 게임이라도 상대방을 이기면 관계에서 유리해지기 때문",
+        "director": "Stanley Kubrick"
     }
 },
 {
@@ -13,8 +13,8 @@
     "pk": 2,
     "fields": {
         "question": 1,
-        "content": "1번의 2번",
-        "director": "Keith Thomas"
+        "content": "지면 단순히 기분이 좋지 않아서",
+        "director": "null"
     }
 },
 {
@@ -22,8 +22,8 @@
     "pk": 3,
     "fields": {
         "question": 2,
-        "content": "2번의 1번",
-        "director": "Kyle Balda"
+        "content": "\"벌써 100번이나 찍었군요. 좋아요, 이제 마무리하죠.\"",
+        "director": "Bong Joon-ho"
     }
 },
 {
@@ -31,8 +31,8 @@
     "pk": 4,
     "fields": {
         "question": 2,
-        "content": "2번의 2번",
-        "director": "Scott Derrickson"
+        "content": "\"나도 알아요. 이번엔 101번째니까 다시 준비해 봅시다.\"",
+        "director": "David Fincher"
     }
 },
 {
@@ -40,8 +40,8 @@
     "pk": 5,
     "fields": {
         "question": 3,
-        "content": "3번의 1번",
-        "director": "Ti West"
+        "content": "좋아요",
+        "director": "David Fincher"
     }
 },
 {
@@ -49,8 +49,8 @@
     "pk": 6,
     "fields": {
         "question": 3,
-        "content": "3번의 2번",
-        "director": "Scott Derrickson"
+        "content": "싫어요",
+        "director": "Christopher Nolan"
     }
 },
 {
@@ -58,8 +58,8 @@
     "pk": 7,
     "fields": {
         "question": 4,
-        "content": "4번의 1번",
-        "director": "Keith Thomas"
+        "content": "너무 화가 나서 그날 촬영을 모두 취소한다.",
+        "director": "Stanley Kubrick"
     }
 },
 {
@@ -67,8 +67,8 @@
     "pk": 8,
     "fields": {
         "question": 4,
-        "content": "4번의 2번",
-        "director": "Hanna Bergholm"
+        "content": "토끼 가족을 묻어주고 촬영을 재개한다.",
+        "director": "null"
     }
 },
 {
@@ -76,8 +76,8 @@
     "pk": 9,
     "fields": {
         "question": 5,
-        "content": "5번의 1번",
-        "director": "Hanna Bergholm"
+        "content": "성악설",
+        "director": "Stanley Kubrick"
     }
 },
 {
@@ -85,8 +85,8 @@
     "pk": 10,
     "fields": {
         "question": 5,
-        "content": "5번의 2번",
-        "director": "Scott Derrickson"
+        "content": "불평등",
+        "director": "Bong Joon-ho"
     }
 },
 {
@@ -94,8 +94,8 @@
     "pk": 11,
     "fields": {
         "question": 6,
-        "content": "6번의 1번",
-        "director": "Scott Derrickson"
+        "content": "택시 기사와 말싸움을 하다 기사한테 젖꼭지를 물어뜯긴 사람",
+        "director": "Quentin Tarantino"
     }
 },
 {
@@ -103,8 +103,116 @@
     "pk": 12,
     "fields": {
         "question": 6,
-        "content": "6번의 2번",
-        "director": "Ti West"
+        "content": "항상 말끔한 정장 차림인 사람",
+        "director": "Christopher Nolan"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 13,
+    "fields": {
+        "question": 7,
+        "content": "DVD 점원으로 일하다 영화계로 진출",
+        "director": "Quentin Tarantino"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 14,
+    "fields": {
+        "question": 7,
+        "content": "CF, 뮤직비디오를 찍다가 감독으로 데뷔",
+        "director": "David Fincher"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 15,
+    "fields": {
+        "question": 8,
+        "content": "스마트폰이나 태블릿으로 봐도 상관없다.",
+        "director": "Christopher Nolan"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 16,
+    "fields": {
+        "question": 8,
+        "content": "극장!",
+        "director": "Martin Scorsese"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 17,
+    "fields": {
+        "question": 9,
+        "content": "네",
+        "director": "Martin Scorsese"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 18,
+    "fields": {
+        "question": 9,
+        "content": "안 좋아할 리가",
+        "director": "Quentin Tarantino"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 19,
+    "fields": {
+        "question": 10,
+        "content": "생각해 보지 못한 흥미로운 주장이네요.. 듣고 보니 그런 거 같아! 토토로 이 악마야!!",
+        "director": "null"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 20,
+    "fields": {
+        "question": 10,
+        "content": "토토로의 치아 구조를 분석해 보면 초식동물의 치아를 갖고 있으므로 주인공을 잡아먹을 리 없다.",
+        "director": "Hayao Miyazaki"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 21,
+    "fields": {
+        "question": 11,
+        "content": "어문, 예술",
+        "director": "Martin Scorsese"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 22,
+    "fields": {
+        "question": 11,
+        "content": "경제, 정치",
+        "director": "Hayao Miyazaki"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 23,
+    "fields": {
+        "question": 12,
+        "content": "달변가",
+        "director": "Bong Joon-ho"
+    }
+},
+{
+    "model": "movies.value",
+    "pk": 24,
+    "fields": {
+        "question": 12,
+        "content": "욕설꾼",
+        "director": "David Fincher"
     }
 }
 ]

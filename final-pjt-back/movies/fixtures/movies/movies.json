@@ -1,0 +1,702 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 1,
+    "fields": {
+        "title": "기생충",
+        "genre": "[\"\\ucf54\\ubbf8\\ub514\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "전원 백수로 살 길 막막하지만 사이는 좋은 기택 가족. 장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박 사장 집으로 향하는 기우. 글로벌 IT기업의 CEO인 박 사장의 저택에 도착하자 젊고 아름다운 사모님 연교와 가정부 문광이 기우를 맞이한다. 큰 문제 없이 박 사장의 딸 다혜의 과외를 시작한 기우. 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고  있는데.....",
+        "poster_path": "/jjHccoFjbqlfr4VGLVLT7yek0Xn.jpg",
+        "backdrop_path": "/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+        "director": "Bong Joon-ho",
+        "average_vote": 0.0,
+        "release_date": "2019-05-30"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 6,
+    "fields": {
+        "title": "설국열차",
+        "genre": "[\"\\uc561\\uc158\", \"SF\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "기상 이변으로 모든 것이 꽁꽁 얼어붙은 지구, 살아남은 사람들을 태운 기차 한 대가 끝없이 궤도를 달리고 있다. 춥고 배고픈 사람들이 바글대는 빈민굴 같은 꼬리칸, 그리고 선택된 사람들이 술과 마약까지 즐기며 호화로운 객실을 뒹굴고 있는 앞쪽칸. 열차 안의 세상은 결코 평등하지 않다. 기차가 달리기 시작한 17년째, 꼬리칸의 젊은 지도자 커티스는 긴 세월 준비해 온 폭동을 일으킨다. 기차의 심장인 엔진을 장악하고 기차 전체를 해방시키기 위해 절대권력자 윌포드가 도사리고 있는 엔진 칸을 향해 질주하는 커티스와 꼬리칸 사람들. 그들 앞에 예기치 못한 상황들이 기다리고 있는데...",
+        "poster_path": "/pRZMtKQpP3fH84YXs02yytUk4ee.jpg",
+        "backdrop_path": "/33dV6HAnXBmwKl640gO3U4auqUN.jpg",
+        "director": "Bong Joon-ho",
+        "average_vote": 0.0,
+        "release_date": "2013-08-01"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 7,
+    "fields": {
+        "title": "옥자",
+        "genre": "[\"\\ubaa8\\ud5d8\", \"\\ub4dc\\ub77c\\ub9c8\", \"SF\"]",
+        "overview": "강원도 산골 소녀 미자에게 옥자는 10년 간 함께 자란 둘도 없는 친구이자 소중한 가족. 어느 날 글로벌 기업 미란도가 나타나 갑자기 옥자를 뉴욕으로 끌고 가고, 할아버지의 만류에도 미자는 옥자를 구하기 위해 위험천만한 여정에 나선다. 옥자를 활용한 슈퍼돼지 프로젝트를 추진 중인 미란도 코퍼레이션의 CEO 루시, 옥자를 이용해 제2의 전성기를 꿈꾸는 동물학자 죠니, 옥자를 앞세워 또 다른 작전을 수행하려는 비밀 동물 보호 단체 ALF까지 각자의 이권을 둘러싸고 옥자를 차지하려는 세상에 맞서는 미자의 여정은 더욱 험난해져 간다.",
+        "poster_path": "/miHNA5DcheO7ax2qon9CmC7qa9j.jpg",
+        "backdrop_path": "/x8PmjDi2mkAKznApIz78C9v3tvt.jpg",
+        "director": "Bong Joon-ho",
+        "average_vote": 0.0,
+        "release_date": "2017-06-29"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 8,
+    "fields": {
+        "title": "시계태엽 오렌지",
+        "genre": "[\"SF\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "10대 소년 알렉스는 친구들과 극악한 비행을 저지르고 다닌다. 어느 날 차를 훔쳐 드라이브를 즐기던 이들은 작가 알렉산더의 집을 습격해 그를 폭행하고 그의 아내를 강간한다. 이튿날 알렉스는 불평을 늘어놓는 친구들을 힘으로 제압하고 자신이 무리의 리더임을 확인시킨다. 그날 밤 알렉스는 한 저택에 침입해 집주인을 죽이고 도망치던 중 친구들의 배신으로 문 앞에 쓰러진다. 검거된 알렉스는 살인죄로 14년형을 언도받는다. 2년 뒤, 알렉스는 좀 더 빨리 감옥 밖으로 나오고 싶은 마음에 재소자에게 약물과 충격요법으로 범죄에 대한 혐오를 불러일으키는 교화 방법인 루도비코 갱생 프로그램에 자원하는데...",
+        "poster_path": "/oYa39Fjs8AgaaHMimGdBj8PiG6h.jpg",
+        "backdrop_path": "/3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "1971-12-19"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 9,
+    "fields": {
+        "title": "2001 스페이스 오디세이",
+        "genre": "[\"SF\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"\\ubaa8\\ud5d8\"]",
+        "overview": "인류에게 문명의 지혜를 가르쳐 준 검은 돌기둥의 정체를 밝히기 위해서 디스커버리호의 선장 보우만(케어 둘리아)과 승무원 풀(게리 룩우드)는 목성을 향해서 날아간다. 하지만 평온하던 디스커버리호에 갑자기 재난이 찾아온다. 우주선 내부에서 일어난 재난은 컴퓨터 할(더글러스 레인)이 반란을 일으킨 것. 할은 풀을 우주선 밖으로 던져버리고, 보우만까지도 모선 밖으로 끌어내지만 그는 필사의 노력으로 할을 제압한다. 보우만은 마침내 목성 궤도에서 문제의 검은 돌기둥을 발견하지만, 그 순간 우주의 급류에 휘말리게 된다. 보우만은 지구로의 귀환을 위해 노력하고, 신비한 시간의 흐름을 경험하는데...",
+        "poster_path": "/fTzcVo738Ys88FPVG987TH4aJKt.jpg",
+        "backdrop_path": "/6gyZF4SeifiUUYDELkCS8nOqsu2.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "2008-09-14"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 12,
+    "fields": {
+        "title": "샤이닝",
+        "genre": "[\"\\uacf5\\ud3ec\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "소설가인 잭 토랜스는 콜로라도 산맥에 있는 오버룩 호텔의 관리인으로 취직한다. 다음 시즌 준비를 하는 이곳은 겨울 동안 폐쇄되기 때문에 토랜스의 가족들만 호텔에 머물게 된다. 갑자기 몰아친 폭설로 잭과 아내 웬디와 아들과 함께 호텔에 고립되고, 투시와 텔레파시 능력이 있는 잭의 아들 대니는 호텔에 유령이 있으며 유령들이 천천히 아버지를 미치게 하고 있음을 알게 된다. 잭은 과거에 스스로 자신의 아내와 두 딸을 죽인 이곳의 예전 관리인 그레이디의 유령을 만난다. 과거에 있었던 살인사건의 악령에 휘말린 잭은 호텔을 공포의 도가니로 몰아가는데...",
+        "poster_path": "/vzc4lvpjaZrrfxsnqmhURm37gmB.jpg",
+        "backdrop_path": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "1980-05-23"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 15,
+    "fields": {
+        "title": "벤자민 버튼의 시간은 거꾸로 간다",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\ud310\\ud0c0\\uc9c0\", \"\\ub85c\\ub9e8\\uc2a4\"]",
+        "overview": "1차 세계 대전 말 뉴올리언즈. 80세의 외모를 가진 아기 벤자민 버튼이 태어난다. 사랑하는 아내가 벤자민을 낳다 세상을 떠난 것에 대한 분노와 아이의 평범하지 않은 외모에 경악한 벤자민의 아버지는 분노를 참지 못하고 그를 놀란 하우스 양로원 현관 앞에 버린다. 놀란 하우스에서 일하는 퀴니에게 발견된 벤자민. 퀴니를 엄마로, 그곳의 할아버지, 할머니들을 친구로 살아가는 벤자민은 해가 갈수록 젊어지는 자신을 발견한다. 12살이 되어 60대 외형을 가지게 된 벤자민은 어느 날, 할머니를 찾아온 6살의 어린 데이지를 만난다. 그리고 데이지의 푸른 눈동자를 영원히 잊을 수 없게 된다.",
+        "poster_path": "/9QxP0nzAyPQfqJIB0xcvglND5UL.jpg",
+        "backdrop_path": "/lggJHoo7R00PRX0iKxZFMc7ug6B.jpg",
+        "director": "David Fincher",
+        "average_vote": 0.0,
+        "release_date": "2009-02-12"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 16,
+    "fields": {
+        "title": "소셜 네트워크",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "2003년 가을, 하버드대의 컴퓨터 천재 마크는 비밀 엘리트 클럽의 윈클보스 형제에게 하버드 선남선녀들만 교류할 수 있는 하버드 커넥션 사이트 제작을 의뢰 받는다. 하지만 여기서 획기적인 아이디어를 생각해낸 마크는 인맥 교류 사이트 페이스북을 개발, 절친 왈도의 도움으로 사이트를 오픈한다. 페이스북은 순식간에 모두의 마음을 사로잡고, 유명한 냅스터의 창시자 숀의 참여로 전세계로 번지면서 마크는 기업가치 58조원, 전세계 최연소 억만장자가 된다. 하지만 그 순간 윈클보스 형제는 물론 왈도마저 전대미문의 소송을 제기하는데...",
+        "poster_path": "/hgaAWIIOPlnrd9nLc1SB7rTc8CT.jpg",
+        "backdrop_path": "/65D7t8wgZFpjOTvIp1HQvHFY0fC.jpg",
+        "director": "David Fincher",
+        "average_vote": 0.0,
+        "release_date": "2010-11-18"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 18,
+    "fields": {
+        "title": "나를 찾아줘",
+        "genre": "[\"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "모두가 부러워하는 삶을 살아가는 완벽한 커플인 닉과 에이미. 결혼 5주년 기념일 아침, 에이미가 흔적도 없이 실종된다. 유년시절 어린이 동화 시리즈 어메이징 에이미의 실제 여주인공이었던  유명인사 아내가 사라지자, 세상은 그녀의 실종사건으로 떠들썩해진다. 한편 경찰은 에이미가 결혼기념일 선물로 숨겨뒀던 편지와 함께  곳곳에서 드러나는 단서들로 남편 닉을 유력한 용의자로 지목한다. 미디어들이 살인 용의자 닉의 일거수일투족을 보도하기 시작하고, 시간이 갈수록 세상의 관심이 그에게 더욱 집중되는데...",
+        "poster_path": "/epEVLlIRErigv6YFkS6YQNFtCtj.jpg",
+        "backdrop_path": "/x9ezMgOtDPqHatHDvxEG0ILb6Ie.jpg",
+        "director": "David Fincher",
+        "average_vote": 0.0,
+        "release_date": "2014-10-23"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 19,
+    "fields": {
+        "title": "펄프 픽션",
+        "genre": "[\"\\uc2a4\\ub9b4\\ub7ec\", \"\\ubc94\\uc8c4\"]",
+        "overview": "펌프킨와 허니 버니가 레스토랑에서 강도 행각을 벌이기 시작한다. 빈센트와 그 동료 쥴스는 두목의 금가방을 찾기 위해 다른 건달이 사는 아파트를 찾아간다. 마르셀러스는 부치에게 돈을 주며 상대 선수에게 져 주라고 하지만 부치는 상대 선수를 때려 눕히고 도망치다, 어릴 때 아버지에게 물려받은 시계를 찾기 위해 아파트로 향한다. 아무런 상관 없이 보이는 이 사건들이 서로 얽히고 鰕糖庸 예상치 못한 인과관계가 만들어지는데...",
+        "poster_path": "/6lXRHGoEbnnBUKsuqpL9JxD4DzT.jpg",
+        "backdrop_path": "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "1994-09-10"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 20,
+    "fields": {
+        "title": "장고: 분노의 추적자",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc11c\\ubd80\"]",
+        "overview": "흑인 노예 장고는 착한 사마리아인 같은 독일인 현금사냥꾼 닥터 킹의 도움을 받아 멋진 말을 타고 미국 평원을 달리며 헤어진 아내 브룸힐다를 찾아다니는 총잡이 낭만주의자로 변신한다. 그는 브룸힐다가 미시시피에서 가장 악독한 농장 캔디랜드의 노예로 일하고 있다는 소식을 듣고 농장주 캔디를 찾아간다. 아내를 구해야 하는 분노의 로맨티스트 장고, 그를 돕는 정의의 바운티 헌터 닥터 킹, 그리고 그들의 표적이 된 욕망의 마스터 캔디. 복수의 사슬이 풀리면, 세 남자의 피도 눈물도 없는 대결이 시작된다.",
+        "poster_path": "/cDW2Ro4HPhsYgRKyGI9CA33gTpn.jpg",
+        "backdrop_path": "/6MCVqErhPC0p6RkzZsLuIb6LZ1L.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "2013-03-21"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 21,
+    "fields": {
+        "title": "바스터즈: 거친 녀석들",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc561\\uc158\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\uc804\\uc7c1\"]",
+        "overview": "2차 세계 대전, 나치의 잔인하고 폭력적인 행태에 분개한 미군 알도 레인 중위는 당한 만큼 돌려준다는 강렬한 신념으로 최고의 재능을 가진 8명의 대원을 모아 바스터즈란 군단을 만들어 나치가 점령한 프랑스에 잠입해 복수를 시작한다. 어느 날 알도 레인 중위는 독일의 여배우이자 영국의 더블 스파이인 브리짓에게 뜻밖의 소식을 듣는다. 나치 수뇌부가 모두 참석하는 독일 전쟁 영화의 프리미어에 히틀러도 참석을 한다는 것. 한 번에 나치를 모두 쓸어버릴 계획으로 바스터즈는 이탈리아 영화 관계자로 분장해 극장으로 향하는데...",
+        "poster_path": "/u8gcf764K5wBBDoXlQtnkOtVeHR.jpg",
+        "backdrop_path": "/yVPcPk96E6Qffiyez2oJc7OKD2A.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "2009-10-28"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 22,
+    "fields": {
+        "title": "헤이트풀8",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"\\uc11c\\ubd80\"]",
+        "overview": "레드 락 타운으로 죄수를 이송해가던 교수형 집행인은 설원 속에서 우연히 현상금 사냥꾼, 보안관과 합류하게 된다. 거센 눈보라를 피해 산장으로 들어선 4명은 그곳에 먼저 와있던 또 다른 4명, 연합군 장교, 이방인, 리틀맨, 카우보이를 만나게 된다. 큰 현상금이 걸린 죄수를 호시탐탐 노리는 이들에게 교수형 집행인은 경고를 하지만, 이를 비웃기라도 하듯 참혹한 독살 사건이 일어난다. 각자 숨겨둔 비밀이 하나씩 밝혀지면서 서로를 향한 불신은 커져만 가고, 팽팽한 긴장감 속에 증오의 밤은 점점 깊어지는데...",
+        "poster_path": "/CJ1Swrno8D9ykFYtqL7bNkS73d.jpg",
+        "backdrop_path": "/7gfDVfaw0VaIkUGiEH13o3TIC7A.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "2016-01-07"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 23,
+    "fields": {
+        "title": "저수지의 개들",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "동부 LA 폐허의 텅빈 창고 안. 대규모 보석 강도를 위해 서로를 전혀 모르는 6명의 프로갱들이 한곳에 모인다. 이들을 한 곳에 불러 모은 장본인은 프로 도둑인 죠 캐봇과 그의 아들 나이스 가이 에디. 다이아몬드 도매상을 강탈하는 보석강도의 전 과정을 지휘하는 이 두 사람은 6명의 갱들에게 각각의 가명을 지정하고, 서로의 신분을 노출시킬 어떠한 정보 교환도 하지 말 것을 지시한다. 거사에 성공한 갱들은 그들 앞으로 돌아올 거액을 꿈구며 환호성을 지른다. 그러나 환호성도 잠시, 그들의 강도짓이 끝나기를 기다리며 문밖에 대기하고 있던 경찰을 발견한 그들은 경악하는데...",
+        "poster_path": "/a6hUyPLPEGgm5wBzjPs7fyqqaM0.jpg",
+        "backdrop_path": "/g6R1OT7ETBLGLeUJOE0pOiAFHcI.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "1996-03-23"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 24,
+    "fields": {
+        "title": "데쓰 프루프",
+        "genre": "[\"\\uc561\\uc158\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "텍사스 주 오스틴. 인기를 한 몸에 끌고 있는 섹시한 라디오 DJ 정글 줄리아는 친구인 알린, 셰나와 셋이 모처럼 신나는 밤을 보낼 예정이다. 밤새도록 동네의 바를 섭렵하며 신나게 웃고 춤추는 세 사람, 그러나 어딘가에서 조용히 이들을 지켜보는 남자가 있었으니 자신 뿐 아니라 아름다운 미녀들을 위험에 빠뜨리는 것에서 삶의 위안을 얻는 스턴트맨 마이크(커트 러셀)가 바로 그다. 자신의 차를 100% 안전한 차라고 소개하며 안전 귀가를 책임지겠다고 미녀들을 유혹하는 마이크. 어느 날 또 다른 미녀들을 노리던 그는 인생 최고의 적수들을 만나게 되는데...",
+        "poster_path": "/z2RMGiZqAQSXQf8PtkNyJu4gjkf.jpg",
+        "backdrop_path": "/c7k9ZZb1MoFzJeyjphKRMLHOgqU.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "2007-09-06"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 25,
+    "fields": {
+        "title": "재키 브라운",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "독신녀 재키 브라운은 멕시코와 미국 간 노선의 민항기 스튜어디스다. 그녀는 무기 밀매상인 오델 로비의 돈을 미국으로 밀반입해주며 부수입을 올린다. 어느날 재키가 공항 세관에서 체포된다. 혐의는 현찰 5만 달러와 코카인 소지죄다. 특별 수사관 레이 니콜렛은 재키를 집요하게 신문하고 재키는 졸지에 직장을 잃고 알거지 신세가 된다. 레이 니콜렛은 재키가 오델이 있는 아지트를 불면 혐의를 벗겨 주겠노라며 미끼를 던진다. 한편 오델의 하수인인 보만이 음주운전과 불법무기 소지죄로 구속된다. 오델은 보만의 입을 틀어막기 위해 맥스를 보석금 위탁 중개인으로 위장시켜 보만을 석방시킨다.",
+        "poster_path": "/4EerA05jHbHnGUNZ2xwrF7QRyHw.jpg",
+        "backdrop_path": "/u04CYmXVpppyPjl7JzThYmV8Kwg.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "1998-05-16"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 26,
+    "fields": {
+        "title": "모노노케 히메",
+        "genre": "[\"\\ubaa8\\ud5d8\", \"\\ud310\\ud0c0\\uc9c0\", \"\\uc560\\ub2c8\\uba54\\uc774\\uc158\"]",
+        "overview": "북쪽의 끝, 에미시족의 마을에 어느 날 갑자기 재앙신이 나타나 마을을 위협한다. 이에 강한 힘을 소유한 에미시족의 후계자인 아시타카는 결투 끝에 포악해진 재앙신을 쓰러트리지만 싸움 도중 오른팔에 저주의 상처를 받고 죽어야 할 운명에 처하게 된다. 결국 재앙신의 탄생 원인을 밝혀 자신의 저주를 없애기 위해 서쪽으로 길을 떠난 아시카타는 여행 중에 지코라는 미스테리한 수도승을 만나 재앙 신이 생겨나게 된 이유가 서쪽 끝에 있는 시시신의 숲과 관련이 깊다는 이야기를 듣게 되고 한시 바삐 서쪽으로 향한다.",
+        "poster_path": "/kBlI1WEWbfYyrh5nuAH2whzWx9Y.jpg",
+        "backdrop_path": "/mpNd0rTVrp6vHJ9Je7wSa3zC8JS.jpg",
+        "director": "Hayao Miyazaki",
+        "average_vote": 0.0,
+        "release_date": "2003-04-25"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 27,
+    "fields": {
+        "title": "하울의 움직이는 성",
+        "genre": "[\"\\ud310\\ud0c0\\uc9c0\", \"\\uc560\\ub2c8\\uba54\\uc774\\uc158\", \"\\ubaa8\\ud5d8\"]",
+        "overview": "19세기 말 마법과 과학이 공존하고 있는 세계 앵거리. 소피는 돌아가신 아버지의 모자상점에서 쉴틈없이 일하는 18살 소녀이다. 어느 날 오랫만에 마을로 나간 소피는 우연히 하울을 만나게 된다. 하울은 왕실 마법사로서 핸섬하지만 조금 겁이 많은 청년이다. 황무지 마녀는 두 사람의 사이를 오해, 주문을 걸어 소피를 90살의 늙은 할머니로 만들어 버린다. 가족을 걱정한 소피는 집을 나오게 되고 황무지를 헤매다가 하울이 사는 성에서 가정부로 낯선 생활을 시작한다. 4개의 다리로 걷는 기괴한 움직이는 성 안에서 하울과 소피의 기묘한 사랑과 모험이 시작되는데...",
+        "poster_path": "/xiz6TiSduvR1U3VLfWVlBEdT9fO.jpg",
+        "backdrop_path": "/vwBa7djy1oxfxUjc7YtVgGNsjrT.jpg",
+        "director": "Hayao Miyazaki",
+        "average_vote": 0.0,
+        "release_date": "2004-12-24"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 28,
+    "fields": {
+        "title": "이웃집 토토로",
+        "genre": "[\"\\ud310\\ud0c0\\uc9c0\", \"\\uc560\\ub2c8\\uba54\\uc774\\uc158\", \"\\uac00\\uc871\"]",
+        "overview": "1955년 일본의 아름다운 시골 마을, 상냥하고 의젓한 11살 사츠키와 장난꾸러기에 호기심 많은 4살의 메이 는 사이좋은 자매로 아빠와 함께 도시를 떠나 시골로 이사온다. 자상한 아빠 쿠사카베타츠오는 도쿄에서 대학 연구원이며, 입원 중이지만 따뜻한 미소를 잃지 않는 엄마가 있다. 곧 퇴원하실 엄마를 공기가 맑은 곳에서 맞이하기 위해서다. 숲 한복판에 금방이라도 쓰러질 것처럼 낡은 집을 보며 자매는 새로운 환경에 대한 호기심으로 잔뜩 들뜬다. 그러던 어느 날 사츠키가 학교에 간 동안 메이는 숲에서 정령을 만나다. 메이는 그 정령에게 토토로란 이름을 붙여주는데...",
+        "poster_path": "/csiklRMzvXRLKtFcIlEDeEU7nWr.jpg",
+        "backdrop_path": "/6O1mOoTXuc1WqjKd2R7MFQHZ7Eb.jpg",
+        "director": "Hayao Miyazaki",
+        "average_vote": 0.0,
+        "release_date": "2001-07-28"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 29,
+    "fields": {
+        "title": "바람계곡의 나우시카",
+        "genre": "[\"\\ubaa8\\ud5d8\", \"\\uc560\\ub2c8\\uba54\\uc774\\uc158\", \"\\ud310\\ud0c0\\uc9c0\"]",
+        "overview": "천 년 전, 불의 7일간으로 불리는 전쟁이 끝난 후 지구는 죽음의 행성으로 변했다. 점점 커지는 곰팡이의 숲인 부해가 유독가스를 내뿜어 사람이 살 수 있는 땅도 얼마 남지 않았다. 자연과 대화를 나눌 수 있는 특별한 소녀 나우시카는 그 중 깨끗한 바람계곡에서 살고 있지만 부해는 이곳마저 먹어치울 듯 가깝게 다가온다. 그러나 위기는 인간들의 다툼에서 시작된다. 군사제국 토르메키아가 불의 7일간을 초래했던 병기 거신병을 부활시키려는 계획을 시작했기 때문. 바람계곡은 분쟁에 휘말리고 나우시카는 토르메키아와 맞서는 도시 국가 페지테의 인질이 된다. 그 와중에 나우시카는 부해가 지구를 정화하고 있었다는 사실을 깨닫는데...",
+        "poster_path": "/jnw5Ab8104n4rTkTootpfZKYPiZ.jpg",
+        "backdrop_path": "/ulVUa2MvnJAjAeRt7h23FFJVRKH.jpg",
+        "director": "Hayao Miyazaki",
+        "average_vote": 0.0,
+        "release_date": "2000-12-30"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 30,
+    "fields": {
+        "title": "벼랑 위의 포뇨",
+        "genre": "[\"\\uc560\\ub2c8\\uba54\\uc774\\uc158\", \"\\ud310\\ud0c0\\uc9c0\", \"\\uac00\\uc871\"]",
+        "overview": "호기심 많은 물고기 소녀 포뇨는 따분한 바다 생활에 싫증을 느끼고, 급기야 아빠 몰래 늘 동경하던 육지로 가출을 감행한다. 해파리를 타고 육지로 올라온 포뇨는 그물에 휩쓸려 유리병 속에 갇히는 위기에 처하게 된다. 때마침 해변가에 놀러 나온 소년 소스케의 도움으로 구출되는 포뇨. 이후 소스케가 마련해 준 초록 양동이에서 소스케와의 즐거운 육지 생활을 시작한다. 하지만 곧 바다의 주인이자 포뇨의 아빠인 후지모토에 의해 포뇨는 다시 바다로 끌려가게 된다. 우여곡절 끝에 여동생들의 도움으로 탈출에 성공한 포뇨는 거대한 파도와 함께 소스케에게로 향하는데...",
+        "poster_path": "/gDT5xMYTLCJdLaUMJTqqfEfvSsD.jpg",
+        "backdrop_path": "/shqLeIkqPAAXM8iT6wVDiXUYz1p.jpg",
+        "director": "Hayao Miyazaki",
+        "average_vote": 0.0,
+        "release_date": "2008-12-18"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 31,
+    "fields": {
+        "title": "테넷",
+        "genre": "[\"\\uc561\\uc158\", \"\\uc2a4\\ub9b4\\ub7ec\", \"SF\"]",
+        "overview": "주도자는 미국의 한 요원으로 우크라이나 국립 오페라 극장의 한 사건에 투입되었다가 우크라이나 요원들에게 붙잡히게 되고 고문을 받지만 CIA가 준 자살 약을 먹고 자살을 택하게 된다. 그러나 이내 다시 눈을 뜬 주인공은 의문의 한 남자로부터 임무를 부여받는다. 그가 주도자에게 줄 수 있는 건 하나의 제스처와 하나의 단어 뿐. 시간의 흐름을 뒤집는 인버전을 통해 현재와 미래를 오가며 세상을 파괴하려는 사토르를 막기 위해 투입된 작전의 주도자는 인버전에 대한 정보를 가진 닐과 미술품 감정사이자 사토르에 대한 복수심이 가득한 그의 아내 캣과 협력해 미래의 공격에 맞서 제3차 세계대전을 막아야 한다.",
+        "poster_path": "/4ISu3R5OQQ39aWCzWWYrB9reSQD.jpg",
+        "backdrop_path": "/yY76zq9XSuJ4nWyPDuwkdV7Wt0c.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2020-08-22"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 32,
+    "fields": {
+        "title": "덩케르크",
+        "genre": "[\"\\uc804\\uc7c1\", \"\\uc561\\uc158\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "제2차 세계대전 당시인 1940년, 프랑스 덩케르크 지역에서 진행된 연합군 구출 작전. 영화는 세개의 시공간을 동시에 진행시킨다. 도버 해협을 건너려는 영국군을 중심으로 한 잔교에서의 일주일, 민간 선박들의 자발적 참전과 차출이 이어지는 바다에서의 하루, 적기를 겨냥한 스피트파이어기 전투사가 있는 하늘에서의 한 시간. 전쟁의 전방위성, 공포의 상시성과 그 압도, 개별 공간을 떠난 공포의 유사성, 그 속의 다급함이 혼재되어 있는 가운데 전쟁과 죽음에의 공포와 생존을 향한 인간적 열망을 그린다.",
+        "poster_path": "/r8GRroYelxUID8dOxcyeNKKol6W.jpg",
+        "backdrop_path": "/ddIkmH3TpR6XSc47jj0BrGK5Rbz.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2017-07-20"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 35,
+    "fields": {
+        "title": "인터스텔라",
+        "genre": "[\"\\ubaa8\\ud5d8\", \"\\ub4dc\\ub77c\\ub9c8\", \"SF\"]",
+        "overview": "세계 각국의 정부와 경제가 완전히 붕괴된 미래가 다가온다. 지난 20세기에 범한 잘못이 전 세계적인 식량 부족을 불러왔고, NASA도 해체되었다. 나사 소속 우주비행사였던 쿠퍼는 지구에 몰아친 식량난으로 옥수수나 키우며 살고 있다. 거센 황사가 몰아친 어느 날 알 수 없는 힘에 이끌려 딸과 함께 도착한 곳은 인류가 이주할 행성을 찾는 나사의 비밀본부. 이 때 시공간에 불가사의한 틈이 열리고, 이 곳을 탐험해 인류를 구해야 하는 임무를 위해 쿠퍼는 만류하는 딸을 뒤로한 채 우주선에 탑승하는데...",
+        "poster_path": "/zDNAeWU0PxKolEX1D8Vn1qWhGjH.jpg",
+        "backdrop_path": "/pbrkL804c8yAv3zBZR4QPEafpAR.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2014-11-06"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 38,
+    "fields": {
+        "title": "배트맨 비긴즈",
+        "genre": "[\"\\uc561\\uc158\", \"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "브루스 웨인은 어린 시절, 부모님이 길거리에서 피살되는 것을 눈 앞에서 지켜본 후 죄의식과 분노로 늘 고통 받는다. 복수의 욕망과 부모님의 가르침 사이에서 갈등하던 그는 악을 물리칠 방법을 터득하기 위해 고담시를 떠나 홀로 세상을 유랑하던 중 듀커드라는 수수께끼의 인물을 만나 가름침을 받고, 듀커드는 브루스에게 어둠의 사도들에 가입하라는 제안을 한다. 듀커드가 속해있는 어둠의 사도들은 라스 알 굴이 이끄는 범죄 소탕 조직. 그러나 브루스는 눈에는 눈, 이에는 이라는 강경책으로 응징하는 이들의 방법이 자신과는 맞지 않음을 깨닫고 고담시로 돌아온다.",
+        "poster_path": "/sb3V2fPhNDRRUvHJW4pQaeHbDxm.jpg",
+        "backdrop_path": "/hQrHN6WXERVw6XUMpfCgLfvrh5V.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2005-06-24"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 39,
+    "fields": {
+        "title": "프레스티지",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"SF\"]",
+        "overview": "로버트 앤지어는 상류층 집안에서 자란 쇼맨십이 강한 마술사. 반면 고아로 사람들과 잘 어울리지 못하는 알프레드 보든은 아이디어를 남들에게 보여 줄 배짱은 없지만 누구보다도 뛰어난 재능을 가진 천재이다. 두 사람은 서로를 아끼는 친구이자 선의의 경쟁자. 그러나 그들이 최고라 자부했던 수중 마술이 실패로 돌아가면서 두 사람은 철천지 원수로 돌변한다. 상대방 마술의 비밀을 캐내려 경쟁을 벌이는 가운데, 로버트는 알프레드의 비밀을 알아내기 위해 자신의 조수이자 사랑하는 여인 올리비아를 알프레드에게 접근하게 만든다.",
+        "poster_path": "/rwEc7SgXu7b5Yo8Co4CvSinF91v.jpg",
+        "backdrop_path": "/mfJepkInUbiZ0mFXFhDNz8ko6Zr.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2006-11-02"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 40,
+    "fields": {
+        "title": "메멘토",
+        "genre": "[\"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "전직 보험 수사관이었던 레너드에게 기억이란 없다. 자신의 아내가 강간당하고 살해되던 날의 충격으로 기억을 10분 이상 지속시키지 못하는 단기 기억상실증 환자가 되었던 것이다. 그가 마지막으로 기억하고 있는 것은 자신의 이름이 레너드 셸비 라는 것과 아내가 강간당하고 살해당했다는 것, 그리고 범인은 존 G 라는 것이 전부. 레너드는 자신의 가정을 파탄 낸 범인을 찾기 위한 방법으로 메모와 문신을 사용하게 된다. 하지만 진실에 다가갈수록 자신의 기억, 주위 사람들에 대한 의심이 갈수록 커져만 가는데...",
+        "poster_path": "/vqxdADPdy0ZVJr8dMB3mh6C5Vsv.jpg",
+        "backdrop_path": "/v4u9FnSOpLEjPIAhbKClM45LJoJ.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2001-08-25"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 43,
+    "fields": {
+        "title": "미행",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "별다른 일을 하지 않은 젊은이가 심심풀이로 다른 사람들의 뒤를 밟는 미행을 해보다가 뜻하지 않게 범죄에 휘말리게 된다. 초저예산 영화로 만든 놀라운 미스터리 스릴러로 흑백의 느와르 영화 분위기이다.",
+        "poster_path": "/lK9LE5D67HNyPlhJcjKAgnRh0OO.jpg",
+        "backdrop_path": "/4kjQK9aanydnmMm6S6QOr1FLy6c.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "1999-04-02"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 46,
+    "fields": {
+        "title": "좋은 친구들",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\ubc94\\uc8c4\"]",
+        "overview": "아일랜드계 이탈리아인 헨리 힐와 토미는 13살에 마피아에 입문해 지미와 함께 트럭이나 공항 화물을 훔치는 일을 한다. 결혼 후에도 마피아 생활을 계속하는 헨리는 이제 조직에서도 안정된 위치와 경제적 여유를 갖는다.  어느 날 헨리와 지미는 공항터미널 사건을 모의해 현금 6백만 달러라는 엄청한 돈을 훔친다. 이 사건을 은폐하기 위해 혈안이 된 지미는 모의에 참여했던 사람들을 죽이고, 토미는 마피아 조직에 가담했다가 살해당한다. 엎친데 덮친격으로 헨리마저 마약거래로 경찰서에 잡혀 들어가는데...",
+        "poster_path": "/zF9hSBS1t7PVFLo01GrJ3OjGi67.jpg",
+        "backdrop_path": "/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "1991-02-14"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 47,
+    "fields": {
+        "title": "택시 드라이버",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "트래비스(로버트 드 니로)는 베트남전에서 귀환한 후 불면증에 시달리며 사회에 적응하지 못하고 있다. 그래서 그는 택시 운전기사로 일하며 뉴욕의 밤거리를 다니며 타락한 사회를 보고 자신이 직접 이 악들을 제거하려고 마음 먹는다. 어느 날 트래비스는 우연히 12살 짜리 창녀 아이리스(조디 포스터)를 만나게 되고 그녀의 인생을 구하려 하지만 그녀는 집으로 돌아가길 꺼려 한다. 자신은 아무 것도 할 수 없다는 생각에 무기력해진 트래비스는 4개의 권총을 구입하고 상원의원 팔렌타인을 저격하러 나선다. 하지만 엉뚱하게도 사창가에서 피비린내 나는 총격전을 벌인 끝에 아이리스를 묶어두고 있던 포주 스포츠를 살해하고 마는데...",
+        "poster_path": "/nJFKg6pyfmkLKttiLQKQuLZBLKH.jpg",
+        "backdrop_path": "/a58oc5qGNazb3QOxEH8eG5S7gjr.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "1989-02-17"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 48,
+    "fields": {
+        "title": "아이리시맨",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\", \"\\uc5ed\\uc0ac\"]",
+        "overview": "2000년, 양로원에서 쓸쓸하게 늙어가는 프랭크 시런은 1975년 빌 버팔리노의 딸 결혼식 참석을 위해 길을 떠났던 날을 회상한다. 영화는 제2차 세계대전에 참전했던 노동자 출신의 프랭크가 어떻게 청부살인업자로 활약하게 됐는지 따라가며 주변 인물과 관계를 조명한다. 지미 호파는 전미운수노조의 수장으로서 막강한 권력을 누리고, 프랭크 시런을 범죄로 끌어들인 러셀 버팔리노는 살해 건수를 배당하는 설계자다. 법무장관으로 지명된 로버트 케네디의 견제, 그로 인한 지미의 감옥행은 나비효과처럼 예기치 못한 결과로 이어지는데...",
+        "poster_path": "/Ch4DTlESeylOs7VaTI5YWI2XN9.jpg",
+        "backdrop_path": "/4P6bqSY4goBnDleDLj7kLupyiW3.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "2019-11-20"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 51,
+    "fields": {
+        "title": "코미디의 왕",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\ucf54\\ubbf8\\ub514\"]",
+        "overview": "건달 루퍼트 펍킨은 스스로 타고난 코미디언이라고 생각하고 있는 배우 지망생이다. 화려한 데뷔를 꿈꾸는 그는 거물 코미디언 제리 랭포드에게 접근하기 위해 갖은 수단을 다 쓰지만 효과는 시원치 않다. 그가 탄 자동차에 무조건 올라탄 펍킨은 한번 연락하라는 한마디에 벌써 유명 인사나 된 듯 과대망상에 빠진다. 그러나 기회는 좀처럼 오지 않고, 마지막 수단으로 펍킨은 랭포드의 열광적인 여성팬을 동원해 그를 납치한다. 랭포드에게 권총을 들이대고 협박한 펍킨은 그로 하여금 제작자에게 깜짝 놀랄 미지의 인물이 랭포드 쇼에 출연하게 된다는 전화를 걸게 하는데...",
+        "poster_path": "/m24EbHxT9NGYEkOlu29YcLOgjgK.jpg",
+        "backdrop_path": "/mNZrsUOkc8KfTu9zjp0lHDCrQtp.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "1982-12-18"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 52,
+    "fields": {
+        "title": "더 울프 오브 월 스트리트",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\", \"\\ucf54\\ubbf8\\ub514\"]",
+        "overview": "부자가 되는 게 꿈인 22살의 조던 벨포트(레오나르도 디카프리오)는 꿈을 실현코자 월스트리트에 발을 들인다. 고객의 돈을 내 주머니로 끌어들이는 비법은 코카인과 마스터베이션에 있다고 말하는 괴짜들이 하루 종일 전화기를 붙들고 사기치는 곳, 조던에게 월스트리트의 첫인상은 그랬다. 첫 직장에 몸담은 지 1년 만에 블랙 먼데이를 경험하고 실직자가 된 조던은 현란한 언변을 무기로 위기를 기회로 만들어버린다. 친구들을 불러모아 스트래튼 오크몬트사를 세운 그는 수수료가 비싼 투기적 저가주을 팔아 돈을 긁어모으고, 주가 조작으로 억만장자가 된 후 술과 마약, 여자를 탐닉한다. 그사이 FBI는 그의 뒤를 캐기 시작하는데...",
+        "poster_path": "/g4WhlVecCbBNhVT67ootHe6oe4A.jpg",
+        "backdrop_path": "/blbA7NEHARQOWy5i9VF5K2kHrPc.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "2014-01-09"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 53,
+    "fields": {
+        "title": "풀 메탈 자켓",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc804\\uc7c1\"]",
+        "overview": "조커와 로렌스, 카우보이 등은 베트남 전에 참전하기 위해 입대한 신병들이다. 이들은 전투 베테랑인 하트만 상사의 교육하에 철두철미한 해병으로 다시 태어나기 위해 훈련을 받는다. 뚱뚱하고 약간 지능이 모자라는 로렌스는 신병 교육대 최고의 고문관. 고된 훈련을 겪는 이들은 로렌스로 인해 자신들이 얼차려를 받게 되는 사실이 싫다. 언제부터인가 로렌스는 자신의 총과 대화를 나누고, 훈련생들은 그가 어딘지 모르게 달라지고 있다는 사실을 느낀다. 8주간의 훈련이 끝나갈 무렵, 윗 침대에서 자고있어야 할 로렌스가 사라진 것을 알게된 조커는 화장실에서 그를 찾아내는데...",
+        "poster_path": "/aQJ650CEHmN5B7W1C2r8efCDyiP.jpg",
+        "backdrop_path": "/yozBWKbyeXtPGN75PlHurOaVvEz.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "1996-02-17"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 58,
+    "fields": {
+        "title": "살인의 추억",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "1986년 경기도. 젊은 여인이 무참히 강간, 살해당한 시체로 발견된다. 2개월 후 비슷한 수법의 강간살인사건이 연이어 발생하면서 사건은 세간의 주목을 받기 시작하고, 일대는 연쇄살인이라는 생소한 범죄의 공포에 휩싸인다. 사건 발생 지역에 특별수사본부가 설치되고, 수사본부는 구희봉 반장을 필두로 지역토박이 형사 박두만과 조용구, 그리고 서울 시경에서 자원해 온 서태윤이 배치된다. 육감과 폭력으로 수사를 진행하는 박형사와 증거와 과학수사를 추구하는 서형사는 수사 내내 마찰을 일으키는데...",
+        "poster_path": "/sujAihJHmNMfeMNQ004KYIPvrGA.jpg",
+        "backdrop_path": "/2NArMoObkAbnIPvqlHC3gRGsfBb.jpg",
+        "director": "Bong Joon-ho",
+        "average_vote": 0.0,
+        "release_date": "2003-05-02"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 59,
+    "fields": {
+        "title": "플란다스의 개",
+        "genre": "[\"\\ucf54\\ubbf8\\ub514\", \"\\ubc94\\uc8c4\"]",
+        "overview": "조용한 아파트, 백수와 다름없는 시간강사 고윤주는 개소리에 괜히 예민해져서 방바닥에 엎드려서 소리를 들어보고 천장에서 소리를 들어보려고 하지만 개소리의 진원지를 알지 못한다. 슬리퍼에 츄리닝을 입고 밖으로 나가 분리수거를 하고 터덜거리며 들어오던 중 바로 옆집 문앞에 서 있는 강아지를 발견한다. 윤주는 그 개를 납치, 지하실로 뛰기 시작한다. 한편 아파트 경비실엔 경리 직원 박현남이 있다. 그날도 지루하게 낱말맞추기나 하고 있는 현남에게 꼬마 슬기가 삔돌이를 찾는 전단을 가지고 오는데...",
+        "poster_path": "/jFXqYWAoSMpm4ztaGxioGeVzog0.jpg",
+        "backdrop_path": "/I6rNAQ0wzFOtLgGuD7BLCyAih6.jpg",
+        "director": "Bong Joon-ho",
+        "average_vote": 0.0,
+        "release_date": "2000-02-19"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 61,
+    "fields": {
+        "title": "패닉 룸",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "뉴욕 맨하튼의 고급주택. 멕(조디 포스터)은 남편과 이혼하고 딸(크리스틴 스튜어트)과 함께 새 집으로 이사 온다. 그 집에는 외부와는 완벽하게 차단된 안전한 공간 패닉 룸이 있다. 당뇨를 앓고 있는 어린 딸 사라와 폐쇄공포증이 있는 멕. 아직은 낯선 그 집에서 첫날 밤을 보내게 되는 그들 앞에 세 명의 무단 침입자가 나타난다. 할아버지가 남긴 막대한 유산을 혼자 차지하기 위해 범행을 계획한 주니어(자레드 레토), 패닉 룸의 설계자로 아이의 양육비 때문에 동참하게 되는 버냄(포레스트 휘테커), 그리고 주니어가 데려온 정체불명의 마스크 맨 라울(드라이트 요아캄). 셋은 패닉 룸 안에 숨겨져 있는 거액의 돈을 차지하기위해 저택에 칩입하지만 집 안에 사람이 있다는 것을 알고 나서 모든 계획에 차질이 생긴다.",
+        "poster_path": "/cyskHeIS785JhKDxYRrHNM7tcIj.jpg",
+        "backdrop_path": "/gXkMRCw4dKE3yRnZpmgP8wfLL1y.jpg",
+        "director": "David Fincher",
+        "average_vote": 0.0,
+        "release_date": "2002-03-29"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 70,
+    "fields": {
+        "title": "세븐",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "은퇴를 7일 앞둔 관록의 형사 윌리엄 소머셋(모건 프리먼)과 새로 전근 온 신참내기 형사 밀스(브래드 피트)가 팀이 된 바로 다음날, 강압에 의해 위가 찢어질 때까지 먹다가 죽은 초고도 비만 남자와 역시 강압에 의해 식칼로 자기 살을 베어내 죽은 악덕 변호사의 사건과 마주한다. 식탐, 탐욕, 그리고 나태, 분노, 교만, 욕정, 시기. 소머셋은 현장에 남은 흔적들로 단테의 신곡과 쵸서의 캔터베리 서사시를 근거로 한 기나긴 연쇄 살인이 시작되었음을 직감하고 성서의 7가지 죄악을 따라 발생하는 사건들을 추적하기 시작하는데...",
+        "poster_path": "/izzk8dbmrLowcoGbFaebqJvzyXg.jpg",
+        "backdrop_path": "/dYjZ27hDw2QFaEIfzbNGwW0IkV9.jpg",
+        "director": "David Fincher",
+        "average_vote": 0.0,
+        "release_date": "1995-11-11"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 74,
+    "fields": {
+        "title": "셔터 아일랜드",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\"]",
+        "overview": "보스턴 셔터아일랜드의 정신병원은 중범죄를 저지른 정신병자를 격리하는 병동으로 탈출 자체가 불가능하다. 하지만 자식 셋을 죽인 혐의를 받고 있는 여인이 이상한 쪽지만을 남긴 채 감쪽같이 사라지는 사건이 발생한다. 연방보안관 테디 다니엘스(레오나르도 디카프리오)는 수사를 위해 동료 척(마크 러팔로)과 함께 셔터아일랜드로 향한다. 테디는 수사를 위해 의사, 간호사, 병원관계자 등을 심문하지만 수사는 전혀 진척되지 않는다. 설상가상 폭풍이 불어 닥쳐 테디와 척은 섬에 고립되게 되고, 그들에게 점점 괴이한 일들이 일어나기 시작하는데...",
+        "poster_path": "/aywZdSOXtwcqqLTl271EUJemi2.jpg",
+        "backdrop_path": "/U8QRD7jvTXEYsUXq74IFKaSiL5.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "2010-03-18"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 75,
+    "fields": {
+        "title": "디파티드",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\ubc94\\uc8c4\"]",
+        "overview": "남부 보스턴 매사추세츠 주 경찰청은 프랭크 코스텔로가 이끄는 막강한 세력을 지닌 보스턴 최대 범죄조직망을 일망타진하기 위해 신참 경찰 빌리 코스티건을 조직에 침투시킨다. 빌리가 경찰 뱃지를 반납하고 보스턴 길거리를 떠돌다 코스텔로의 신임을 얻기 위해 애쓰는 동안 또 다른 신참 콜린 설리반은 경찰청 내에서 승승장구하여 특별 수사반에 배치된다. 특별 수사반의 임무 역시 코스텔러를 제거하는 것. 그러나 사실 콜린은 경찰청에 투입된 코스텔로의 첩자. 경찰청의 동태를 사전에 코스텔로에게 알리는 게 그의 진짜 임무였던 것이다.",
+        "poster_path": "/jaaYn5iY0s9vwcm8oOhxKBWYW6U.jpg",
+        "backdrop_path": "/cDFtxTxEtE3ljadfQ5SwtRTi8Iw.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "2006-11-23"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 77,
+    "fields": {
+        "title": "휴고",
+        "genre": "[\"\\ubaa8\\ud5d8\", \"\\ub4dc\\ub77c\\ub9c8\", \"\\uac00\\uc871\"]",
+        "overview": "1931년 프랑스 파리의 기차역, 역사 내 커다란 시계탑을 혼자 관리하며 숨어 살고 있는 열두 살 소년 휴고(아사 버터필드). 사고로 아버지(주드 로)를 잃은 휴고에겐 아버지와의 추억이 담긴 고장 난 로봇 인형만이 가진 전부다. 아버지의 숨겨진 메시지가 있을 거라 믿으며 망가진 로봇 인형을 고치려는 것을 포기하지 않는 휴고는 어느 날 인형 부품을 훔쳤다는 이유로 장난감 가게 주인 조르주(벤 킹슬리)에게 아버지의 수첩을 뺏기고 만다. 조르주 할아버지의 손녀딸 이자벨(클로이 모레츠)의 도움으로 로봇 인형의 설계도가 담긴 아버지의 수첩을 되찾으려는 휴고는 떠돌이 아이들을 강제로 고아원에 보내는 악명 높은 역무원(사챠 바론 코헨)의 눈에 띄게 되고, 애타게 찾던 로봇 인형의 마지막 열쇠를 가지고 있던 건 다름아닌 이자벨이라는 것을 알게 되는데...",
+        "poster_path": "/tHbvIeEa5OKQ07SSGlvNn1IEQ9l.jpg",
+        "backdrop_path": "/jlh5bNiSPcbQ79Nt31kE2GxIR3h.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "2012-02-29"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 79,
+    "fields": {
+        "title": "에비에이터",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "조각같이 아름다운 외모, 총명한 두뇌, 그리고 부모로부터 물려받은 막대한 재산으로 20세의 나이에 억만장자가 된 하워드 휴즈. 그러나 그는 현재에 만족하지 않는다. 그는 모두가 불가능이라고 부른 영역에 자신의 야망을 건다. 가장 먼저 선택한 것은 영화. 기라성같은 할리웃 제작자들의 비웃음과 영화계의 냉대에도 불구하고 2년의 촬영기간, 1년의 후반작업 기간이라는 어마어마한 자본과 제작공정 끝에 을 발표한다. 그리고 할리웃의 모든 흥행 역사를 갈아치운다. 세상의 감탄, 그러나 놀라움은 출발에 불과했다!  ‘영화계의 마이다스’로 떠오른 하워드 휴즈는 당대 최고의 섹스심벌로 추앙받는 여배우들을 차례로 발굴해낸다. 그리고 그녀들은 금새 하워드 휴즈의 매력에 사로잡혀 연인이 돼버린다. 진 할로우, 캐서린 헵번, 에바 가드너... 서로 다른 매력의 여배우들이 그의 주변에서 맴돌고 각종 잡지와 매스컴의 표적이 된 휴즈. 그러나 사랑에 머무르기엔 그의 야망은 너무 거대했다!  어려서부터 비행기 조종 취미를 가졌던 하워드는 최고의 엔지니어들을 모아 새로운 비행기들을 생산해낸다. 마침내 세계 비행기록을 경신하며 ‘전 세계에서 가장 빠른 남자’의 타이틀을 얻는다. 그리고 오늘날까지 가장 긴 날개를 가진 비행기로 기록되는 ‘헤라클레스’를 완성하기에 이른다. 전 세계에서 가장 큰 항공사중 하나인 TWA 항공을 인수하며 세계 굴지의 항공재벌이 되지만... 생각지 못했던 음모와 시련이 그를 괴롭힌다. 그리고, 아무도 모르는 그의 내면의 비밀이 서서히 베일을 벗는데...",
+        "poster_path": "/mzCZhJwFN3J4vHnSc5BXDAYvhYw.jpg",
+        "backdrop_path": "/eDT0H0bApPYXepBnhEV5tPZF33G.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "2004-12-31"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 80,
+    "fields": {
+        "title": "카지노",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\"]",
+        "overview": "조그만 동네에서 자란 에이스는 도박에서 언제나 이기는 재주를 타고 났다. 그 때문에 그는 마피아 보스들에게 알려지고, 보스들은 그를 보호하기 위해 니키를 붙여준다. 니키는 비록 몸집은 작지만 상대가 얼마나 크든지간에 먼저 제압해 버리는 능력을 갖고 있는 갱. 오랫동안 니키와 에이스는 완벽한 팀을 이루게 된다. 그러나 라스베가스로 진출한 에이스는 니키가 라스베가스로 온다는 소식을 접하고 니키의 포악한 성질이 걱정돼 꺼려한다. 에이스의 심정을 눈치채고 있던 니키는 라스베가스에서 자신의 독특한 방법인 폭력으로 나름대로의 영역을 넓혀나가고, 에이스는 합법적인 카지노를 운영하면서 자신의 입지를 굳혀 가는데...",
+        "poster_path": "/fygChDROEjKiFAoBmgYHNzEyi2v.jpg",
+        "backdrop_path": "/pLR2O3dmA9xkCiPA26U7ErCUYSi.jpg",
+        "director": "Martin Scorsese",
+        "average_vote": 0.0,
+        "release_date": "1996-03-16"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 88,
+    "fields": {
+        "title": "킬 빌: 2부",
+        "genre": "[\"\\uc561\\uc158\", \"\\ubc94\\uc8c4\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "악명높은 데들리 바이퍼의 최고 암살단원 더 브라이드는 임신 사실을 알고 태어날 아이를 위해 피묻은 과거를 청산하고자 한다. 동료들의 눈을 피해 평범한 남자와 결혼식을 올리려는 찰나, 다섯명의 데들리 바이퍼가 그녀를 찾아와 총알세례를 퍼부었다. 5년간의 혼수상태에서 깨어난 더 브라이드는 아이가 죽었다는 사실에 분노의 눈물을 흘리고 복수를 맹세한다. 버니타 그린과 오렌 이시이를 처치한 그녀에게 이제 버드와 엘, 그리고 최종목표인 빌 이렇게 셋이 남았다. 그런데 죽은 줄 알았던 자신의 딸이 살아있다는 소식을 접하게 되고...",
+        "poster_path": "/cSTDycUJuSSUd2QgmpmjUDrW69g.jpg",
+        "backdrop_path": "/70EtzaGfO2d8X5n8SLI4s61KuJh.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "2004-05-14"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 89,
+    "fields": {
+        "title": "킬 빌: 1부",
+        "genre": "[\"\\uc561\\uc158\", \"\\ubc94\\uc8c4\"]",
+        "overview": "어느 한적한 오후, 행복한 결혼식을 앞둔 더 브라이드와 그녀의 신랑, 그리고 모든 하객들이 의문의 조직에 의해 처참하게 살해당한다. 그로부터 5년 후, 코마상태의 더 브라이드는 죽음 직전까지 갔다가 어렵게 깨어난다. 그리고 피로 얼룩진 과거가 그녀의 뇌리에 스치면서 서서히 복수의 리스트를 작성하기 시작한다. 그녀는 전세계적으로 악명높은 살인조직 데들리 바이퍼의 일원이었고, 조직의 보스인 빌을 포함한 5명의 일원이 새로운 삶을 앞둔 그녀를 처참하게 무너뜨렸음이 밝혀지자, 그녀는 텍사스, 멕시코, 일본을 방문하며 가장 잔인한 복수를 실행하게 되는데...",
+        "poster_path": "/lH82lk837fACeVZUmqHH0UiEeWL.jpg",
+        "backdrop_path": "/lVy5Zqcty2NfemqKYbVJfdg44rK.jpg",
+        "director": "Quentin Tarantino",
+        "average_vote": 0.0,
+        "release_date": "2003-11-21"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 91,
+    "fields": {
+        "title": "인썸니아",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\", \"\\uc2a4\\ub9b4\\ub7ec\"]",
+        "overview": "밤이 없이 낮만 계속되는 백야에 접어든 알래스카의 외딴 마을의 쓰레기 하치장에서 17세 소녀의 시체가 전라의 몸으로 발견된다. 용의자도 단서도, 목격자도 없는 이 의문의 사건을 수사하기 위해 LA 경찰청 소속의 베테랑 경찰관 윌 도너(알 파치노)와 그의 동료 햅(마틴 도노반)이 도착한다. 그들은 이내 살인사건의 일급 용의자로 은둔 소설가인 월터 핀치(로빈 윌리암스)를 지목하지만 월터는 잠복근무중인 윌과 햅을 따돌리고 사라진다. 추적중에 도너는 안개속에서 총을 발사하고, 이내 쓰러진 햅이 발견된다. 동료의 죽음에 대한 자책감으로 상심에 빠진 도너는 지역 경찰(힐러리 스왕크)의 도움을 받아 월터와의 대결에 나선다.",
+        "poster_path": "/iUVqFNAsczEZDKMZ0WUwmijFXXi.jpg",
+        "backdrop_path": "/jU8MC5uSgBkZXyZYGtZgMsMsfeN.jpg",
+        "director": "Christopher Nolan",
+        "average_vote": 0.0,
+        "release_date": "2002-08-15"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 92,
+    "fields": {
+        "title": "닥터 스트레인지러브",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\ucf54\\ubbf8\\ub514\", \"\\uc804\\uc7c1\"]",
+        "overview": "미 공군의 잭 리퍼 장군은 공산주의자들이 미국인의 신성한 혈통을 오염시킬 음모를 꾸미고 있다는 망상에 사로잡혀 핵폭격기를 출격시킨다. 미국 대통령은 절대절명의 위기를 해결 하기 위해 자문회를 소집하는데, 그 자리에서 소련 대사는 만일 소련이 핵공격을 당한다면 지구상의 모든 동식물이 파멸되는 운명의 날이 다가오게 될 것이라고 경고한다. 전 나치주의자였던 천재 과학자 스트레인지러브 박사는 핵무기에 지구의 운명이 달려있다는 사실이 너무 명백하므로 핵무기로 상황을 대응할 수 없다는 결론을 내린다. 과연 폭격기는 제 시간에 제거될 수 있을 것인가? 아니면 잭 리퍼 장군이 전세계를 파멸시키는데 성공 할 것인가?",
+        "poster_path": "/2VrsnlM63ab3oAuMt3XOnbGYMY6.jpg",
+        "backdrop_path": "/sTp8K0SfcC2RQef1Tu160z3niHO.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "1964-01-29"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 93,
+    "fields": {
+        "title": "로리타",
+        "genre": "[\"\\ubc94\\uc8c4\", \"\\ub4dc\\ub77c\\ub9c8\", \"\\ub85c\\ub9e8\\uc2a4\"]",
+        "overview": "파리에서 미국으로 건너온 대학 교수 험버트는 여름 동안 지낼 하숙집을 찾다 미망인 샬롯의 집에 머물게 된다. 그는 샬롯의 애정어린 관심을 받고 부담스러웠지만, 그녀의 조숙한 어린 딸 로리타에게 한 눈에 반해버린다. 결국 험버트는 로리타의 곁을 떠나지 않기 위해 샬롯과 결혼을 한다. 어느 날, 로리타에 대한 마음을 기록한 험버트의 일기장을 본 샬롯은 격분해 집 밖으로 뛰쳐나가다 교통사고로 죽고 만다. 험버트는 기숙학교에 보내진 로리타에게 어머니의 죽음을 알리고 함께 도피 여행을 떠난다. 이 때 정체 불명의 추적자가 생기는데...",
+        "poster_path": "/8Puqbeh0D95DpXFWep1rmH78btu.jpg",
+        "backdrop_path": "/aoq23NUjv6ULYglJOYRCiy2URnx.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "1962-06-21"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 97,
+    "fields": {
+        "title": "아이즈 와이드 셧",
+        "genre": "[\"\\ub4dc\\ub77c\\ub9c8\", \"\\uc2a4\\ub9b4\\ub7ec\", \"\\ubbf8\\uc2a4\\ud14c\\ub9ac\"]",
+        "overview": "뉴욕의 크리스마스, 성공한 의사 빌 하퍼드와 그의 아름다운 아내 앨리스는 빌의 친구 지글러가 여는 크리스마스 파티에 참석한다. 파티에서 두 사람은 각각 이성으로부터 강한 성적 유혹을 받는다. 그 다음날 앨리스는 빌에게 숨겨왔던 비밀을 털어 놓는다. 여름 휴가 때 우연히 마주친 한 해군 장교의 매력에 반해 그에게 강한 충동을 느껴 그와 하루밤만 보낼 수 있다면 남편과 딸 모두를 포기할 수 있을 것만 같다는 것이 그 내용이다. 평소에 아내를 정숙한 여자라 믿어 왔던 빌은 커다란 충격을 받는다. 그날 밤 환자의 부음 소식을 듣고 집을 나선 그는 앨리스가 장교와 정사를 나누는 환상에 시달린다. 얼마 후 빌은 대학 동창인 닉으로부터 부자들의 비밀 섹스 파티에 대한 이야기를 듣게 되고 닉의 반대를 무시한 채 파티장에 찾아간다. 그러나 빌의 위장 침입이 곧 밝혀지는데...",
+        "poster_path": "/aUZ7GzsPR4PlpegU2QoGgFylyZ5.jpg",
+        "backdrop_path": "/AklO85uUDAL3O7iSOtFGfqT3w8n.jpg",
+        "director": "Stanley Kubrick",
+        "average_vote": 0.0,
+        "release_date": "2000-09-02"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 99,
+    "fields": {
+        "title": "마녀 배달부 키키",
+        "genre": "[\"\\uc560\\ub2c8\\uba54\\uc774\\uc158\", \"\\uac00\\uc871\", \"\\ud310\\ud0c0\\uc9c0\", \"\\ubaa8\\ud5d8\"]",
+        "overview": "마녀 엄마와 인간 아빠 사이에서 태어난 소녀 키키는 13살이 되던 만월의 어느 밤, 검은 고양이 지지와 함께 집을 나와 마녀 수업을 떠난다. 평소 바다를 동경하던 키키는 바다에 떠있는 커다란 마을에 정착하게 되고, 그 곳에서 갑자기 도로에 뛰어들게 되어 경찰에게 잡히지만 돔보라는 친구를 만나 도망을 치게 된다. 키키는 빵가게 앞을 지나가다 마음씨 좋은 아주머니를 만나게 되고 그 빵집에서 첫 배달이 시작된다. 어느날 비행선 사고가 일어나는데, 거기에 돔보가 포함되어있다는 것을 알고 급히 현장으로 가게 되고, 청소부의 대걸레를 빌려 마법을 사용, 돔보를 구출하려 하는데...",
+        "poster_path": "/ssYpg8sGD83l7cMQqGalhfoYQDm.jpg",
+        "backdrop_path": "/h5pAEVma835u8xoE60kmLVopLct.jpg",
+        "director": "Hayao Miyazaki",
+        "average_vote": 0.0,
+        "release_date": "2007-11-22"
+    }
+}
+]
