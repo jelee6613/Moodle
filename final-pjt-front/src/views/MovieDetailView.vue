@@ -34,14 +34,15 @@
         평점
         <b-form-rating
           id="rating-lg-no-border rating-inline"
-          v-if="isWatched"
+          v-if="isLoggedIn"
           @change="onRate()"
-          v-model="watchedRate"
+          v-model="value.rate"
           variant="danger"
           class="star mb-2"
           no-border inline show-value
           size="lg"
         ></b-form-rating>
+        {{ value }}
       </div>
     </div>
 
@@ -68,11 +69,15 @@ export default {
   data() {
     return {
       moviePk: this.$route.params.moviePk,
-      watchedRate: this.movie.rate,
+      value: {
+        moviePk: this.$route.params.moviePk,
+        rate: 0,
+      }
+      // watchedRate: this.movie.rate,
     }
   },
   computed: {
-    ...mapGetters(['movie']),
+    ...mapGetters(['movie', 'isLoggedIn']),
     movieGenres() {
       return JSON.parse(this.movie.genre)
     },
@@ -89,7 +94,8 @@ export default {
   methods: {
     ...mapActions(['fetchMovie', 'rateMovie']),
     onRate() {
-      this.rateMovie(this.moviePk, this.watchedRate)
+      console.log(this.value)
+      this.rateMovie(this.value)
     }
   },
   created() {

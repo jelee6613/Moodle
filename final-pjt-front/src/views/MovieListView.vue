@@ -18,7 +18,7 @@
       <div class="d-flex movie-list-item">
         <movie-list-item
           v-for="nowPlaying in nowPlayings"
-          :key="nowPlaying.pk"
+          :key="nowPlaying.id"
           :movie="nowPlaying"
         ></movie-list-item>
       </div>
@@ -28,7 +28,7 @@
       <div class="d-flex movie-list-item">
         <movie-list-item
           v-for="popular in populars"
-          :key="popular.pk"
+          :key="popular.id"
           :movie="popular"
         ></movie-list-item>
       </div>
@@ -38,7 +38,7 @@
       <div class="d-flex movie-list-item">
         <movie-list-item
           v-for="upcoming in upcomings"
-          :key="upcoming.pk"
+          :key="upcoming.id"
           :movie="upcoming"
         ></movie-list-item>
       </div>
