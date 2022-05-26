@@ -1,49 +1,67 @@
 <template>
-  <div>
+  <div class="movie-detail">
     <img class="img-fluid" :src="`https://image.tmdb.org/t/p/original${movie.backdrop_path}`" alt="">
-    <div class="container movie-detail">
-      <div>
-        <h1>{{ movie.title }}</h1>
-      </div>
-      <div>
-        {{ movie.overview }}
-      </div>
-      <div>
-        {{ movie.poster_path }}
-      </div>
-      <div>
-        {{ movie.backdrop_path }}
-      </div>
-      <div>
-        {{ movie.director }}
-      </div>
-      <div>
-        <b-form-rating
-          variant="warning"
-          :value="movieRate"
-          no-border inline show-value readonly          
-          class="star"
-        ></b-form-rating>
-        <!-- {{ movie.average_vote }} -->
-      </div>
-        {{ movieGenres }}
-      <div>
-        {{ movie.release_date }}
-      </div>
-      <div>
-        평점
-        <b-form-rating
-          id="rating-lg-no-border rating-inline"
-          v-if="isLoggedIn"
-          @change="onRate()"
-          v-model="value.rate"
-          :value="value.rate"
-          variant="danger"
-          class="star mb-2"
-          no-border inline show-value show-clear
-          size="lg"
-        ></b-form-rating>
-        {{ value }}
+    <div class="container-lg">
+      <div class="movie-detail-info">
+        <div class="col-10 col-lg-7">
+          <div class="movie-detail-box">
+            <div class="mb-3 align-items-end">
+              <span class="font-bold">{{ movie.title }}</span><br/>
+              <b-form-rating
+                variant="warning"
+                :value="movieRate"
+                no-border inline show-value readonly          
+                class="star ml-4"
+              ></b-form-rating>
+            </div>
+            <hr />
+            <div class="font-description my-4">
+              {{ movie.overview }}
+            </div>
+            <div class="font-description movie-detail-item">
+              <span class="text-small">
+                감독&nbsp;
+              </span>
+              <span>
+                {{ movie.director }}
+              </span>
+            </div>
+            <div class="font-description movie-detail-item">
+              <span class="text-small">
+                장르&nbsp;
+              </span>
+              <span v-for="genre in movieGenres" :key="genre">
+                {{ genre }}&nbsp;
+              </span>
+            </div>
+            <div class="font-description movie-detail-item">
+              <span class="text-small">
+                개봉일&nbsp;
+              </span>
+              <span>
+                {{ movie.release_date }}
+              </span>
+            </div>
+            <div class="d-flex align-items-center mt-3">
+              <span class="text-small">
+                내 평점&nbsp;
+              </span>
+              <div class="star-box">
+                <b-form-rating
+                  id="rating-lg-no-border rating-inline"
+                  v-if="isLoggedIn"
+                  @change="onRate()"
+                  v-model="value.rate"
+                  :value="value.rate"
+                  variant="danger"
+                  no-border inline show-value show-clear
+                  class="star"
+                  size="lg"
+                ></b-form-rating>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -95,9 +113,16 @@ export default {
 </script>
 
 <style>
-/* .img-fluid {
+.img-fluid {
   width: 100%;
-} */
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #aeaeae;
+  /* opacity: 0.5; */
+}
+
 .form-control:focus {
   background-color: transparent;
   color: #ffffff;
@@ -107,8 +132,25 @@ export default {
 
 }
 
+.movie-detail-info {
+  /* z-index: 99; */
+  position: absolute;
+  bottom: 70px;
+}
+
+.movie-detail-item {
+  display: inline-block;
+  border-bottom: #aaaaaa solid 1px;
+  /* border-radius: 50px; */
+  padding: 0.5rem 1.6rem;
+  margin-right: 2rem;
+}
+
+.star-box {
+}
+
 .star {
  background-color: transparent;
- color: #ffffff
+ color: #ffffff;
 }
 </style>
