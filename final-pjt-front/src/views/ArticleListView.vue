@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h2>ArticleListView</h2>
     
     <div class="d-flex flex-row-reverse">

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>movie detail</h2>
-
+    <img class="img-fluid" :src="`https://image.tmdb.org/t/p/original${movie.backdrop_path}`" alt="">
+    
     <div>
       <h1>{{ movie.title }}</h1>
     </div>
@@ -76,5 +76,7 @@ export default {
 </script>
 
 <style>
-
+/* .img-fluid {
+  width: 100%;
+} */
 </style>

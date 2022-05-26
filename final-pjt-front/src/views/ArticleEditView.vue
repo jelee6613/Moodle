@@ -1,7 +1,17 @@
 <template>
-  <div>
-    <h1>Edit Article</h1>
-    <article-form v-if="isArticle" :article="article" action="update"></article-form>
+  <div class="container d-flex align-items-center">
+    <div class="col py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="mb-5 text-center">  
+            <h3 class="my-1">
+              게시글 수정
+            </h3>
+          </div>
+          <article-form v-if="isArticle" :article="article" action="update"></article-form>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <span>Movie Recommendation</span>
     <div v-if="isMovieEmpty">
       <quiz-form></quiz-form>

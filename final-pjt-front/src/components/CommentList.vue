@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <ul>
-      <comment-list-item
-        v-for="comment in comments"
-        :key="comment.id"
-        :comment="comment"
-      ></comment-list-item>
-    </ul>
+  <div class="d-flex justify-content-center">
+    <div class="col">
+      <div class="row p-3">
+        <comment-list-item
+          v-for="comment in comments"
+          :key="comment.id"
+          :comment="comment"
+        ></comment-list-item>
+        <comment-form></comment-form>
+      </div>
+    </div>
 
-    <comment-form></comment-form>
   </div>
 </template>
 

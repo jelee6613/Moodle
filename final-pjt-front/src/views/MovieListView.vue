@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="mt-3 mb-5" v-if="currentUser.is_superuser">
       <form @submit.prevent="onSubmit" class="row justify-content-center">
         <div class="col-11 col-md-8 col-lg-6">
@@ -88,6 +88,11 @@ export default {
 .input-group > .form-control {
   border: none;
 }
+textarea.form-control,
+textarea.form-control:-webkit-autofill,
+textarea.form-control:-webkit-autofill:hover,
+textarea.form-control:-webkit-autofill:focus,
+textarea.form-control:-webkit-autofill:active,
 input.form-control,
 input.form-control:-webkit-autofill,
 input.form-control:-webkit-autofill:hover,
