@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit" enctype="multipart/form-data">
       <div class="my-4">
         <label class="form-label" for="title">글 제목</label>
         <input 
@@ -18,6 +18,10 @@
           type="text" 
           id="content"
           required />
+      </div>
+      <div class="my-4">
+        <label for="image" class="form-label"></label>
+        <input type="file" name="image" id="image">
       </div>
       <div class="d-grid mt-4">
         <button class="btn btn-outline-primary btn-lg mb-3">작성완료</button>
