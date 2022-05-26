@@ -3,42 +3,84 @@
     "model": "movies.question",
     "pk": 1,
     "fields": {
-        "content": "1번 문제 내용"
+        "content": "어떤 사람은 간단한 게임에서도 상대방을 이기길 원합니다. 그 이유는 무엇일까요?"
     }
 },
 {
     "model": "movies.question",
     "pk": 2,
     "fields": {
-        "content": "2번 문제 내용"
+        "content": "똑같은 장면을 100번째 촬영하고 있습니다. 한 배우가 지쳐서 \"벌써 100번째야, 그만 좀 찍어!\"라며 화를 냅니다. 당신이 감독이라면?"
     }
 },
 {
     "model": "movies.question",
     "pk": 3,
     "fields": {
-        "content": "3번 문제 내용"
+        "content": "영화 CG에 대해서 어떻게 생각하세요?"
     }
 },
 {
     "model": "movies.question",
     "pk": 4,
     "fields": {
-        "content": "4번 문제 내용"
+        "content": "영화 촬영장에서 사고로 토끼 가족이 죽었다.. 당신이 감독이라면?"
     }
 },
 {
     "model": "movies.question",
     "pk": 5,
     "fields": {
-        "content": "5번 문제 내용"
+        "content": "관심이 가는 영화 소재는?"
     }
 },
 {
     "model": "movies.question",
     "pk": 6,
     "fields": {
-        "content": "6번 문제 내용"
+        "content": "호기심이 가는 사람은?"
+    }
+},
+{
+    "model": "movies.question",
+    "pk": 7,
+    "fields": {
+        "content": "다음은 어떤 감독이 겪었던 생애입니다. 흥미로운 것을 골라주세요."
+    }
+},
+{
+    "model": "movies.question",
+    "pk": 8,
+    "fields": {
+        "content": "당신의 영화 관람 스타일에 가까운 것은?"
+    }
+},
+{
+    "model": "movies.question",
+    "pk": 9,
+    "fields": {
+        "content": "혹시 마블 영화를 안 좋아하나요?"
+    }
+},
+{
+    "model": "movies.question",
+    "pk": 10,
+    "fields": {
+        "content": "\"이웃집 토토로에 나오는 토토로는 굉장히 위험한 생명체로 주인공을 잡아먹지 않은 이유는 단순히 배가 고프지 않았기 때문이다.\"라는 주장에 당신의 의견은?"
+    }
+},
+{
+    "model": "movies.question",
+    "pk": 11,
+    "fields": {
+        "content": "당신이 흥미를 느끼는 전공은?"
+    }
+},
+{
+    "model": "movies.question",
+    "pk": 12,
+    "fields": {
+        "content": "당신은 무엇에 더 가깝나요?"
     }
 }
 ]

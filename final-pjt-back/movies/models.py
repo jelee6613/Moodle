@@ -15,7 +15,7 @@ class Movie(models.Model):
     release_date = models.DateField(null=True)
 
     def __str__(self):
-        return self.title
+        return f'{self.title} : {self.director}'
 
 
 class WatchedMovie(models.Model):
@@ -26,6 +26,9 @@ class WatchedMovie(models.Model):
 
 class Question(models.Model):
     content = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.content
 
 
 class Value(models.Model):

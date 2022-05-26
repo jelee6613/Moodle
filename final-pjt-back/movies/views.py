@@ -7,7 +7,7 @@ import json
 
 from pprint import pprint
 
-from movies.serializers.quiz import QuestionSerializer, ValueSerializer
+from movies.serializers.quiz import QuestionSerializer
 
 from .models import Movie, WatchedMovie, Value, Question
 
@@ -116,7 +116,7 @@ def movie_create(request):
 
     URL = 'https://api.themoviedb.org/3'
     api_key = '04f1192a9aa395adc14e461889d716f8'
-    keyword = request.data
+    keyword = '마녀 배달부 키키'
     params = {
         'api_key': api_key,
         'query': keyword,
