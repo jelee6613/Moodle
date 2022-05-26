@@ -154,10 +154,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.User'
 
-MEDIA_ROOT = BASE_DIR/'media'
-
 MEDIA_URL = '/media/'
-
+MEDIA_ROOT = BASE_DIR/'media'
 
 # CORS (Vue LocalHost 교차 통신)
 CORS_ALLOWED_ORIGINS = [
