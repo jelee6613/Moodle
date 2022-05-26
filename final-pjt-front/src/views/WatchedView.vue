@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <h2>WatchedView</h2>
-    <h3>관람한 영화</h3>
-    <movie-list-item
-      v-for="watchedMovie in profile.movies"
-      :key="watchedMovie.pk"
-      :movie="watchedMovie"
-    >
-    </movie-list-item>
+  <div class="container">
+    <div class="col">
+      <div class="row">
+        <h3>{{ profile.username }}님이 관람한 영화</h3>
+        <div class="col-4"></div>
+          <movie-list-item
+            v-for="watchedMovie in profile.movies"
+            :key="watchedMovie.pk"
+            :movie="watchedMovie"
+          >
+          </movie-list-item>
+      </div>
+    </div>
   </div>
 </template>
 

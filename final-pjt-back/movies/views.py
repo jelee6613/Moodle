@@ -251,20 +251,6 @@ def movie_recommendations(request):
         return Response(serializer.data)
 
 
-## 삭제 예정
-@api_view(['POST'])
-def movie_watched(request, movie_id):
-    movie = get_object_or_404(Movie, pk=movie_id)
-    # 내가 본 영화 등록/취소
-    if request.user.movies.filter(pk=movie_id).exists():
-        request.user.movies.remove(movie)
-    else:
-        request.user.movies.add(movie)
-    
-    serializer = MovieDetailSerializer(movie)
-    return Response(serializer.data)
-
-
 @api_view(['POST'])
 def movie_rate(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
@@ -276,7 +262,7 @@ def movie_rate(request, movie_id):
         watched_movie = get_object_or_404(WatchedMovie, movie_id=movie_id, user_id=request.user.id)
 
         # 평가했던 평점 그대로 재요청 보내면 내가 본 영화에서 삭제
-        if request.data['rate'] == watched_movie.rate:
+        if not request.data['rate']:
             is_delete = True
             request.user.movies.remove(movie)
 
