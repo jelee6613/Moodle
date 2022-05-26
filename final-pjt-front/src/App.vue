@@ -30,8 +30,8 @@
       <div class="text-center">
         <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
       </div>
-      <router-view/>  
     </div>
+    <router-view :key="$route.path"/>  
   </div>
 </template>
 
@@ -95,6 +95,17 @@ nav a.router-link-exact-active {
 .navbar-toggler {
   color: #ffffff !important;
   border: none;
+}
+
+a { 
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #90b8f8;
+  text-decoration: underline;
 }
 
 .logo {

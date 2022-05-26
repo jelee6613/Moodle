@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     {{ profileUsername }}의 <h2>ProfileView</h2>
 
     <!-- Follow -->
@@ -13,7 +13,10 @@
         <!-- <i class="fa-regular fa-heart"></i>  -->
       </button>
     </div>
-
+    <div>
+      팔로잉 : {{ profile.followings }}  |
+      팔로우 : {{ profile.followers }}
+    </div>
     <router-link :to="{ name: 'watched', params: { username: profile.username }}">
       관람한 영화
     </router-link>

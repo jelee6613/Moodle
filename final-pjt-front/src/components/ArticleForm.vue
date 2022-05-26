@@ -1,16 +1,26 @@
 <template>
   <div>
     <form @submit.prevent="onSubmit">
-      <div>
-        <label for="title">제목: </label>
-        <input v-model="newArticle.title" type="text" id="title" />
+      <div class="my-4">
+        <label class="form-label" for="title">글 제목</label>
+        <input 
+          class="form-control form-control-lg"
+          v-model="newArticle.title" 
+          type="text" 
+          id="title" 
+          required />
       </div>
-      <div>
-        <label for="content">내용: </label>
-        <textarea v-model="newArticle.content" type="text" id="content" />
+      <div class="my-4">
+        <label class="form-label" for="content">글 내용</label>
+        <textarea 
+          class="form-control form-control-lg"
+          v-model="newArticle.content" 
+          type="text" 
+          id="content"
+          required />
       </div>
-      <div>
-        <button>작성완료</button>
+      <div class="d-grid mt-4">
+        <button class="btn btn-outline-primary btn-lg mb-3">작성완료</button>
       </div>
     </form>
 
@@ -52,5 +62,7 @@ export default {
 </script>
 
 <style>
-
+textarea.form-control {
+  min-height: calc(1.5rem + 15rem + 2px) !important;
+}
 </style>
