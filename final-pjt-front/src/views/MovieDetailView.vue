@@ -37,6 +37,7 @@
           v-if="isLoggedIn"
           @change="onRate()"
           v-model="value.rate"
+          :value="value.rate"
           variant="danger"
           class="star mb-2"
           no-border inline show-value show-clear

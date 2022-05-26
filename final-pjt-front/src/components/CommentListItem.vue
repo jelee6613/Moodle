@@ -5,7 +5,7 @@
         <router-link :to="{ name: 'profile', params: { username: comment.user.username }}">
           {{ comment.user.username }}
         </router-link>
-        <span>댓글 작성시간 / 수정시간</span>
+        <span>{{ comment.created_at | date }} | {{ comment.updated_at | date}}</span>
       </div>
 
       <div v-if="currentUser.username === comment.user.username && !isEditing">
@@ -34,6 +34,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import moment from 'moment'
 
 export default {
     name: 'CommentListItem',
@@ -65,7 +66,13 @@ export default {
         this.updateComment(this.payload)
         this.isEditing = false
       }
-    }
+    },
+    filters: {
+      date(dateField) {
+        return moment(String(dateField)).format('YYYY/MM/DD HH:mm')
+      }
+    },
+
 }
 </script>
 
