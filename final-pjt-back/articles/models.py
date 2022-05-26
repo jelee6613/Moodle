@@ -7,7 +7,6 @@ class Article(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     content = models.TextField()
-    image = models.ImageField(null=True, blank=True, upload_to='images/')
     like_users = models.ManyToManyField(User, related_name='like_articles')
     created_at = models.DateTimeField( auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
