@@ -2,14 +2,14 @@
   <div class="container">
     <span class="font-bold">{{ profileUsername }}</span><br/>
     <!-- Follow -->
-    <div v-if="profile.pk != currentUser.pk">
-      <button v-if="profile.followers.find((user) => user.pk === currentUser.pk)" @click="follow(username)">
-        <!-- <i class="fa-solid fa-heart"></i> -->
+    <div class="my-2" v-if="profile.pk != currentUser.pk">
+      <button class="btn btn-outline-light btn-sm" v-if="profile.followers.find((user) => user.pk === currentUser.pk)" @click="follow(username)">
         팔로우취소
+        <i class="fa-solid fa-user-group"></i>
       </button>
-      <button v-else @click="follow(username)">
+      <button class="btn btn-outline-light btn-sm" v-else @click="follow(username)">
         팔로우
-        <!-- <i class="fa-regular fa-heart"></i>  -->
+        <i class="fa-solid fa-user-group"></i>
       </button>
     </div>
 

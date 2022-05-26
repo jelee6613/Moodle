@@ -123,7 +123,7 @@ export default {
   }
 
   .article-content {
-
+    white-space: pre-wrap;
   }
 
   .article-like button {

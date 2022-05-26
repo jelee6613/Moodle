@@ -132,6 +132,10 @@ export default {
 
 }
 
+.movie-detail-box {
+
+}
+
 .movie-detail-info {
   /* z-index: 99; */
   position: absolute;

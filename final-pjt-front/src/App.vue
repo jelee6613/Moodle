@@ -33,10 +33,6 @@
                 <li class="m-3">
                   <router-link class="dropdown-item" :to="{ name: 'logout' }">로그아웃</router-link>
                 </li>
-                <!-- <li class="m-3">
-                </li>
-                <li class="m-3">
-                </li> -->
               </ul>
             </li>
             <div class="d-flex" v-else>
@@ -121,8 +117,16 @@ export default {
   font-size: 1.15rem;
 }
 
+.text-large {
+  font-size: 1.6rem;
+
+}
+.text-medium {
+  font-size: 1.2rem !important;
+}
+
 .text-small {
-  font-size: 0.9rem;
+  font-size: 0.9rem !important;
 }
 
 body {
