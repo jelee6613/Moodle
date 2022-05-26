@@ -116,7 +116,21 @@ export default {
         url: drf.movies.movieRecommendation(),
         method: 'post',
         data: results,
-        headers: getters.authHeader,
+        headers: getters.authHeader
+      })
+        .then( res => {
+          commit('SET_MOVIE', res.data)
+        })
+        .catch( err => console.error(err) )
+    },
+    rateMovie({ getters, commit }, moviePk, rate) {
+      // 내가 본 영화 추가 및 별점 저장하기
+      // POST movies movieRate
+      axios({
+        url: drf.movies.movieRate(moviePk),
+        method: 'post',
+        data: rate,
+        headers: getters.authHeader
       })
         .then( res => {
           commit('SET_MOVIE', res.data)
