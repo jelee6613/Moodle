@@ -52,7 +52,7 @@
       v-bind:star-size="30"
       v-bind:rounded-corners="true" 
       v-bind:clearable="true"
-      v-bind:rount-start-rating="true"
+      v-bind:round-start-rating="true"
     ></star-rating> -->
 
   </div>
