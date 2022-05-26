@@ -31,14 +31,18 @@ def article_detail_or_update_or_delete(request, article_id):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = ArticleSerializer(article, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
+        # 추가
+        if request.user.id == article.user:
+            serializer = ArticleSerializer(article, data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                return Response(serializer.data)
 
     elif request.method == 'DELETE':
-        article.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        # 추가
+        if request.user.id == article.user:
+            article.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(['POST'])
