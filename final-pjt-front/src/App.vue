@@ -11,14 +11,14 @@
         <ul class="navbar-nav col">
           <div>
             <li class="m-3">
-              <router-link v-if="isLoggedIn" :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
-              <router-link v-else :to="{ name: 'login' }">오늘 뭐 보지</router-link>
+              <router-link :to="{ name: 'movieRecommendation' }">오늘 뭐 보지</router-link>
+              <!-- <router-link v-else :to="{ name: 'login' }">오늘 뭐 보지</router-link> -->
             </li>
           </div>
           <div>
             <li class="m-3">
-              <router-link v-if="isLoggedIn" :to="{ name: 'articleList' }">커뮤니티</router-link>
-              <router-link v-else :to="{ name: 'login' }">커뮤니티</router-link>
+              <router-link :to="{ name: 'articleList' }">커뮤니티</router-link>
+              <!-- <router-link v-else :to="{ name: 'login' }">커뮤니티</router-link> -->
             </li>
           </div>
           <div class="ms-lg-auto">
@@ -49,11 +49,6 @@
         </ul>
       </div>
     </nav>
-    <!-- <div class="container">
-      <div class="text-center">
-        <p v-if="isLoggedIn">반갑습니다. {{ currentUser.username }}님!</p>
-      </div>
-    </div> -->
     <router-view :key="$route.path"/>  
   </div>
 </template>
@@ -149,16 +144,22 @@ nav {
 
 nav a {
   font-size: 1.2rem !important;
-  color: #ffffff !important;
+  color: #ffffff; 
   text-decoration: none !important;
 }
 
 nav a:hover {
-  color: #5f85db;
+  color: #5f85db !important;
 }
 
 nav a.router-link-exact-active {
-  color: #90b8f8;
+  color: #90b8f8 !important;                     
+}
+
+.navbar-text,
+.navbar-text a,
+.nav-link {
+  color: #ffffff;
 }
 
 .navbar-toggler {

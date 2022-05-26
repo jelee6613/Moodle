@@ -55,7 +55,6 @@ export default {
   
 }
 
-
 .recommend-header {
   font-family: LeferiPoint-WhiteObliqueA;
   font-size: 1.6rem;

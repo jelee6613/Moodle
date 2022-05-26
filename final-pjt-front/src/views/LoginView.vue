@@ -42,8 +42,11 @@
                     <account-error v-if="!(['username', 'password'].includes(field))" :errors="errors"></account-error>
                 </div>
               </div>
-              <div class="d-grid mt-5">
+              <div class="d-grid mt-5 text-center">
                 <button class="btn btn-outline-primary btn-lg mb-3">로그인</button>
+                <span class="text-small">
+                  처음이신가요? <router-link class="link" :to="{ name: 'signup' }">회원가입</router-link>
+                </span>
               </div>
             </form>
           </div>
@@ -81,5 +84,12 @@ export default {
 </script>
 
 <style>
+.text-small > .link {
+  margin-left: 0.4rem;
+  text-decoration: underline;
+}
 
+.text-small > .link:hover {
+  color: #90b8f8;
+}
 </style>

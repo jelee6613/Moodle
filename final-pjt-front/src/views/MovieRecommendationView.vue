@@ -39,7 +39,7 @@ export default {
   name: 'MovieRecommendationView',
   components: { QuizForm, RecommendedList },
   computed: {
-    ...mapGetters(['movie']),
+    ...mapGetters(['movie', 'isLoggedIn']),
     isMovieEmpty() {
       return _.isEmpty(this.movie)
     }
@@ -48,7 +48,12 @@ export default {
     ...mapActions(['fetchQuiz']),
   },
   created() {
-    this.fetchQuiz()
+    if (!this.isLoggedIn) {
+      alert('로그인이 필요합니다.')
+      this.$router.push({ name: 'login'})
+    } else {
+      this.fetchQuiz()
+    }
   }
 }
 </script>
