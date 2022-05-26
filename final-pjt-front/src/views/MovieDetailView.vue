@@ -74,7 +74,7 @@ export default {
     value() {
       return {
         moviePk: this.$route.params.moviePk,
-        rate: this.movie?.rate,
+        rate: this.movie.rate?this.movie.rate:null
       }
     }
   },
