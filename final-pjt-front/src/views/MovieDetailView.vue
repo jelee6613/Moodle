@@ -39,41 +39,24 @@
           v-model="value.rate"
           variant="danger"
           class="star mb-2"
-          no-border inline show-value
+          no-border inline show-value show-clear
           size="lg"
         ></b-form-rating>
         {{ value }}
       </div>
     </div>
-
-    <!-- <star-rating
-      @click="test()"
-      v-model="movieRate"
-      v-bind:increment="0.5"
-      v-bind:star-size="30"
-      v-bind:rounded-corners="true" 
-      v-bind:clearable="true"
-      v-bind:round-start-rating="true"
-    ></star-rating> -->
-
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { BFormRating } from 'bootstrap-vue'
-// import StarRating from 'vue-star-rating'
 
 export default {
   name: 'MovieDetailView',
   data() {
     return {
       moviePk: this.$route.params.moviePk,
-      value: {
-        moviePk: this.$route.params.moviePk,
-        rate: 0,
-      }
-      // watchedRate: this.movie.rate,
     }
   },
   computed: {
@@ -86,6 +69,12 @@ export default {
     },
     movieRate() { // average_vote
       return this.movie.average_vote
+    },
+    value() {
+      return {
+        moviePk: this.$route.params.moviePk,
+        rate: this.movie.rate?this.movie.rate:null
+      }
     }
   },
   components: {

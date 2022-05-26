@@ -14,6 +14,9 @@ class Movie(models.Model):
     average_vote = models.FloatField(default=0.0)
     release_date = models.DateField(null=True)
 
+    def __str__(self):
+        return self.title
+
 
 class WatchedMovie(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
