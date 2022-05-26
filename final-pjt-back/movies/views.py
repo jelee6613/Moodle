@@ -73,7 +73,7 @@ def movie_list(request):
 
             serializer = MovieValidationSerializer(data=movie_data)
             if serializer.is_valid():
-                if not Movie.objects.filter(poster_path=movie_data['poster_path']).exists():
+                if not Movie.objects.filter(title=movie_data['title']).exists():
                 
                     # 장르 id => 한글화 작업
                     genres_datas = movie_data['genre_ids']
@@ -101,7 +101,7 @@ def movie_list(request):
                     
                     serializer.save(genre=movie_genres_json, director=movie_director)
     
-                movie = get_object_or_404(Movie, poster_path=movie_data['poster_path'])
+                movie = get_object_or_404(Movie, title=movie_data['title'])
                 serializer = MovieDetailSerializer(movie)
                 movies.append(serializer.data)
         
@@ -116,7 +116,7 @@ def movie_create(request):
 
     URL = 'https://api.themoviedb.org/3'
     api_key = '04f1192a9aa395adc14e461889d716f8'
-    keyword = '마녀 배달부 키키'
+    keyword = request.data
     params = {
         'api_key': api_key,
         'query': keyword,
@@ -137,7 +137,7 @@ def movie_create(request):
         serializer = MovieValidationSerializer(data=movie_data)
         if serializer.is_valid():
         
-            if not Movie.objects.filter(poster_path=movie_data['poster_path']).exists():
+            if not Movie.objects.filter(title=movie_data['title']).exists():
                 
                 # 장르 id => 한글화 작업
                 genres = movie_data['genre_ids']
