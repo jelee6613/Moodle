@@ -24,7 +24,7 @@ export default {
 <style>
   .movie-item {
     min-width: 21%;
+    max-width: 21%;
     scroll-snap-align: start;
   }
-
 </style>

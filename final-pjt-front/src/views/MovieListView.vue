@@ -15,7 +15,7 @@
 
     <div class="d-flex movie-list">
       <h3>현재상영작</h3>
-      <div class="d-flex movie-list-item">
+      <div class="d-flex movie-list-item mt-3">
         <movie-list-item
           v-for="nowPlaying in nowPlayings"
           :key="nowPlaying.id"
@@ -25,7 +25,7 @@
     </div>
     <div class="d-flex movie-list">
       <h3>인기작</h3>
-      <div class="d-flex movie-list-item">
+      <div class="d-flex movie-list-item mt-3">
         <movie-list-item
           v-for="popular in populars"
           :key="popular.id"
@@ -35,7 +35,7 @@
     </div>
     <div class="d-flex movie-list">
       <h3>상영예정작</h3>
-      <div class="d-flex movie-list-item">
+      <div class="d-flex movie-list-item mt-3">
         <movie-list-item
           v-for="upcoming in upcomings"
           :key="upcoming.id"
