@@ -123,13 +123,13 @@ export default {
         })
         .catch( err => console.error(err) )
     },
-    rateMovie({ getters, commit }, moviePk, rate) {
+    rateMovie({ getters, commit }, { moviePk, rate }) {
       // 내가 본 영화 추가 및 별점 저장하기
       // POST movies movieRate
       axios({
         url: drf.movies.movieRate(moviePk),
         method: 'post',
-        data: rate,
+        data: { rate },
         headers: getters.authHeader
       })
         .then( res => {
