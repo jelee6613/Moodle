@@ -49,7 +49,7 @@ import moment from 'moment'
 export default {
   name: 'ArticleListView',
   computed: {
-    ...mapGetters(['articles']),
+    ...mapGetters(['articles', 'isLoggedIn']),
     orderedArticles() {
       return _.orderBy(this.articles, 'id', 'desc')
     }
@@ -63,15 +63,16 @@ export default {
     }
   },
   created() {
-    this.fetchArticles()
+    if (!this.isLoggedIn) {
+      alert('로그인이 필요합니다.')
+      this.$router.push({ name: 'login'})
+    } else {
+      this.fetchArticles()
+    }
   }
 }
 </script>
 
 <style>
-router-link {
-  font-size: 1.2rem;
-  color: #ffffff;
-  text-decoration: none;
-}
+
 </style>

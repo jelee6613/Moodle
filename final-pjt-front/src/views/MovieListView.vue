@@ -108,6 +108,11 @@ input.form-control:-webkit-autofill:active {
   margin: 5rem 0 ;
 }
 
+.movie-list h3 {
+  font-family: IBMPlexSansKR-Bold;
+  font-size: 2rem;
+}
+
 .movie-list-item {
   overflow: auto;
   scroll-snap-type: x mandatory;
