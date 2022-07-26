@@ -18,7 +18,7 @@
 
 * 까다로웠던 부분은, 사용자별로 관람한 영화의 평점을 매기는 부분이었다. 각 사용자가 매긴 평점에 따라 영화 별 평균 평점이 나올 수 있도록 해야했기 때문에, 사용자(User)개체와 영화(Movie)개체의 관계속에 새로운 속성인 평점(rate)을 추가해야 했다.
 
-  ![final pjt ERD](마주리.assets/final pjt ERD.png)
+  ![final pjt ERD](https://github.com/jelee6613/Movie-Ganger/blob/master/assets/final%20pjt%20ERD.png)
 
 
 
@@ -26,7 +26,7 @@
 
 * ERD를 바탕으로 RDB를 설계했다.
 
-![image-20220517232704924](assets/image-20220517232704924.png)
+![image-20220517232704924](https://github.com/jelee6613/Movie-Ganger/blob/master/assets/image-20220517232704924.png)
 
 ---
 
@@ -46,13 +46,13 @@
 
 * 어제 작성했던 Vue Components 구조를 토대로 다이어그램을 작성하였다.
 
-  ![Vue Components](../assets/Vue Components.jpg)
+  ![Vue Components](assets/image-20220520011830728.png)
 
 * DB 모델링과 Vue Components 구조가 세워지고 난 후, 직접 Django에서 프로젝트를 생성하고`Models.py`를 작성한 뒤 `shell`을 사용하여서 모델링이 잘 되었는지를 확인했다. 가장 걱정했던 부분은 `User`와 `Movie` 개체의 관계인 `WatchedMovie`(내가 본 영화) 테이블이었다. `shell_plus`를 통해서 데이터를 직접 생성해보고 ORM을 작성해보면서 원하는 대로 작동하는 것을 보고 굉장히 뿌듯했다 😉
 * 어제 작성한 URL과 Components 구조를 기반으로 하여서 Vue의 Router와 Component를 생성하였다. 그리고 Django와의 통신을 위해서 통신을 위한 URL을 모두 `drf.js`라는 파일에 작성하였다. 이 파일은 `/src`에 `api`라는 디렉토리를 생성하고 그 안에 저장하였다.
 * Django에서 사용될 URL을 적다보니 이전에 작성한 명세에서 Restful하지 못하게 작성한 부분을 종은님께서 발견하였다. 그래서 부족한 부분들을 보완하는 것으로 오늘의 협업은 마무리가 되었다!
 
-![image-20220520011830728](./assets/image-20220520011830728.png)
+![image-20220520011830728](https://github.com/jelee6613/Movie-Ganger/blob/master/assets/image-20220520011830728.png)
 
 ---
 
