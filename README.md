@@ -1,7 +1,7 @@
 # 비슷한 성향의 영화 감독을 찾아 영화를 추천해드려요!
 
 기간: 2022년 5월 17일 → 2022년 5월 26일
-
+수상: SSAFY 7th 관통프로젝트 최우수상
 # MOVIE GANGER
 
 ![MOVIE GANGER.png](assets/MOVIE_GANGER.png)
