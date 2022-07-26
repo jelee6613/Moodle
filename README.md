@@ -4,7 +4,7 @@
 
 # MOVIE GANGER
 
-![MOVIE GANGER.png](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/MOVIE_GANGER.png)
+![MOVIE GANGER.png](assets/MOVIE_GANGER.png)
 
 ## 개요
 
@@ -222,32 +222,32 @@
 
 ### 메인페이지
 
-![메인페이지](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/Untitled.png)
+![메인페이지](assets/Untitled.png)
 
 ### 영화 추천페이지
 
-![영화 추천페이지](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/Untitled%201.png)
+![영화 추천페이지](assets/Untitled%201.png)
 
 ### 영화 추천페이지 (결과)
 
-![영화 추천페이지(결과)](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/Untitled%202.png)
+![영화 추천페이지(결과)](assets/Untitled%202.png)
 
 ### 영화 상세페이지
 
-![영화 상세페이지](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/Untitled%203.png)
+![영화 상세페이지](assets/Untitled%203.png)
 
 ### 커뮤니티
 
-![커뮤니티](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/Untitled%204.png)
+![커뮤니티](assets/Untitled%204.png)
 
 ### 마이페이지
 
-![마이페이지](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/Untitled%205.png)
+![마이페이지](assets/Untitled%205.png)
 
 
 ## 🎥시연 영상
 
-[프로젝트시연영상.mp4](https://github.com/jelee6613/Movie-Ganger/blob/master/%EC%9D%BC%EC%A7%80/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81.mp4)
+[프로젝트시연영상.mp4](assets/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81.mp4)
 
 ## 🏋️‍♀️어려웠던 점
 
