@@ -1,6 +1,6 @@
-# [MOVIE GANGER] 나와 비슷한 성향의 영화 감독을 찾아 영화를 추천해드려요!
+# 나와 비슷한 성향의 영화 감독을 찾아 영화를 추천해드려요!
 
-속성: 2022년 5월 17일 → 2022년 5월 26일
+: 2022년 5월 17일 → 2022년 5월 26일
 
 # MOVIE GANGER
 
@@ -24,10 +24,11 @@
 - Front End (20%)
 
 ## 핵심 기능
-
-- TMDB API로 받아온 영화 정보 DB에 저장하기
     
-    ```python
+<details>
+<summary>TMDB API로 받아온 영화 정보 DB에 저장하기</summary>
+<div markdown="1">       
+    
     genres_dict = {
         28: '액션',
         12: '모험',
@@ -115,11 +116,14 @@
             res[GET_MOVIES_PATH_NAME] = movies
     
         return Response(res)
-    ```
     
-- 사용자가 제출한 퀴즈 결과를 기반으로 비슷한 성향의 영화 감독 찾기
-    
-    ```python
+</div>
+</details>
+
+<details>
+<summary>사용자가 제출한 퀴즈 결과를 기반으로 비슷한 성향의 영화 감독 찾기</summary>
+<div markdown="1">       
+
     @api_view(['GET', 'POST'])
     def movie_recommendations(request):
     		
@@ -140,20 +144,22 @@
     
             recommendable_director = max(set(results), key=results.count)
             director_movies = Movie.objects.all().filter(director=recommendable_director)
-    ```
+</div>
+</details>
+
+<details>
+<summary>위에서 찾은 영화 감독의 작품 중에서 사용자가 많이 본 장르의 영화 추천</summary>
+<div markdown="1">       
     
-- 위에서 찾은 영화 감독의 작품 중에서 사용자가 많이 본 장르의 영화 추천
-    
-    ```python
     @api_view(['GET', 'POST'])
     def movie_recommendations(request):
     		
-    		# 퀴즈를 진행하기 위한 문항&보기 응답
+    	# 퀴즈를 진행하기 위한 문항&보기 응답
         if request.method == 'GET':
             
-    				# ...
+    		# ...
     		
-    		# 제출한 퀴즈 결과를 기반으로 비슷한 성향의 영화 감독 찾기
+    	# 제출한 퀴즈 결과를 기반으로 비슷한 성향의 영화 감독 찾기
         elif request.method == 'POST':
     				
     				# ...
@@ -205,7 +211,9 @@
     				    
     				serializer = MovieDetailSerializer(recommendable_movie)
     				return Response(serializer.data)
-    ```
+    
+</div>
+</details>
     
 
 # 👀사진 & 시연 영상
@@ -320,5 +328,3 @@
     
     *어느 기관에서 조사한 결과에 따르면 사람들은 SNS나 지인으로부터 영화 추천받는 것을 선호한다고 합니다. 사용자의 프로필과 팔로우 기능을 구현한 만큼, 서로의 프로필 페이지에서 방명록 기능을 추가하면 사용자들끼리 영화 추천을 보다 적극적으로 이끌어 낼 수 있을 것이라 생각합니다.* 
     
-
-[◀ 이전 페이지 돌아가기](https://www.notion.so/4158293ac6044e3089680d8482042e02)
