@@ -1,11 +1,10 @@
-# 비슷한 성향의 영화 감독을 찾아 영화를 추천해드려요!
+# MOODLE, 당신만의 영화 감독을 찾아보세요!
 
-- SSAFY 7th 관통프로젝트 최우수상
+- SSAFY 7th 서울 5반 관통프로젝트 최우수상
 - 2022년 5월 17일 ~ 2022년 5월 26일
 
-# MOVIE GANGER
 
-![MOVIE GANGER.png](assets/MOVIE_GANGER.png)
+![MOODLE.png](assets/MOODLE.png)
 
 ## 개요
 
