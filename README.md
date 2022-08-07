@@ -18,10 +18,12 @@
 - Back End 1명
 - Front End 1명
 
-## 기여도
+## 담당 업무
 
-- Back End (80%)
-- Front End (20%)
+- Back End
+    - DB 설계
+    - REST API 설계
+    - Open API 활용
 
 ## 핵심 기능
     
@@ -214,7 +216,13 @@
     
 </div>
 </details>
-    
+
+## ERD
+![메인페이지](assets/moodle_back.png)
+
+
+## Components & Routes 구조
+![메인페이지](assets/moodle_front.png)
 
 ## 👀화면 구성
 
