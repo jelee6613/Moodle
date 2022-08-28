@@ -4,7 +4,7 @@
 - 2022년 5월 17일 ~ 2022년 5월 26일
 
 
-![MOODLE.png](assets/MOODLE.png)
+![MOODLE.png](assets/메인.png)
 
 ## 목차
 
