@@ -53,13 +53,13 @@
 
 ## 3️⃣ 설계
 
-### ERD
+### 🔸 ERD
 
 ![erd](assets/erd.png)
 
 <br>
 
-### Components & Routes 구조
+### 🔸 Components & Routes 구조
 
 ![front](assets/front.png)
 
@@ -301,7 +301,7 @@ movie_genres_json = json.dumps(movie_genres)
 </details>
 
 <details>
-  <summary><h4>하나의 요청에서 3번의 Open API 응답을 받아 DB에 저장하고, 각 응답에 해당하는 정보를 구분해서 사용자에게 응답하기</h4></summary>
+  <summary><h4>한 번의 요청으로 3 개의 Open API 응답을 DB에 저장하고, 3 가지를 구분해서 사용자에게 응답하기</h4></summary>
   
 각 Open API의 path를 반복문으로 돌면서 DB에 data를 저장하고, 저장이 끝나면 DB에서 해당 영화가 가진 유일한 속성-값으로 바로 찾아내 빈 리스트에 차곡차곡 채워 최종 응답으로 보낼 딕셔너리에 저장한다.
     
