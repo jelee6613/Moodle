@@ -12,7 +12,7 @@
 
 2️⃣ <a href="#2️⃣-프로젝트-구성원--기여도">프로젝트 구성원 & 기여도</a>
 
-3️⃣ <a href="#3️⃣-설계">설계</a>
+3️⃣ <a href="#3️⃣-기술스택--설계">기술스택 & 설계</a>
 
 4️⃣ <a href="#4️⃣-시연">시연</a>
 
@@ -53,15 +53,45 @@
 
 <br>
 
-## 3️⃣ 설계
+## 3️⃣ 기술스택 & 설계
 
-### 🔸 ERD
+### 🔸 기술스택
 
-![erd](assets/erd.png)
+<details>
+  <summary><h4>Back-End</h4></summary>
+  <li>Visual Studio Code 1.70.2</li>
+  <li>Python 3.9.9</li>
+  <li>Django 3.2.12</li>
+  <li>django-allauth 0.50.0</li>
+  <li>django-cors-headers 3.12.0</li>
+  <li>django-extensions 3.1.5</li>
+  <li>djangorestframework 3.13.1</li>
+  <li>dj-rest-auth 2.2.4</li>
+  <li>requests 2.27.1</li>
+</details>
+
+<details>
+  <summary><h4>Front-End</h4></summary>
+  <li>Visual Studio Code 1.70.2</li>
+  <li>vue 2.6.14</li>
+  <li>vuex 3.6.2</li>
+  <li>vue-router 3.5.1</li>
+  <li>vue-moment 4.1.0</li>
+  <li>vue-star-rating 1.7.0</li>
+  <li>axios 0.27.2</li>
+  <li>bootstrap-vue 2.22.0</li>
+  <li>lodash 2.17.21</li>
+</details>
 
 <br>
 
-### 🔸 Components & Routes 구조
+### 🔸 설계
+
+#### ERD
+
+![erd](assets/erd.png)
+
+#### Components & Routes 구조
 
 ![front](assets/front.png)
 
