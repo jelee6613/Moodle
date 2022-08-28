@@ -2,7 +2,7 @@
   <div class="main" id="app">
     <nav class="navbar navbar-expand-lg bg-none">
       <router-link :to="{ name: 'movieList' }">
-        <img class="logo mr-4" src="https://lab.ssafy.com/uploads/-/system/appearance/header_logo/1/ssafy_logo.png" alt="">
+        <img class="logo mr-4" src="@/assets/MOODLE.png" alt="">
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
