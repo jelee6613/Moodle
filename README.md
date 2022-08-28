@@ -68,6 +68,7 @@
   <li>djangorestframework 3.13.1</li>
   <li>dj-rest-auth 2.2.4</li>
   <li>requests 2.27.1</li>
+  <li>sqlite3</li>
 </details>
 
 <details>
