@@ -100,7 +100,7 @@
 
 ## 4️⃣ 시연
 ### 👇Click!
-[![시연영상](assets/로고.png)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0ce316de-273f-45e7-90ac-797a44a985bc/%EC%B5%9C%EC%A2%85%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220828%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220828T064325Z&X-Amz-Expires=86400&X-Amz-Signature=00587c0b4bd553e029cf61389804988a377ff19051369975404ec61eed082985&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25EC%25B5%259C%25EC%25A2%2585%25EC%258B%259C%25EC%2597%25B0%25EC%2598%2581%25EC%2583%2581.mp4%22&x-id=GetObject) 
+[![시연영상](assets/로고.png)](https://youtu.be/ALXX5F6ty6w) 
 
 0:00 - 메인페이지 & 상세페이지
 
