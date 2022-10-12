@@ -10,13 +10,16 @@
 
 1️⃣ <a href="#1️⃣-개요">개요</a>
 
-2️⃣ <a href="#2️⃣-프로젝트-구성원--기여도">프로젝트 구성원 & 기여도</a>
+2️⃣ <a href="#2️⃣-기술스택--기여도">기술스택 & 기여도</a>
 
-3️⃣ <a href="#3️⃣-기술스택--설계">기술스택 & 설계</a>
+3️⃣ <a href="#3️⃣-설계">설계</a>
 
 4️⃣ <a href="#4️⃣-시연">시연</a>
 
-5️⃣ <a href="#5️⃣-배운점">배운점</a>
+5️⃣ <a href="#5️⃣-개발자">개발자</a>
+
+6️⃣ <a href="#6️⃣-회고">회고</a>
+
 
 <br>
 
@@ -29,77 +32,98 @@
 
 <br>
 
-## 2️⃣ 프로젝트 구성원 & 기여도
-
-### ****🔸**** 프로젝트 구성원
-
-| 이름 | 역할 |
-| --- | --- |
-| 👩마주리 | Front-End |
-| 👨이종은 (me) | Back-End |
-
-<br>
-
-### ****🔸**** 기여도 (Back-End)
-
-- 설계
-    - ERD 작성
-    - Components & Routes 구조 설계
-- 개발
-    - REST API 구축
-    - Open API 데이터 가공
-    - DB 구축
-    - 영화 추천 알고리즘 구현
-
-<br>
-
-## 3️⃣ 기술스택 & 설계
+## 2️⃣ 기술스택 & 기여도
 
 ### 🔸 기술스택
 
-<details>
-  <summary><h4>Back-End</h4></summary>
-  <li>Visual Studio Code 1.70.2</li>
-  <li>Python 3.9.9</li>
-  <li>Django 3.2.12</li>
-  <li>django-allauth 0.50.0</li>
-  <li>django-cors-headers 3.12.0</li>
-  <li>django-extensions 3.1.5</li>
-  <li>djangorestframework 3.13.1</li>
-  <li>dj-rest-auth 2.2.4</li>
-  <li>requests 2.27.1</li>
-  <li>sqlite3</li>
-</details>
-
-<details>
-  <summary><h4>Front-End</h4></summary>
-  <li>Visual Studio Code 1.70.2</li>
-  <li>vue 2.6.14</li>
-  <li>vuex 3.6.2</li>
-  <li>vue-router 3.5.1</li>
-  <li>vue-moment 4.1.0</li>
-  <li>vue-star-rating 1.7.0</li>
-  <li>axios 0.27.2</li>
-  <li>bootstrap-vue 2.22.0</li>
-  <li>lodash 2.17.21</li>
-</details>
+<span>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+<img src="https://img.shields.io/badge/Django-000000?style=for-the-badge&logo=Django&logoColor=white">
+<img src="https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
+</span>
+<br>
+<span>
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
+<img src="https://img.shields.io/badge/Node.js-339939?style=for-the-badge&logo=Node.js&logoColor=white">
+</span>
+<br>
+<span>
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+</span>
+<br>
+<span>
+<img src="https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=GitLab&logoColor=white">
+<img src="https://img.shields.io/badge/Mattermost-0058CC?style=for-the-badge&logo=Mattermost&logoColor=white">
+</span>
+<br>
+<span>
+<img src="https://img.shields.io/badge/visual studio code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+</span>
 
 <br>
 
-### 🔸 설계
+### 🔸 기여도 (Back-End)
 
-#### ERD
+<span>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+<img src="https://img.shields.io/badge/Django-000000?style=for-the-badge&logo=Django&logoColor=white">
+<img src="https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
+</span>
+
+<br>
+
+<span>
+<img src="https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=GitLab&logoColor=white">
+<img src="https://img.shields.io/badge/Mattermost-0058CC?style=for-the-badge&logo=Mattermost&logoColor=white">
+</span>
+
+<br>
+
+<span>
+<img src="https://img.shields.io/badge/visual studio code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+</span>
+
+#### ◼ 기획
+
+#### ◼ 설계
+
+◽ ERD 작성
+
+◽ Components 설계
+
+◽ Routes 설계
+
+#### ◼ 개발
+
+◽ REST API 구축
+
+◽ Open API 활용
+
+◽ DB 관리
+
+◽ 영화 추천 알고리즘
+
+<br>
+
+## 3️⃣ 설계
+
+### 🔸 ERD
 
 ![erd](assets/erd.png)
 
-#### Components & Routes 구조
+### 🔸 Components & Routes 구조
 
 ![front](assets/front.png)
 
 <br>
 
 ## 4️⃣ 시연
+
 ### 👇Click!
+
 [![시연영상](assets/로고.png)](https://youtu.be/ALXX5F6ty6w) 
 
 0:00 - 메인페이지 & 상세페이지
@@ -122,7 +146,16 @@
 
 <br>
 
-## 5️⃣ 배운점
+## 5️⃣ 개발자
+
+| 이름 | 역할 |
+| --- | --- |
+| 👩마주리 | Front-End |
+| 👨이종은 (me) | Back-End |
+
+<br>
+
+## 6️⃣ 회고
 
 ### 🔸 핵심기능
 
