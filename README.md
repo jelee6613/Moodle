@@ -67,6 +67,12 @@
 
 ### 🔸 기여도 (Back-End)
 
+> 영화 추천 아이디어 기획과 구현을 포함한 백엔드 업무를 수행했습니다.
+>
+> 획기적인 영화 추천 서비스를 제공하고자 사람들이 영화를 추천 받는 경로를 조사했습니다. 어느 기관에서 진행한 설문에 따르면 사람들은 주변 지인, SNS에서 영화를 추천 받는 경우가 많았습니다. 즉, 자신과 비슷한 성향의 사람으로부터 추천 받는 것이 핵심이었고, 사용자와 비슷한 성향의 영화 감독을 찾아서 추천하는 아이디어를 제안했습니다.
+>
+> 사용자가 간단한 설문을 진행하면 비슷한 성향의 영화 감독을 찾아내고, 해당 영화 감독의 작품 중에서 사용자가 관람한 영화 데이터를 분석해서 선호하는 장르의 작품을 추천하는 알고리즘을 구현했습니다.
+
 <span>
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
 <img src="https://img.shields.io/badge/Django-000000?style=for-the-badge&logo=Django&logoColor=white">
@@ -87,6 +93,8 @@
 </span>
 
 #### ◼ 기획
+
+◽ ERD 작성
 
 #### ◼ 설계
 
